@@ -1,0 +1,8 @@
+# dsh-plugin-example bundle patch.
+#
+# 每个插件都必须带这个文件（package.json 的 dsh.bundle.patch 指向它），
+# `dsh plugin add` 靠它把插件条目插进 profile 的 loader 树。
+# 安装：dsh plugin --profile <name> add dsh-plugin-example
+- insert:
+    - id: example
+      name: dsh-plugin-example

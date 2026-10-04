@@ -1,0 +1,11 @@
+packages:
+  - packages/*
+
+# 所有插件对齐同一套 DSH 宿主版本，升级只改这里。
+# 注意：@deepseek-ai/* 的 npm `latest` 标签是旧的（如 dsh-tools 指向 0.0.1-rc.1），
+# 必须写死版本，不能写 ^0.2.0-rc.2 之外的浮动范围。
+catalog:
+  '@deepseek-ai/cordis': 4.0.4
+  '@deepseek-ai/dsh-tools': 0.2.0-rc.2
+  '@types/node': ^26.2.0
+  typescript: ^7.0.2
