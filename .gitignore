@@ -3,3 +3,8 @@ lib/
 *.tsbuildinfo
 *.log
 .DS_Store
+# >>> Comet managed project state >>>
+!/.comet/
+/.comet/*
+!/.comet/config.yaml
+# <<< Comet managed project state <<<
