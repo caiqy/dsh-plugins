@@ -3,6 +3,8 @@ lib/
 *.tsbuildinfo
 *.log
 .DS_Store
+.tmp/
+*.tgz
 # >>> Comet managed project state >>>
 !/.comet/
 /.comet/*
