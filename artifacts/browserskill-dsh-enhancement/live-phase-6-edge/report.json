@@ -1,0 +1,1052 @@
+{
+  "candidate": "D:\\Caiqy\\Projects\\Github\\dsh-plugins\\artifacts\\browserskill-dsh-enhancement\\wxg-prc-cpg-browser-skill-dsh-plugin-0.3.3-dsh.1.tgz",
+  "sha256": "81d7eec2d2315b0e95d5170d5a09e4c45d2269ed17c8f702485ecc71028e40b9",
+  "startedAt": "2026-10-19T08:24:01.491Z",
+  "calls": [
+    {
+      "name": "bsk_session",
+      "args": {
+        "action": "browsers"
+      },
+      "elapsedMs": 49,
+      "ok": true,
+      "result": [
+        {
+          "instance_id": "2303ebf6",
+          "browser_name": "chrome",
+          "browser_version": "155.0.0.0",
+          "extension_version": "0.3.3",
+          "label": "chrome",
+          "session_count": 0,
+          "connected_at_ms": 1792398106759,
+          "version_skew": false,
+          "extension_protocol_version": "1.3",
+          "unresponsive": false
+        },
+        {
+          "instance_id": "daae7a27",
+          "browser_name": "edge",
+          "browser_version": "155.0.0.0",
+          "extension_version": "0.3.3",
+          "label": "edge-gmail3",
+          "session_count": 0,
+          "connected_at_ms": 1792398200056,
+          "version_skew": false,
+          "extension_protocol_version": "1.3",
+          "unresponsive": false
+        }
+      ]
+    },
+    {
+      "name": "bsk_session",
+      "args": {
+        "action": "list"
+      },
+      "elapsedMs": 0,
+      "ok": true,
+      "result": {
+        "pendingCleanup": 0,
+        "sessions": []
+      }
+    },
+    {
+      "name": "bsk_page",
+      "args": {
+        "action": "wait-ms",
+        "durationMs": 0
+      },
+      "elapsedMs": 47,
+      "ok": true,
+      "result": {
+        "waitedMs": 0
+      }
+    },
+    {
+      "name": "bsk_page",
+      "args": {
+        "action": "wait-ms",
+        "durationMs": 20
+      },
+      "elapsedMs": 75,
+      "ok": true,
+      "result": {
+        "waitedMs": 20
+      }
+    },
+    {
+      "name": "bsk_page",
+      "args": {
+        "action": "wait-ms",
+        "durationMs": -1
+      },
+      "elapsedMs": 0,
+      "ok": false,
+      "error": "Error: durationMs must be an integer in 0..300000"
+    },
+    {
+      "name": "bsk_page",
+      "args": {
+        "action": "wait-ms",
+        "durationMs": 10000
+      },
+      "elapsedMs": 313,
+      "ok": false,
+      "error": "AbortError: tool call aborted"
+    },
+    {
+      "name": "bsk_session",
+      "args": {
+        "action": "browsers"
+      },
+      "elapsedMs": 45,
+      "ok": true,
+      "result": [
+        {
+          "instance_id": "2303ebf6",
+          "browser_name": "chrome",
+          "browser_version": "155.0.0.0",
+          "extension_version": "0.3.3",
+          "label": "chrome",
+          "session_count": 0,
+          "connected_at_ms": 1792398106759,
+          "version_skew": false,
+          "extension_protocol_version": "1.3",
+          "unresponsive": false
+        },
+        {
+          "instance_id": "daae7a27",
+          "browser_name": "edge",
+          "browser_version": "155.0.0.0",
+          "extension_version": "0.3.3",
+          "label": "edge-gmail3",
+          "session_count": 0,
+          "connected_at_ms": 1792398200056,
+          "version_skew": false,
+          "extension_protocol_version": "1.3",
+          "unresponsive": false
+        }
+      ]
+    },
+    {
+      "name": "bsk_session",
+      "args": {
+        "action": "start",
+        "browser": "daae7a27",
+        "name": "bsk-candidate-edge",
+        "url": "http://127.0.0.1:58497/",
+        "width": 1000,
+        "height": 800
+      },
+      "elapsedMs": 624,
+      "ok": true,
+      "result": {
+        "sessionId": "hcss",
+        "browserInstanceId": "daae7a27",
+        "url": "http://127.0.0.1:58497/"
+      }
+    },
+    {
+      "name": "bsk_tabs",
+      "args": {
+        "action": "list",
+        "session": "hcss"
+      },
+      "elapsedMs": 53,
+      "ok": true,
+      "result": {
+        "session": "hcss",
+        "tabs": [
+          {
+            "tabId": 1014172528,
+            "title": "新建标签页",
+            "url": "edge://newtab/",
+            "windowId": 1014172487,
+            "active": true,
+            "scope": "user"
+          },
+          {
+            "tabId": 1014172536,
+            "title": "BrowserSkill candidate smoke",
+            "url": "http://127.0.0.1:58497/",
+            "windowId": 1014172535,
+            "active": true,
+            "scope": "agent"
+          }
+        ]
+      }
+    },
+    {
+      "name": "bsk_inspect",
+      "args": {
+        "action": "observe",
+        "session": "hcss"
+      },
+      "elapsedMs": 106,
+      "ok": true,
+      "result": {
+        "session": "hcss",
+        "tabId": 1014172536,
+        "text": "@vom 1\n@view 961x660\n@layers 1 focus=L1\nL1 page\n  RootWebArea \"BrowserSkill candidate smoke\"\n    heading \"BrowserSkill 本地候选测试\"\n      StaticText \"BrowserSkill 本地候选测试\"\n    LabelText \"Single file\"\n      @e1 button \"Single file\"\n      StaticText \"Single file\"\n    LabelText \"Multiple files\"\n      @e2 button \"Multiple files\"\n      StaticText \"Multiple files\"\n    StaticText \"Drop test files\"\n    @e3 link \"Download test file\"\n    @e4 button \"Hover test menu [has-submenu]\"\n    StaticText \"Full-page test spacer\"\n    paragraph \"End of test page\"\n      StaticText \"End of test page\"",
+        "refCount": 4,
+        "truncated": false
+      }
+    },
+    {
+      "name": "bsk_interact",
+      "args": {
+        "action": "evaluate",
+        "session": "hcss",
+        "expression": "-1"
+      },
+      "elapsedMs": 48,
+      "ok": true,
+      "result": {
+        "ok": true,
+        "tab_id": 1014172536,
+        "value": -1,
+        "session": "hcss"
+      }
+    },
+    {
+      "name": "bsk_interact",
+      "args": {
+        "action": "evaluate",
+        "session": "hcss",
+        "expression": "Promise.resolve(42)"
+      },
+      "elapsedMs": 47,
+      "ok": true,
+      "result": {
+        "ok": true,
+        "tab_id": 1014172536,
+        "value": 42,
+        "session": "hcss"
+      }
+    },
+    {
+      "name": "bsk_interact",
+      "args": {
+        "action": "evaluate",
+        "session": "hcss",
+        "expression": "Promise.resolve(7)",
+        "awaitPromise": false,
+        "returnByValue": false
+      },
+      "elapsedMs": 49,
+      "ok": true,
+      "result": {
+        "ok": true,
+        "tab_id": 1014172536,
+        "value": {
+          "className": "Promise",
+          "description": "Promise",
+          "objectId": "4278784305983253984.2.2",
+          "subtype": "promise",
+          "type": "object"
+        },
+        "session": "hcss"
+      }
+    },
+    {
+      "name": "bsk_interact",
+      "args": {
+        "action": "evaluate",
+        "session": "hcss",
+        "expression": "(()=>{throw new Error('candidate-smoke-error')})()"
+      },
+      "elapsedMs": 50,
+      "ok": false,
+      "error": "Error: evaluate failed: {\"ok\":false,\"tab_id\":1014172536,\"error\":{\"text\":\"Error: candidate-smoke-error\\n    at <anonymous>:1:13\\n    at <anonymous>:1:49\",\"line\":1,\"column\":6}}"
+    },
+    {
+      "name": "bsk_interact",
+      "args": {
+        "action": "evaluate",
+        "session": "hcss",
+        "expression": "new Promise(()=>{})",
+        "timeoutMs": 150
+      },
+      "elapsedMs": 207,
+      "ok": false,
+      "error": "BskError: bsk evaluate failed: tool RPC timed out after 150ms (hint: retry the command; if timeouts persist, check `bsk logs` and confirm the browser is still responding)"
+    },
+    {
+      "name": "bsk_interact",
+      "args": {
+        "action": "evaluate",
+        "session": "hcss",
+        "expression": "new Promise(resolve=>setTimeout(()=>resolve(1),10000))"
+      },
+      "elapsedMs": 2430,
+      "ok": false,
+      "error": "AbortError: tool call aborted"
+    },
+    {
+      "name": "bsk_interact",
+      "args": {
+        "action": "upload",
+        "session": "hcss",
+        "target": "#single",
+        "files": [
+          "C:\\Users\\caiqy\\AppData\\Local\\Temp\\bsk-candidate-live-edEyiD\\a.txt"
+        ]
+      },
+      "elapsedMs": 62,
+      "ok": true,
+      "result": {
+        "tab_id": 1014172536,
+        "used_selector": "#single",
+        "file_names": [
+          "a.txt"
+        ],
+        "session": "hcss"
+      }
+    },
+    {
+      "name": "bsk_interact",
+      "args": {
+        "action": "evaluate",
+        "session": "hcss",
+        "expression": "Promise.all([...document.querySelector('#single').files].map(async f=>({name:f.name,text:await f.text()})))"
+      },
+      "elapsedMs": 47,
+      "ok": true,
+      "result": {
+        "ok": true,
+        "tab_id": 1014172536,
+        "value": [
+          {
+            "name": "a.txt",
+            "text": "上传甲\n"
+          }
+        ],
+        "session": "hcss"
+      }
+    },
+    {
+      "name": "bsk_interact",
+      "args": {
+        "action": "upload",
+        "session": "hcss",
+        "target": "#multi",
+        "files": [
+          "C:\\Users\\caiqy\\AppData\\Local\\Temp\\bsk-candidate-live-edEyiD\\a.txt",
+          "C:\\Users\\caiqy\\AppData\\Local\\Temp\\bsk-candidate-live-edEyiD\\b.txt"
+        ],
+        "mode": "input"
+      },
+      "elapsedMs": 63,
+      "ok": true,
+      "result": {
+        "tab_id": 1014172536,
+        "used_selector": "#multi",
+        "file_names": [
+          "a.txt",
+          "b.txt"
+        ],
+        "session": "hcss"
+      }
+    },
+    {
+      "name": "bsk_interact",
+      "args": {
+        "action": "evaluate",
+        "session": "hcss",
+        "expression": "Promise.all([...document.querySelector('#multi').files].map(async f=>({name:f.name,text:await f.text()})))"
+      },
+      "elapsedMs": 50,
+      "ok": true,
+      "result": {
+        "ok": true,
+        "tab_id": 1014172536,
+        "value": [
+          {
+            "name": "a.txt",
+            "text": "上传甲\n"
+          },
+          {
+            "name": "b.txt",
+            "text": "upload B\n"
+          }
+        ],
+        "session": "hcss"
+      }
+    },
+    {
+      "name": "bsk_interact",
+      "args": {
+        "action": "upload",
+        "session": "hcss",
+        "target": "#drop",
+        "files": [
+          "C:\\Users\\caiqy\\AppData\\Local\\Temp\\bsk-candidate-live-edEyiD\\a.txt",
+          "C:\\Users\\caiqy\\AppData\\Local\\Temp\\bsk-candidate-live-edEyiD\\b.txt"
+        ],
+        "mode": "drop"
+      },
+      "elapsedMs": 65,
+      "ok": true,
+      "result": {
+        "tab_id": 1014172536,
+        "used_selector": "#drop",
+        "file_names": [
+          "a.txt",
+          "b.txt"
+        ],
+        "session": "hcss"
+      }
+    },
+    {
+      "name": "bsk_interact",
+      "args": {
+        "action": "evaluate",
+        "session": "hcss",
+        "expression": "window.dropped"
+      },
+      "elapsedMs": 48,
+      "ok": true,
+      "result": {
+        "ok": true,
+        "tab_id": 1014172536,
+        "value": [
+          {
+            "name": "a.txt",
+            "text": "上传甲\n"
+          },
+          {
+            "name": "b.txt",
+            "text": "upload B\n"
+          }
+        ],
+        "session": "hcss"
+      }
+    },
+    {
+      "name": "bsk_interact",
+      "args": {
+        "action": "upload",
+        "session": "hcss",
+        "target": "#single",
+        "files": [
+          "C:\\Users\\caiqy\\AppData\\Local\\Temp\\bsk-candidate-live-edEyiD\\missing.txt"
+        ]
+      },
+      "elapsedMs": 48,
+      "ok": false,
+      "error": "BskError: bsk upload failed: open upload file C:\\Users\\caiqy\\AppData\\Local\\Temp\\bsk-candidate-live-edEyiD\\missing.txt: 系统找不到指定的文件。 (os error 2) (hint: is the daemon running? try `bsk daemon start` or `bsk status`)"
+    },
+    {
+      "name": "bsk_interact",
+      "args": {
+        "action": "download",
+        "session": "hcss",
+        "target": "#download",
+        "output": "D:\\Caiqy\\Projects\\Github\\dsh-plugins\\artifacts\\browserskill-dsh-enhancement\\live-phase-6-edge\\edge\\download.txt"
+      },
+      "elapsedMs": 467,
+      "ok": true,
+      "result": {
+        "byte_size": 26,
+        "danger": "safe",
+        "mime": "text/plain",
+        "path": "D:\\Caiqy\\Projects\\Github\\dsh-plugins\\artifacts\\browserskill-dsh-enhancement\\live-phase-6-edge\\edge\\download.txt",
+        "suggested_filename": "bsk-smoke.txt",
+        "tab_id": 1014172536,
+        "used_selector": "#download",
+        "session": "hcss"
+      }
+    },
+    {
+      "name": "bsk_interact",
+      "args": {
+        "action": "download",
+        "session": "hcss",
+        "target": "#download",
+        "output": "D:\\Caiqy\\Projects\\Github\\dsh-plugins\\artifacts\\browserskill-dsh-enhancement\\live-phase-6-edge\\edge\\download.txt"
+      },
+      "elapsedMs": 52,
+      "ok": false,
+      "error": "BskError: bsk download failed: output already exists (pass --overwrite to replace it): D:\\Caiqy\\Projects\\Github\\dsh-plugins\\artifacts\\browserskill-dsh-enhancement\\live-phase-6-edge\\edge\\download.txt (hint: is the daemon running? try `bsk daemon start` or `bsk status`)"
+    },
+    {
+      "name": "bsk_interact",
+      "args": {
+        "action": "download",
+        "session": "hcss",
+        "target": "#download",
+        "output": "D:\\Caiqy\\Projects\\Github\\dsh-plugins\\artifacts\\browserskill-dsh-enhancement\\live-phase-6-edge\\edge\\download.txt",
+        "overwrite": true
+      },
+      "elapsedMs": 301,
+      "ok": true,
+      "result": {
+        "byte_size": 26,
+        "danger": "safe",
+        "mime": "text/plain",
+        "path": "D:\\Caiqy\\Projects\\Github\\dsh-plugins\\artifacts\\browserskill-dsh-enhancement\\live-phase-6-edge\\edge\\download.txt",
+        "suggested_filename": "bsk-smoke.txt",
+        "tab_id": 1014172536,
+        "used_selector": "#download",
+        "session": "hcss"
+      }
+    },
+    {
+      "name": "bsk_inspect",
+      "args": {
+        "action": "screenshot",
+        "session": "hcss",
+        "fullPage": true,
+        "scope": "current",
+        "output": "D:\\Caiqy\\Projects\\Github\\dsh-plugins\\artifacts\\browserskill-dsh-enhancement\\live-phase-6-edge\\edge\\full.png",
+        "timeoutMs": 30000
+      },
+      "elapsedMs": 3917,
+      "ok": true,
+      "result": {
+        "session": "hcss",
+        "tabId": 1014172536,
+        "path": "D:\\Caiqy\\Projects\\Github\\dsh-plugins\\artifacts\\browserskill-dsh-enhancement\\live-phase-6-edge\\edge\\full.png",
+        "savedTo": "D:\\Caiqy\\Projects\\Github\\dsh-plugins\\artifacts\\browserskill-dsh-enhancement\\live-phase-6-edge\\edge\\full.png",
+        "scope": "current",
+        "width": 961,
+        "height": 2296,
+        "byteSize": 49423,
+        "image": {
+          "attachmentId": "live-1",
+          "mediaType": "image/png",
+          "bytes": 49423,
+          "width": 961,
+          "height": 2296,
+          "name": "screenshot-hcss.png"
+        }
+      }
+    },
+    {
+      "name": "bsk_inspect",
+      "args": {
+        "action": "screenshot",
+        "session": "hcss",
+        "fullPage": true,
+        "scope": "current",
+        "output": "D:\\Caiqy\\Projects\\Github\\dsh-plugins\\artifacts\\browserskill-dsh-enhancement\\live-phase-6-edge\\edge\\full.png",
+        "timeoutMs": 30000
+      },
+      "elapsedMs": 3935,
+      "ok": false,
+      "error": "Error: EEXIST: file already exists, copyfile 'C:\\Users\\caiqy\\AppData\\Local\\Temp\\bsk-screenshot-1792398250997-ezbm0j.png' -> 'D:\\Caiqy\\Projects\\Github\\dsh-plugins\\artifacts\\browserskill-dsh-enhancement\\live-phase-6-edge\\edge\\full.png'"
+    },
+    {
+      "name": "bsk_inspect",
+      "args": {
+        "action": "screenshot",
+        "session": "hcss",
+        "fullPage": true,
+        "scope": "follow",
+        "output": "D:\\Caiqy\\Projects\\Github\\dsh-plugins\\artifacts\\browserskill-dsh-enhancement\\live-phase-6-edge\\edge\\follow.png",
+        "timeoutMs": 30000
+      },
+      "elapsedMs": 3911,
+      "ok": true,
+      "result": {
+        "session": "hcss",
+        "tabId": 1014172536,
+        "path": "D:\\Caiqy\\Projects\\Github\\dsh-plugins\\artifacts\\browserskill-dsh-enhancement\\live-phase-6-edge\\edge\\follow.png",
+        "savedTo": "D:\\Caiqy\\Projects\\Github\\dsh-plugins\\artifacts\\browserskill-dsh-enhancement\\live-phase-6-edge\\edge\\follow.png",
+        "scope": "follow",
+        "width": 961,
+        "height": 2296,
+        "byteSize": 49423,
+        "image": {
+          "attachmentId": "live-3",
+          "mediaType": "image/png",
+          "bytes": 49423,
+          "width": 961,
+          "height": 2296,
+          "name": "screenshot-hcss.png"
+        }
+      }
+    },
+    {
+      "name": "bsk_inspect",
+      "args": {
+        "action": "html",
+        "session": "hcss"
+      },
+      "elapsedMs": 57,
+      "ok": true,
+      "result": {
+        "session": "hcss",
+        "tabId": 1014172536,
+        "truncated": false,
+        "byteSize": 4831,
+        "html": "<!DOCTYPE html><html lang=\"en\"><head><meta charset=\"utf-8\"><title>BrowserSkill candidate smoke</title>\n<style>body{font:18px sans-serif;margin:24px}input,a,button{display:block;margin:16px}#drop{border:2px dashed;padding:24px;width:300px}.menu button{display:none}.menu:hover button{display:block}.spacer{height:1800px}</style>\n<style wxt-shadow-root-document-styles=\"ae0g6r9769m\">@property --tw-translate-x{syntax:\"*\";inherits:false;initial-value:0}@property --tw-translate-y{syntax:\"*\";inherits:false;initial-value:0}@property --tw-translate-z{syntax:\"*\";inherits:false;initial-value:0}@property --tw-rotate-x{syntax:\"*\";inherits:false}@property --tw-rotate-y{syntax:\"*\";inherits:false}@property --tw-rotate-z{syntax:\"*\";inherits:false}@property --tw-skew-x{syntax:\"*\";inherits:false}@property --tw-skew-y{syntax:\"*\";inherits:false}@property --tw-space-y-reverse{syntax:\"*\";inherits:false;initial-value:0}@property --tw-divide-x-reverse{syntax:\"*\";inherits:false;initial-value:0}@property --tw-border-style{syntax:\"*\";inherits:false;initial-value:solid}@property --tw-divide-y-reverse{syntax:\"*\";inherits:false;initial-value:0}@property --tw-leading{syntax:\"*\";inherits:false}@property --tw-font-weight{syntax:\"*\";inherits:false}@property --tw-tracking{syntax:\"*\";inherits:false}@property --tw-ordinal{syntax:\"*\";inherits:false}@property --tw-slashed-zero{syntax:\"*\";inherits:false}@property --tw-numeric-figure{syntax:\"*\";inherits:false}@property --tw-numeric-spacing{syntax:\"*\";inherits:false}@property --tw-numeric-fraction{syntax:\"*\";inherits:false}@property --tw-shadow{syntax:\"*\";inherits:false;initial-value:0 0 #0000}@property --tw-shadow-color{syntax:\"*\";inherits:false}@property --tw-shadow-alpha{syntax:\"<percentage>\";inherits:false;initial-value:100%}@property --tw-inset-shadow{syntax:\"*\";inherits:false;initial-value:0 0 #0000}@property --tw-inset-shadow-color{syntax:\"*\";inherits:false}@property --tw-inset-shadow-alpha{syntax:\"<percentage>\";inherits:false;initial-value:100%}@property --tw-ring-color{syntax:\"*\";inherits:false}@property --tw-ring-shadow{syntax:\"*\";inherits:false;initial-value:0 0 #0000}@property --tw-inset-ring-color{syntax:\"*\";inherits:false}@property --tw-inset-ring-shadow{syntax:\"*\";inherits:false;initial-value:0 0 #0000}@property --tw-ring-inset{syntax:\"*\";inherits:false}@property --tw-ring-offset-width{syntax:\"<length>\";inherits:false;initial-value:0}@property --tw-ring-offset-color{syntax:\"*\";inherits:false;initial-value:#fff}@property --tw-ring-offset-shadow{syntax:\"*\";inherits:false;initial-value:0 0 #0000}@property --tw-outline-style{syntax:\"*\";inherits:false;initial-value:solid}@property --tw-blur{syntax:\"*\";inherits:false}@property --tw-brightness{syntax:\"*\";inherits:false}@property --tw-contrast{syntax:\"*\";inherits:false}@property --tw-grayscale{syntax:\"*\";inherits:false}@property --tw-hue-rotate{syntax:\"*\";inherits:false}@property --tw-invert{syntax:\"*\";inherits:false}@property --tw-opacity{syntax:\"*\";inherits:false}@property --tw-saturate{syntax:\"*\";inherits:false}@property --tw-sepia{syntax:\"*\";inherits:false}@property --tw-drop-shadow{syntax:\"*\";inherits:false}@property --tw-drop-shadow-color{syntax:\"*\";inherits:false}@property --tw-drop-shadow-alpha{syntax:\"<percentage>\";inherits:false;initial-value:100%}@property --tw-drop-shadow-size{syntax:\"*\";inherits:false}@property --tw-backdrop-blur{syntax:\"*\";inherits:false}@property --tw-backdrop-brightness{syntax:\"*\";inherits:false}@property --tw-backdrop-contrast{syntax:\"*\";inherits:false}@property --tw-backdrop-grayscale{syntax:\"*\";inherits:false}@property --tw-backdrop-hue-rotate{syntax:\"*\";inherits:false}@property --tw-backdrop-invert{syntax:\"*\";inherits:false}@property --tw-backdrop-opacity{syntax:\"*\";inherits:false}@property --tw-backdrop-saturate{syntax:\"*\";inherits:false}@property --tw-backdrop-sepia{syntax:\"*\";inherits:false}@property --tw-duration{syntax:\"*\";inherits:false}@property --tw-ease{syntax:\"*\";inherits:false}</style></head><body><h1>BrowserSkill 本地候选测试</h1><label>Single file<input id=\"single\" type=\"file\"></label><label>Multiple files<input id=\"multi\" type=\"file\" multiple=\"\"></label>\n<div id=\"drop\">Drop test files</div><a id=\"download\" href=\"/download\" download=\"bsk-smoke.txt\">Download test file</a>\n<div class=\"menu\" role=\"button\" tabindex=\"0\" aria-haspopup=\"menu\">Hover test menu<button>Hidden action</button></div><div class=\"spacer\">Full-page test spacer</div><p>End of test page</p>\n<script>const drop=document.querySelector('#drop');drop.addEventListener('dragover',e=>e.preventDefault());drop.addEventListener('drop',e=>{e.preventDefault();window.dropped=Promise.all([...e.dataTransfer.files].map(async f=>({name:f.name,text:await f.text()})));});</script></body><browser-skill-overlay aria-hidden=\"true\" data-bsk-overlay=\"\"></browser-skill-overlay></html>"
+      }
+    },
+    {
+      "name": "bsk_inspect",
+      "args": {
+        "action": "html",
+        "session": "hcss",
+        "output": "D:\\Caiqy\\Projects\\Github\\dsh-plugins\\artifacts\\browserskill-dsh-enhancement\\live-phase-6-edge\\edge\\page.html"
+      },
+      "elapsedMs": 49,
+      "ok": true,
+      "result": {
+        "session": "hcss",
+        "tabId": 1014172536,
+        "truncated": false,
+        "byteSize": 4831,
+        "path": "D:\\Caiqy\\Projects\\Github\\dsh-plugins\\artifacts\\browserskill-dsh-enhancement\\live-phase-6-edge\\edge\\page.html",
+        "writtenBytes": 4831
+      }
+    },
+    {
+      "name": "bsk_inspect",
+      "args": {
+        "action": "html",
+        "session": "hcss",
+        "output": "D:\\Caiqy\\Projects\\Github\\dsh-plugins\\artifacts\\browserskill-dsh-enhancement\\live-phase-6-edge\\edge\\page.html"
+      },
+      "elapsedMs": 46,
+      "ok": false,
+      "error": "Error: EEXIST: file already exists, open 'D:\\Caiqy\\Projects\\Github\\dsh-plugins\\artifacts\\browserskill-dsh-enhancement\\live-phase-6-edge\\edge\\page.html'"
+    },
+    {
+      "name": "bsk_assist",
+      "args": {
+        "action": "emulate",
+        "session": "hcss",
+        "device": "iphone-14",
+        "width": 430,
+        "mobile": false,
+        "dpr": 2,
+        "touch": false,
+        "ua": "BrowserSkillSmoke/1.0",
+        "acceptLanguage": "en-US"
+      },
+      "elapsedMs": 52,
+      "ok": true,
+      "result": {
+        "session": "hcss",
+        "tabId": 1014172536,
+        "cleared": false
+      }
+    },
+    {
+      "name": "bsk_interact",
+      "args": {
+        "action": "evaluate",
+        "session": "hcss",
+        "expression": "({ua:navigator.userAgent,dpr:devicePixelRatio,touch:navigator.maxTouchPoints})"
+      },
+      "elapsedMs": 50,
+      "ok": true,
+      "result": {
+        "ok": true,
+        "tab_id": 1014172536,
+        "value": {
+          "dpr": 2,
+          "touch": 0,
+          "ua": "BrowserSkillSmoke/1.0"
+        },
+        "session": "hcss"
+      }
+    },
+    {
+      "name": "bsk_assist",
+      "args": {
+        "action": "emulate",
+        "session": "hcss",
+        "off": true,
+        "touch": false
+      },
+      "elapsedMs": 0,
+      "ok": false,
+      "error": "Error: off is mutually exclusive with emulation overrides"
+    },
+    {
+      "name": "bsk_assist",
+      "args": {
+        "action": "emulate",
+        "session": "hcss",
+        "off": true
+      },
+      "elapsedMs": 51,
+      "ok": true,
+      "result": {
+        "session": "hcss",
+        "tabId": 1014172536,
+        "cleared": true
+      }
+    },
+    {
+      "name": "bsk_inspect",
+      "args": {
+        "action": "observe",
+        "session": "hcss",
+        "probeHover": true,
+        "debugSurfaces": true
+      },
+      "elapsedMs": 726,
+      "ok": true,
+      "result": {
+        "session": "hcss",
+        "tabId": 1014172536,
+        "text": "@vom 1\n@view 961x660\n@layers 1 focus=L1\nL1 page\n  RootWebArea \"BrowserSkill candidate smoke\"\n    heading \"BrowserSkill 本地候选测试\"\n      StaticText \"BrowserSkill 本地候选测试\"\n    LabelText \"Single file\"\n      @e1 button \"Single file\" =\"C:\\\\fakepath\\\\a.txt\"\n      StaticText \"Single file\"\n    LabelText \"Multiple files\"\n      @e2 button \"Multiple files\" =\"C:\\\\fakepath\\\\a.txt\"\n      StaticText \"Multiple files\"\n    StaticText \"Drop test files\"\n    @e3 link \"Download test file\"\n    @e4 button \"Hover test menu [has-submenu]\" [hover first: Hidden action]\n    StaticText \"Full-page test spacer\"\n    paragraph \"End of test page\"\n      StaticText \"End of test page\"",
+        "refCount": 4,
+        "truncated": false,
+        "hoverProbe": {
+          "performed": true,
+          "revealed_content": true
+        },
+        "debug": {
+          "surface_probes": [
+            {
+              "trigger_backend_node_id": 30,
+              "trigger_point": {
+                "x": 480.5,
+                "y": 415.21875
+              },
+              "trigger_action": "hover",
+              "sub_items": [
+                "Hidden action"
+              ],
+              "confidence": "medium"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "bsk_session",
+      "args": {
+        "action": "stop",
+        "session": "hcss"
+      },
+      "elapsedMs": 120,
+      "ok": true,
+      "result": {
+        "stopped": "hcss",
+        "requestId": "1792398542252:a803d0b1-42f5-49ed-b654-c14ce58026b6",
+        "alreadyClosed": false
+      }
+    },
+    {
+      "name": "bsk_session",
+      "args": {
+        "action": "list"
+      },
+      "elapsedMs": 0,
+      "ok": true,
+      "result": {
+        "pendingCleanup": 0,
+        "sessions": []
+      }
+    }
+  ],
+  "browsers": [
+    {
+      "label": "edge",
+      "browser": "daae7a27",
+      "results": {
+        "evaluate": {
+          "passed": true,
+          "value": {
+            "ok": true,
+            "tab_id": 1014172536,
+            "value": {
+              "className": "Promise",
+              "description": "Promise",
+              "objectId": "4278784305983253984.2.2",
+              "subtype": "promise",
+              "type": "object"
+            },
+            "session": "hcss"
+          }
+        },
+        "uploadSingle": {
+          "passed": true
+        },
+        "uploadMultiple": {
+          "passed": true
+        },
+        "uploadDrop": {
+          "passed": true
+        },
+        "missingUpload": {
+          "passed": true
+        },
+        "download": {
+          "passed": true
+        },
+        "screenshot": {
+          "passed": true,
+          "value": {
+            "path": "D:\\Caiqy\\Projects\\Github\\dsh-plugins\\artifacts\\browserskill-dsh-enhancement\\live-phase-6-edge\\edge\\full.png",
+            "width": 961,
+            "height": 2296,
+            "attachment": {
+              "attachmentId": "live-1",
+              "mediaType": "image/png",
+              "bytes": 49423,
+              "width": 961,
+              "height": 2296,
+              "name": "screenshot-hcss.png"
+            }
+          }
+        },
+        "html": {
+          "passed": true,
+          "value": {
+            "session": "hcss",
+            "tabId": 1014172536,
+            "truncated": false,
+            "byteSize": 4831,
+            "path": "D:\\Caiqy\\Projects\\Github\\dsh-plugins\\artifacts\\browserskill-dsh-enhancement\\live-phase-6-edge\\edge\\page.html",
+            "writtenBytes": 4831
+          }
+        },
+        "emulate": {
+          "passed": true,
+          "value": {
+            "dpr": 2,
+            "touch": 0,
+            "ua": "BrowserSkillSmoke/1.0"
+          }
+        },
+        "hover": {
+          "passed": true,
+          "value": {
+            "hoverProbe": {
+              "performed": true,
+              "revealed_content": true
+            },
+            "debug": {
+              "surface_probes": [
+                {
+                  "trigger_backend_node_id": 30,
+                  "trigger_point": {
+                    "x": 480.5,
+                    "y": 415.21875
+                  },
+                  "trigger_action": "hover",
+                  "sub_items": [
+                    "Hidden action"
+                  ],
+                  "confidence": "medium"
+                }
+              ]
+            }
+          }
+        }
+      },
+      "passed": true,
+      "connection": {
+        "instance_id": "daae7a27",
+        "browser_name": "edge",
+        "browser_version": "155.0.0.0",
+        "extension_version": "0.3.3",
+        "label": "edge-gmail3",
+        "session_count": 0,
+        "connected_at_ms": 1792398200056,
+        "version_skew": false,
+        "extension_protocol_version": "1.3",
+        "unresponsive": false
+      },
+      "session": "hcss",
+      "nameRequested": "bsk-candidate-edge"
+    }
+  ],
+  "failures": [],
+  "cleanup": [
+    {
+      "browser": "daae7a27",
+      "session": "hcss",
+      "stopped": true,
+      "explicitScreenshotRetained": true
+    }
+  ],
+  "fixtureBoundary": "Packed apply and all six public tools use the unmodified real runner/CLI/daemon/extensions. Context registration, image-capable model metadata and the durable local attachment store are host fixtures; no desktop GUI or actual DSH attachment service is claimed.",
+  "package": {
+    "name": "@wxg-prc-cpg/browser-skill-dsh-plugin",
+    "description": "DeepSeek Harness tool plugin that exposes BrowserSkill browser automation (bsk_* tools) to the model",
+    "version": "0.3.3-dsh.1",
+    "license": "MIT",
+    "publishConfig": {
+      "access": "public",
+      "registry": "https://registry.npmjs.org/"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/Tencent/BrowserSkill.git",
+      "directory": "packages/dsh-plugin-browserskill"
+    },
+    "homepage": "https://github.com/Tencent/BrowserSkill/tree/main/packages/dsh-plugin-browserskill#readme",
+    "bugs": {
+      "url": "https://github.com/Tencent/BrowserSkill/issues"
+    },
+    "keywords": [
+      "dsh-plugin",
+      "deepseek-harness",
+      "browserskill",
+      "browser-automation"
+    ],
+    "type": "module",
+    "main": "lib/index.mjs",
+    "types": "lib/index.d.mts",
+    "exports": {
+      ".": {
+        "types": "./lib/index.d.mts",
+        "default": "./lib/index.mjs"
+      },
+      "./client": {
+        "default": "./lib/client.cjs"
+      },
+      "./package.json": "./package.json"
+    },
+    "files": [
+      "lib",
+      "skill",
+      "cordis.patch.yml",
+      "LICENSE"
+    ],
+    "dsh": {
+      "bundle": {
+        "patch": "./cordis.patch.yml"
+      },
+      "client": {
+        "platform": "web",
+        "inject": [
+          "@deepseek-ai/dsh-client-ui-tool",
+          "@deepseek-ai/dsh-client-ui-layout"
+        ],
+        "external": [
+          "@deepseek-ai/dsh-client-ui-primitives"
+        ]
+      }
+    },
+    "scripts": {
+      "build": "node scripts/build-client-css.mjs && node scripts/build-skill-content.mjs && tsdown",
+      "typecheck": "pnpm run build:skill && tsc --noEmit",
+      "test": "pnpm run build:css && pnpm run build:skill && vitest run",
+      "build:css": "node scripts/build-client-css.mjs",
+      "build:skill": "node scripts/build-skill-content.mjs",
+      "prepack": "pnpm run build",
+      "lint:publint": "publint"
+    },
+    "peerDependencies": {
+      "@deepseek-ai/cordis": "^4.0.2",
+      "@deepseek-ai/dsh-attachment": "^0.1.5-rc.3 || ^0.2.0-rc.1",
+      "@deepseek-ai/dsh-client-ui-primitives": "^0.1.5-rc.3 || ^0.2.0-rc.1",
+      "@deepseek-ai/dsh-client-ui-tool": "^0.1.5-rc.3 || ^0.2.0-rc.1",
+      "@deepseek-ai/dsh-llm": "^0.1.5-rc.3 || ^0.2.0-rc.1",
+      "@deepseek-ai/dsh-tools": "^0.1.5-rc.3 || ^0.2.0-rc.1",
+      "@deepseek-ai/schemastery": "^3.18.2",
+      "react": "^18.2.0"
+    },
+    "peerDependenciesMeta": {
+      "@deepseek-ai/dsh-attachment": {
+        "optional": true
+      },
+      "@deepseek-ai/dsh-client-ui-primitives": {
+        "optional": true
+      },
+      "@deepseek-ai/dsh-client-ui-tool": {
+        "optional": true
+      },
+      "react": {
+        "optional": true
+      }
+    },
+    "devDependencies": {
+      "@browser-skill/ui": "workspace:*",
+      "@deepseek-ai/cordis": "4.0.2",
+      "@deepseek-ai/dsh-agent": "0.1.5-rc.3",
+      "@deepseek-ai/dsh-agent-loop": "0.1.5-rc.3",
+      "@deepseek-ai/dsh-api-session-controller": "0.1.5-rc.3",
+      "@deepseek-ai/dsh-attachment": "0.1.5-rc.3",
+      "@deepseek-ai/dsh-client-store": "0.1.5-rc.3",
+      "@deepseek-ai/dsh-client-ui-chat": "0.1.5-rc.3",
+      "@deepseek-ai/dsh-client-ui-conversation": "0.1.5-rc.3",
+      "@deepseek-ai/dsh-client-ui-layout": "0.1.5-rc.3",
+      "@deepseek-ai/dsh-client-ui-primitives": "0.1.5-rc.3",
+      "@deepseek-ai/dsh-client-ui-renderer": "0.1.5-rc.3",
+      "@deepseek-ai/dsh-client-ui-session": "0.1.5-rc.3",
+      "@deepseek-ai/dsh-client-ui-slots": "0.1.5-rc.3",
+      "@deepseek-ai/dsh-client-ui-tool": "0.1.5-rc.3",
+      "@deepseek-ai/dsh-llm": "0.1.5-rc.3",
+      "@deepseek-ai/dsh-scope": "0.1.5-rc.3",
+      "@deepseek-ai/dsh-session": "0.1.5-rc.3",
+      "@deepseek-ai/dsh-session-projection": "0.1.5-rc.3",
+      "@deepseek-ai/dsh-skill": "0.1.5-rc.3",
+      "@deepseek-ai/dsh-system-prompt": "0.1.5-rc.3",
+      "@deepseek-ai/dsh-tool-skill": "0.1.5-rc.3",
+      "@deepseek-ai/dsh-tools": "0.1.5-rc.3",
+      "@deepseek-ai/schemastery": "3.18.2",
+      "@remixicon/react": "^4.9.0",
+      "@tailwindcss/cli": "^4.3.3",
+      "@testing-library/react": "^16.1.0",
+      "@types/node": "^22.10.0",
+      "@types/react": "~18.3.1",
+      "@types/react-dom": "^18.3.0",
+      "@types/semver": "7.7.1",
+      "happy-dom": "^15.11.7",
+      "lightningcss": "^1.30.0",
+      "postcss": "^8.5.0",
+      "postcss-prefix-selector": "^2.1.1",
+      "react": "^18.2.0",
+      "react-dom": "^18.2.0",
+      "semver": "7.8.5",
+      "tailwindcss": "^4.3.3",
+      "tsdown": "^0.22.14",
+      "typescript": "^5.8.0",
+      "vitest": "^4.1.6"
+    }
+  },
+  "connected": [
+    {
+      "instance_id": "2303ebf6",
+      "browser_name": "chrome",
+      "browser_version": "155.0.0.0",
+      "extension_version": "0.3.3",
+      "label": "chrome",
+      "session_count": 0,
+      "connected_at_ms": 1792398106759,
+      "version_skew": false,
+      "extension_protocol_version": "1.3",
+      "unresponsive": false
+    },
+    {
+      "instance_id": "daae7a27",
+      "browser_name": "edge",
+      "browser_version": "155.0.0.0",
+      "extension_version": "0.3.3",
+      "label": "edge-gmail3",
+      "session_count": 0,
+      "connected_at_ms": 1792398200056,
+      "version_skew": false,
+      "extension_protocol_version": "1.3",
+      "unresponsive": false
+    }
+  ],
+  "finishedAt": "2026-10-19T08:26:53.522Z",
+  "requestedBrowsers": [
+    [
+      "edge",
+      "daae7a27"
+    ]
+  ],
+  "requestedFeatures": [
+    "evaluate",
+    "uploadSingle",
+    "uploadMultiple",
+    "uploadDrop",
+    "missingUpload",
+    "download",
+    "screenshot",
+    "html",
+    "emulate",
+    "hover"
+  ],
+  "passed": true
+}
