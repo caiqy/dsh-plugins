@@ -1,7 +1,8 @@
 # BrowserSkill DSH 增强候选
 
 - 官方基线：`dsh-plugin-v0.3.3` / `d9a78aed47874459ae1e44523a597e42dd9acf99`
-- 源码分支：`packages/browser-skill` 内 `dsh/plugin-parity-0.3.3`
+- 长期维护分支：`packages/browser-skill` 内 [`dsh/plugin-parity-0.3.3`](https://github.com/caiqy/BrowserSkill/tree/dsh/plugin-parity-0.3.3)，后续在此分支合入官方稳定 tag、复用增强与测试
+- 固定版本 tag：[`dsh-plugin-v0.3.3-dsh.1`](https://github.com/caiqy/BrowserSkill/tree/dsh-plugin-v0.3.3-dsh.1)，指向下面的最终 HEAD；分支及 tag 已推送到 fork，未创建 GitHub Release
 - 实现补丁提交：`6ea57e9223f0ef082db1c729da4bc7af3e7aa7a9`
 - 最终 HEAD：`cb389bb4a31cfa200ba179e9279e2f6a347509d4`（补充复现检查说明，无运行时代码变化）
 - 包名：`@wxg-prc-cpg/browser-skill-dsh-plugin`
@@ -37,4 +38,4 @@ Comet Runtime 完整 typecheck、604/604 测试、build、publint、上游包检
 
 [desktop 安装后实测记录与截图](./desktop-installed/VERIFICATION.md) 单独记录本次实际宿主测试及 HTTP(S) 页面要求、网页认证范围。实际 DSH 附件已验证；独立 Chrome 访问 desktop 网页时需要认证，未读取凭据或宣称已遍历网页内部 UI。
 
-未执行远端 push/merge/npm 发布。官方 npm 更新会覆盖本地增强；安装、官方 0.3.3 回退及未来 stable tag 重放步骤见上述交付说明。
+2026-10-19 已按用户授权将长期增强分支和上述固定版本 tag 推送到 `caiqy/BrowserSkill`；未合并到官方仓库，未创建 PR、GitHub Release 或发布 npm。后续复用长期增强分支，合入官方稳定 tag 后验证和打包，维护约定见 [工作区说明](../../README.md#browserskill-子仓库)。官方 npm 更新会覆盖本地增强；安装及官方 0.3.3 回退步骤见上述交付说明。
