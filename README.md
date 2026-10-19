@@ -24,6 +24,21 @@ pnpm typecheck        # 全部类型检查
 pnpm test             # 全部冒烟测试（node --test，无框架）
 ```
 
+## BrowserSkill 子仓库
+
+`packages/browser-skill/` 是 Git submodule，fork 为 <https://github.com/caiqy/BrowserSkill>（`origin`），官方上游为 <https://github.com/Tencent/BrowserSkill>（`upstream`）。当前固定在 `dsh-plugin-v0.3.3`，提交 `d9a78aed47874459ae1e44523a597e42dd9acf99`。
+
+它保留自己的 pnpm workspace、依赖和构建流程，显式排除在根 workspace 之外。DSH 插件源码位于 `packages/browser-skill/packages/dsh-plugin-browserskill/`；增强仅修改插件层，Chrome、Edge 继续使用官方扩展。
+
+新 checkout 获取源码并配置官方远端：
+
+```sh
+git submodule update --init packages/browser-skill
+git -C packages/browser-skill remote add upstream https://github.com/Tencent/BrowserSkill.git
+```
+
+接口方案确认后，从固定基线创建增强分支。官方升级时检查并重放仍需保留的补丁，独立验证和打包，再更新父仓库中的子模块提交；不自动跟随 fork 的 main。
+
 ## 新建一个插件
 
 1. `cp -r packages/dsh-plugin-example packages/dsh-plugin-<名字>`

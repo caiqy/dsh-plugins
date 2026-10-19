@@ -4,3 +4,6 @@
 [submodule "packages/dsh-subagent-registry"]
 	path = packages/dsh-subagent-registry
 	url = https://github.com/fan56/dsh-subagent-registry.git
+[submodule "vendor/browser-skill"]
+	path = packages/browser-skill
+	url = https://github.com/caiqy/BrowserSkill.git

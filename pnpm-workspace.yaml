@@ -1,5 +1,7 @@
 packages:
   - packages/*
+  # BrowserSkill 保留自己的 pnpm workspace 和构建流程。
+  - '!packages/browser-skill'
 
 # 所有插件对齐同一套 DSH 宿主版本，升级只改这里。
 # 注意：@deepseek-ai/* 的 npm `latest` 标签是旧的（如 dsh-tools 指向 0.0.1-rc.1），
