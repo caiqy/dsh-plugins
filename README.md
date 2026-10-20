@@ -19,7 +19,26 @@ https://raw.githubusercontent.com/caiqy/dsh-plugins/main/index.json
 
 BrowserSkill 增强版要求另行安装官方 CLI 和浏览器扩展（当前配套 0.3.3），不能与官方 DSH 插件同时启用。发行使用 npm 的 `dsh` 标签和索引中的精确版本，不覆盖官方 npm 包。
 
-维护时先运行两个包各自的类型检查、构建与测试，再打包并发布到 `https://registry.npmjs.org/`。确认 npm 版本可读后，才将真实发布时间（Unix 秒）、版本及安装来源写入 `index.json` 并推送；DSH 默认缓存索引 10 分钟。根 workspace 不发布，BrowserSkill 的构建在其独立 workspace 内执行。
+发版使用 GitHub Actions + npm Trusted Publishing（OIDC），不需要在 CI 保存 npm token 或重复浏览器登录。先在对应源码仓库修改版本并推送，再在本仓库选择一个插件发版（版本号为示例）：
+
+```sh
+pnpm release web-search 0.1.1
+pnpm release browser-skill 0.3.3-dsh.3
+
+# 使用现有版本验证 Actions 构建、测试与打包，不发布。
+pnpm release web-search 0.1.0 --check
+pnpm release browser-skill 0.3.3-dsh.2 --check
+```
+
+本机需已登录 GitHub CLI；可用 `--ref <branch-or-tag>` 指定已推送的候选。两个插件在各自源码仓库运行发布工作流，只发布所选包。也可推送 `web-search-v<version>` / `caiqy-dsh-plugin-v<version>` tag 触发，或在对应仓库 Actions 手动运行。npm 发布仍需先为每个包配置 Trusted Publisher。
+
+工作流会类型检查、构建、测试、打包并验证真实公开 npm 包。市场索引在 Web Search 工作流成功后及每小时第 17、47 分钟同步；BrowserSkill 发行会由定时任务接入。也可以立即手动同步指定插件：
+
+```sh
+gh workflow run sync-market-index.yml --repo caiqy/dsh-plugins -f plugin=browser-skill
+```
+
+索引只有在公开包可下载且哈希校验通过后才更新，保留历史版本。GitHub 定时调度可能延迟，DSH 默认另缓存索引 10 分钟。认证字段、检查模式、失败重试及子模块维护要点见 [AGENTS.md 的发版说明](AGENTS.md#按插件发版github-actions)。根 workspace 不发布，BrowserSkill 保持自己的构建流程。
 
 ## 结构
 
