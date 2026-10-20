@@ -54,7 +54,7 @@ git -C packages/browser-skill remote add upstream https://github.com/Tencent/Bro
 
 ```bash
 pnpm build
-dsh plugin --profile plugins-dev add link:D:/Caiqy/Projects/Github/dsh-plugins/packages/dsh-plugin-example
+dsh plugin --profile plugins-dev add link:./packages/dsh-plugin-example
 dsh --profile plugins-dev --dump-config | Select-String example   # 确认条目进了 loader 树
 dsh --profile plugins-dev                                          # 启动（占用 web 端口，先停掉日常 GUI 或加 --port）
 ```
