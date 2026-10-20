@@ -12,6 +12,7 @@
 | --- | --- | --- |
 | [packages/dsh-plugin-example/](packages/dsh-plugin-example/) | 最小插件模板；从 [src/index.ts](packages/dsh-plugin-example/src/index.ts) 和 [冒烟测试](packages/dsh-plugin-example/test/smoke.test.mjs) 开始 | 根 workspace，普通目录 |
 | [packages/dsh-plugin-web-search/](packages/dsh-plugin-web-search/) | 替换宿主搜索 provider，含配置 UI；先读 [README](packages/dsh-plugin-web-search/README.md) | 根 workspace，普通目录 |
+| [packages/dsh-plugin-toolbox/](packages/dsh-plugin-toolbox/) | DSH 工具箱；设置菜单与逐项功能开关，当前提供 Windows VS Code 启动修复；先读 [README](packages/dsh-plugin-toolbox/README.md) | 根 workspace，普通目录 |
 | [packages/dsh-subagent-registry/](packages/dsh-subagent-registry/) | 自定义子代理派发、续跑、后台追问及 Web 预设管理；先读 [README](packages/dsh-subagent-registry/README.md) | Git submodule，同时纳入根 workspace；自有依赖和 TS 配置 |
 | [packages/browser-skill/](packages/browser-skill/) | BrowserSkill fork；DSH 插件在 [packages/dsh-plugin-browserskill/](packages/browser-skill/packages/dsh-plugin-browserskill/) | Git submodule，明确排除在根 workspace 外；自有 pnpm workspace |
 | [vendor/deepseek-harness/](vendor/deepseek-harness/) | 共享宿主源码参考；用途和升级约定见 [vendor/README.md](vendor/README.md) | 本地 checkout（已忽略，不入库），不参与根构建 |

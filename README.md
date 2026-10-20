@@ -62,6 +62,16 @@ pnpm typecheck        # 全部类型检查
 pnpm test             # 全部冒烟测试（node --test，无框架）
 ```
 
+## DSH 工具箱（本地候选）
+
+[DSH 工具箱](packages/dsh-plugin-toolbox/README.md)（`@caiqy/dsh-plugin-toolbox`）在设置中增加独立菜单，每项功能单独开关并自动保存。本版提供 Windows Desktop 的 VS Code 打开目录修复，尚未发布 npm 或加入市场索引。
+
+```sh
+pnpm --filter @caiqy/dsh-plugin-toolbox typecheck
+pnpm --filter @caiqy/dsh-plugin-toolbox build
+pnpm --filter @caiqy/dsh-plugin-toolbox test
+```
+
 ## BrowserSkill 子仓库
 
 `packages/browser-skill/` 是 Git submodule，fork 为 <https://github.com/caiqy/BrowserSkill>（`origin`），官方上游为 <https://github.com/Tencent/BrowserSkill>（`upstream`）。长期增强分支为 `dsh/plugin-parity-0.3.3`；名称中的 `0.3.3` 表示初始基线，后续继续复用此分支。当前发行版本 `0.3.3-dsh.3` 通过 Actions OIDC 发布，对应提交 `19232997c523ec7e8e95b724feb99cb0f50d2ed0`，父仓库固定该提交。此前 `0.3.3-dsh.2` 保留 tag `caiqy-dsh-plugin-v0.3.3-dsh.2` / `91fae956183d45e3ec2de197e22cdb27f1866382`。早期本地增强版本 `0.3.3-dsh.1` 保留在 tag `dsh-plugin-v0.3.3-dsh.1` / `cb389bb4a31cfa200ba179e9279e2f6a347509d4`；官方初始基线为 `dsh-plugin-v0.3.3` / `d9a78aed47874459ae1e44523a597e42dd9acf99`。增强分支及版本 tag 均已推送到 fork。
