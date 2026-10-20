@@ -7,7 +7,7 @@
 从 npm 安装公开发行版：
 
 ```sh
-dsh plugin --profile desktop add @caiqy/dsh-plugin-web-search@0.1.0
+dsh plugin --profile desktop add @caiqy/dsh-plugin-web-search@0.1.1
 ```
 
 也可以在 DSH 的插件市场添加本仓库索引源：
@@ -27,7 +27,7 @@ pnpm -C packages/dsh-plugin-web-search pack
 将生成的 tarball 安装到所需 profile，例如：
 
 ```sh
-dsh plugin --profile desktop add ./packages/dsh-plugin-web-search/caiqy-dsh-plugin-web-search-0.1.0.tgz
+dsh plugin --profile desktop add ./packages/dsh-plugin-web-search/caiqy-dsh-plugin-web-search-0.1.1.tgz
 ```
 
 在 DSH 的插件详情页打开本插件配置，填写并保存。是否需要重新加载由宿主插件管理器提示决定；本仓库的开发任务不会自动安装或修改你的在用 profile。
