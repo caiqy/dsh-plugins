@@ -3,8 +3,18 @@ lib/
 *.tsbuildinfo
 *.log
 .DS_Store
+Thumbs.db
 .tmp/
 *.tgz
+coverage/
+# 本地环境变量
+.env
+.env.*
+!.env.example
+# 本机宿主 / Agent 配置：含绝对路径，随机器变化，不入库
+/.dsh/
+/.codex/
+/.agents/
 # >>> Comet managed project state >>>
 !/.comet/
 /.comet/*
