@@ -15,6 +15,15 @@
       },
       "versions": [
         {
+          "version": "0.3.3-dsh.3",
+          "publishTimestamp": 1792489422,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org/"
+          },
+          "engines": {}
+        },
+        {
           "version": "0.3.3-dsh.2",
           "publishTimestamp": 1792485310,
           "source": {
@@ -36,6 +45,15 @@
         "directory": "packages/dsh-plugin-web-search"
       },
       "versions": [
+        {
+          "version": "0.1.1",
+          "publishTimestamp": 1792489454,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org/"
+          },
+          "engines": {}
+        },
         {
           "version": "0.1.0",
           "publishTimestamp": 1792485500,
