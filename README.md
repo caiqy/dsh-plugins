@@ -14,20 +14,20 @@ https://raw.githubusercontent.com/caiqy/dsh-plugins/main/index.json
 
 | 插件 | npm 包 | 版本 |
 | --- | --- | --- |
-| BrowserSkill 增强版 | `@caiqy/browser-skill-dsh-plugin` | `0.3.3-dsh.2` |
-| Web Search | `@caiqy/dsh-plugin-web-search` | `0.1.0` |
+| BrowserSkill 增强版 | `@caiqy/browser-skill-dsh-plugin` | `0.3.3-dsh.3` |
+| Web Search | `@caiqy/dsh-plugin-web-search` | `0.1.1` |
 
 BrowserSkill 增强版要求另行安装官方 CLI 和浏览器扩展（当前配套 0.3.3），不能与官方 DSH 插件同时启用。发行使用 npm 的 `dsh` 标签和索引中的精确版本，不覆盖官方 npm 包。
 
 发版使用 GitHub Actions + npm Trusted Publishing（OIDC），不需要在 CI 保存 npm token 或重复浏览器登录。先在对应源码仓库修改版本并推送，再在本仓库选择一个插件发版（版本号为示例）：
 
 ```sh
-pnpm release web-search 0.1.1
-pnpm release browser-skill 0.3.3-dsh.3
+pnpm release web-search 0.1.2
+pnpm release browser-skill 0.3.3-dsh.4
 
 # 使用现有版本验证 Actions 构建、测试与打包，不发布。
-pnpm release web-search 0.1.0 --check
-pnpm release browser-skill 0.3.3-dsh.2 --check
+pnpm release web-search 0.1.1 --check
+pnpm release browser-skill 0.3.3-dsh.3 --check
 ```
 
 本机需已登录 GitHub CLI；可用 `--ref <branch-or-tag>` 指定已推送的候选。两个插件在各自源码仓库运行发布工作流，只发布所选包。也可推送 `web-search-v<version>` / `caiqy-dsh-plugin-v<version>` tag 触发，或在对应仓库 Actions 手动运行。npm 发布仍需先为每个包配置 Trusted Publisher；新连接需在页面给出的期限内（通常 48 小时）完成一次真实 OIDC 发布来激活，检查模式不能激活连接。BrowserSkill 手动运行须选择增强分支 `dsh/plugin-parity-0.3.3`，不要使用跟随上游的 `main` 发布。
@@ -64,7 +64,7 @@ pnpm test             # 全部冒烟测试（node --test，无框架）
 
 ## BrowserSkill 子仓库
 
-`packages/browser-skill/` 是 Git submodule，fork 为 <https://github.com/caiqy/BrowserSkill>（`origin`），官方上游为 <https://github.com/Tencent/BrowserSkill>（`upstream`）。长期增强分支为 `dsh/plugin-parity-0.3.3`；名称中的 `0.3.3` 表示初始基线，后续继续复用此分支。当前发行版本 `0.3.3-dsh.2` 固定为 tag `caiqy-dsh-plugin-v0.3.3-dsh.2`，提交 `91fae956183d45e3ec2de197e22cdb27f1866382`。早期本地增强版本 `0.3.3-dsh.1` 保留在 tag `dsh-plugin-v0.3.3-dsh.1` / `cb389bb4a31cfa200ba179e9279e2f6a347509d4`；官方初始基线为 `dsh-plugin-v0.3.3` / `d9a78aed47874459ae1e44523a597e42dd9acf99`。增强分支及版本 tag 均已推送到 fork。
+`packages/browser-skill/` 是 Git submodule，fork 为 <https://github.com/caiqy/BrowserSkill>（`origin`），官方上游为 <https://github.com/Tencent/BrowserSkill>（`upstream`）。长期增强分支为 `dsh/plugin-parity-0.3.3`；名称中的 `0.3.3` 表示初始基线，后续继续复用此分支。当前发行版本 `0.3.3-dsh.3` 通过 Actions OIDC 发布，对应提交 `19232997c523ec7e8e95b724feb99cb0f50d2ed0`，父仓库固定该提交。此前 `0.3.3-dsh.2` 保留 tag `caiqy-dsh-plugin-v0.3.3-dsh.2` / `91fae956183d45e3ec2de197e22cdb27f1866382`。早期本地增强版本 `0.3.3-dsh.1` 保留在 tag `dsh-plugin-v0.3.3-dsh.1` / `cb389bb4a31cfa200ba179e9279e2f6a347509d4`；官方初始基线为 `dsh-plugin-v0.3.3` / `d9a78aed47874459ae1e44523a597e42dd9acf99`。增强分支及版本 tag 均已推送到 fork。
 
 它保留自己的 pnpm workspace、依赖和构建流程，显式排除在根 workspace 之外。DSH 插件源码位于 `packages/browser-skill/packages/dsh-plugin-browserskill/`；增强仅修改插件层，Chrome、Edge 继续使用官方扩展。
 
@@ -75,9 +75,9 @@ git submodule update --init packages/browser-skill
 git -C packages/browser-skill remote add upstream https://github.com/Tencent/BrowserSkill.git
 ```
 
-维护时切换到上述长期增强分支，复用现有实现、测试和打包流程。子仓库 `main` 保持官方代码；官方发布新稳定 tag 后，将对应 tag 合入增强分支，处理实际冲突，并移除已被官方吸收的本地增强。完成类型检查、测试、构建、包检查和 Chrome/Edge 冒烟后，提高本地版本、打包并为新验收版本创建固定 tag；旧 tag 不移动。无需为每次升级重新开发或新建维护分支。
+维护时切换到上述长期增强分支，复用现有实现、测试和打包流程。子仓库 `main` 保持官方代码；官方发布新稳定 tag 后，将对应 tag 合入增强分支，处理实际冲突，并移除已被官方吸收的本地增强。完成类型检查、测试、构建、包检查和需要的 Chrome/Edge 冒烟后，提高版本并提交推送，选择统一命令或版本 tag 其中一种方式触发发版。手动发版后不要再推送会触发相同版本发布的 tag；源提交由子模块指针及 npm provenance 固定，已有 tag 不移动。无需为每次升级重新开发或新建维护分支。
 
-先推送子仓库增强分支和版本 tag，再提交父仓库的子模块指针，确保其他机器能获取对应提交。父仓库固定验收过的提交，不自动跟随分支更新。现有安装包、实测证据和回退入口见 [交付记录](artifacts/browserskill-dsh-enhancement/DELIVERY.md)；其中链接的候选期文档保留当时记录，分支维护方式以本节为准。
+先推送子仓库增强分支（若选择 tag 发版，再推送对应 tag），再提交父仓库的子模块指针，确保其他机器能获取对应提交。父仓库固定验收过的提交，不自动跟随分支更新。现有安装包、实测证据和回退入口见 [交付记录](artifacts/browserskill-dsh-enhancement/DELIVERY.md)；其中链接的候选期文档保留当时记录，分支维护方式以本节为准。
 
 ## 新建一个插件
 

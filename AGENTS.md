@@ -104,15 +104,15 @@ pnpm -C packages/browser-skill --filter @caiqy/browser-skill-dsh-plugin test
 
 ```sh
 # 版本号为示例，必须与远端对应 package.json 一致。
-pnpm release web-search 0.1.1
-pnpm release browser-skill 0.3.3-dsh.3
+pnpm release web-search 0.1.2
+pnpm release browser-skill 0.3.3-dsh.4
 
 # 先在 Actions 完整构建、测试和打包，但不发布 npm；可使用现有版本。
-pnpm release web-search 0.1.0 --check
-pnpm release browser-skill 0.3.3-dsh.2 --check
+pnpm release web-search 0.1.1 --check
+pnpm release browser-skill 0.3.3-dsh.3 --check
 
 # 默认分支之外的候选必须显式指定已推送的 ref。
-pnpm release browser-skill 0.3.3-dsh.3 --ref <branch-or-tag> --check
+pnpm release browser-skill 0.3.3-dsh.4 --ref <branch-or-tag> --check
 ```
 
 | 选择名 | 仓库 / 默认 ref | 工作流 | 自动发布 tag 前缀 |
