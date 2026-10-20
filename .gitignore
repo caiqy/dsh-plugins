@@ -15,6 +15,8 @@ coverage/
 /.dsh/
 /.codex/
 /.agents/
+# 本地 vendor 参考 checkout，按 vendor/README.md 自行克隆
+/vendor/deepseek-harness/
 # >>> Comet managed project state >>>
 !/.comet/
 /.comet/*

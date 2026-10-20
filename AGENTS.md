@@ -14,7 +14,7 @@
 | [packages/dsh-plugin-web-search/](packages/dsh-plugin-web-search/) | 替换宿主搜索 provider，含配置 UI；先读 [README](packages/dsh-plugin-web-search/README.md) | 根 workspace，普通目录 |
 | [packages/dsh-subagent-registry/](packages/dsh-subagent-registry/) | 自定义子代理派发、续跑、后台追问及 Web 预设管理；先读 [README](packages/dsh-subagent-registry/README.md) | Git submodule，同时纳入根 workspace；自有依赖和 TS 配置 |
 | [packages/browser-skill/](packages/browser-skill/) | BrowserSkill fork；DSH 插件在 [packages/dsh-plugin-browserskill/](packages/browser-skill/packages/dsh-plugin-browserskill/) | Git submodule，明确排除在根 workspace 外；自有 pnpm workspace |
-| [vendor/deepseek-harness/](vendor/deepseek-harness/) | 共享宿主源码参考；用途和升级约定见 [vendor/README.md](vendor/README.md) | Git submodule，不参与根构建 |
+| [vendor/deepseek-harness/](vendor/deepseek-harness/) | 共享宿主源码参考；用途和升级约定见 [vendor/README.md](vendor/README.md) | 本地 checkout（已忽略，不入库），不参与根构建 |
 | [docs/comet/specs/](docs/comet/specs/) | 已沉淀的功能规格 | 历史变更记录在 [docs/comet/archive/](docs/comet/archive/) |
 | [.comet/config.yaml](.comet/config.yaml) | Comet 项目配置，启用 Native，产物根目录为 `docs` | 工作流配置不等于当前有活跃需求 |
 | [.dsh/](.dsh/)、[.codex/](.codex/)、[.agents/](.agents/) | 本项目宿主配置、Hook 与 Comet 路由脚本 | 按当前任务需要读取，不当作插件业务源码 |
@@ -101,7 +101,7 @@ pnpm -C packages/browser-skill --filter @wxg-prc-cpg/browser-skill-dsh-plugin te
 ## Git、联调与工作流边界
 
 - 开始先看 `git status --short` 和 `git submodule status`；子模块关系以 [.gitmodules](.gitmodules) 为准。修改子模块前查看其自己的状态和更具体的指引，父仓库只记录子模块提交指针；按任务范围分别处理提交，不自动升级或重置子模块。
-- [vendor/deepseek-harness/](vendor/deepseek-harness/) 用于核对宿主契约，默认不直接修改。升级宿主需同时核对 SDK、peer 范围与固定子模块提交，不自动跟随上游分支。
+- [vendor/deepseek-harness/](vendor/deepseek-harness/) 是本地参考 checkout（忽略不入库），用于核对宿主契约，默认不直接修改。升级宿主需同时核对 SDK、peer 范围与 [vendor/README.md](vendor/README.md) 记录的固定版本，不自动跟随上游分支。
 - 本地联调优先使用隔离 profile `plugins-dev`，流程见 [本地联调说明](README.md#本地联调)。安装或更新插件、重启在用 profile、发布 npm 包属于额外操作，按用户授权执行；普通开发与文档任务不默认包含这些动作。
 - 客户端改动必须运行包内完整构建；源码或类型检查通过不代表已运行宿主加载了新 bundle。实际 UI 验证需确认目标 profile 加载了新产物，再刷新或按宿主要求重载。
 - 使用 Comet 时，先读取项目配置和当前 selection，再遵循选中 change 的阶段规则；Native 正式产物位于 `docs/comet/changes/<change>/`，运行时数据位于 `.comet/runtime/native/`。没有活跃 change 的普通任务不必创建 change，不手工修改 Runtime 状态，不把 archive 当作当前任务。
