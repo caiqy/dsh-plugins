@@ -2,6 +2,25 @@
 
 DSH（DeepSeek Harness）插件的开发工作区。每个插件是 `packages/` 下一个**互相独立**的 npm 包：独立版本、独立 `package.json`、可单独 `pnpm publish`，只是共用一次 `pnpm install` 和一套 TS 配置。
 
+## 插件发行与市场索引
+
+在 DSH 插件市场添加以下索引源：
+
+```text
+https://raw.githubusercontent.com/caiqy/dsh-plugins/main/index.json
+```
+
+索引列出公开 npm 包的固定版本：
+
+| 插件 | npm 包 | 版本 |
+| --- | --- | --- |
+| BrowserSkill 增强版 | `@caiqy/browser-skill-dsh-plugin` | `0.3.3-dsh.2` |
+| Web Search | `@caiqy/dsh-plugin-web-search` | `0.1.0` |
+
+BrowserSkill 增强版要求另行安装官方 CLI 和浏览器扩展（当前配套 0.3.3），不能与官方 DSH 插件同时启用。发行使用 npm 的 `dsh` 标签和索引中的精确版本，不覆盖官方 npm 包。
+
+维护时先运行两个包各自的类型检查、构建与测试，再打包并发布到 `https://registry.npmjs.org/`。确认 npm 版本可读后，才将真实发布时间（Unix 秒）、版本及安装来源写入 `index.json` 并推送；DSH 默认缓存索引 10 分钟。根 workspace 不发布，BrowserSkill 的构建在其独立 workspace 内执行。
+
 ## 结构
 
 ```
@@ -26,7 +45,7 @@ pnpm test             # 全部冒烟测试（node --test，无框架）
 
 ## BrowserSkill 子仓库
 
-`packages/browser-skill/` 是 Git submodule，fork 为 <https://github.com/caiqy/BrowserSkill>（`origin`），官方上游为 <https://github.com/Tencent/BrowserSkill>（`upstream`）。长期增强分支为 `dsh/plugin-parity-0.3.3`；名称中的 `0.3.3` 表示初始基线，后续继续复用此分支。已验收版本 `0.3.3-dsh.1` 固定为 tag `dsh-plugin-v0.3.3-dsh.1`，提交 `cb389bb4a31cfa200ba179e9279e2f6a347509d4`；官方初始基线为 `dsh-plugin-v0.3.3` / `d9a78aed47874459ae1e44523a597e42dd9acf99`。增强分支及版本 tag 均已推送到 fork。
+`packages/browser-skill/` 是 Git submodule，fork 为 <https://github.com/caiqy/BrowserSkill>（`origin`），官方上游为 <https://github.com/Tencent/BrowserSkill>（`upstream`）。长期增强分支为 `dsh/plugin-parity-0.3.3`；名称中的 `0.3.3` 表示初始基线，后续继续复用此分支。当前发行版本 `0.3.3-dsh.2` 固定为 tag `caiqy-dsh-plugin-v0.3.3-dsh.2`，提交 `91fae956183d45e3ec2de197e22cdb27f1866382`。早期本地增强版本 `0.3.3-dsh.1` 保留在 tag `dsh-plugin-v0.3.3-dsh.1` / `cb389bb4a31cfa200ba179e9279e2f6a347509d4`；官方初始基线为 `dsh-plugin-v0.3.3` / `d9a78aed47874459ae1e44523a597e42dd9acf99`。增强分支及版本 tag 均已推送到 fork。
 
 它保留自己的 pnpm workspace、依赖和构建流程，显式排除在根 workspace 之外。DSH 插件源码位于 `packages/browser-skill/packages/dsh-plugin-browserskill/`；增强仅修改插件层，Chrome、Edge 继续使用官方扩展。
 

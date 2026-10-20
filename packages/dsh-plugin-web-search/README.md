@@ -1,21 +1,33 @@
-# dsh-plugin-web-search
+# @caiqy/dsh-plugin-web-search
 
 替换 DSH 内置 `web_search` 的搜索后端。第一版支持 OpenAI `/v1/alpha/search` 和采用相同协议的兼容接口；不增加模型工具。`web_fetch` 继续使用宿主默认 HTTP 后端。
 
 ## 安装
 
-在仓库根目录安装依赖，再构建与打包：
+从 npm 安装公开发行版：
+
+```sh
+dsh plugin --profile desktop add @caiqy/dsh-plugin-web-search@0.1.0
+```
+
+也可以在 DSH 的插件市场添加本仓库索引源：
+
+```text
+https://raw.githubusercontent.com/caiqy/dsh-plugins/main/index.json
+```
+
+从源码构建时，在仓库根目录安装依赖，再构建与打包：
 
 ```sh
 pnpm install
-pnpm --filter dsh-plugin-web-search build
+pnpm --filter @caiqy/dsh-plugin-web-search build
 pnpm -C packages/dsh-plugin-web-search pack
 ```
 
 将生成的 tarball 安装到所需 profile，例如：
 
 ```sh
-dsh plugin --profile desktop add ./packages/dsh-plugin-web-search/dsh-plugin-web-search-0.1.0.tgz
+dsh plugin --profile desktop add ./packages/dsh-plugin-web-search/caiqy-dsh-plugin-web-search-0.1.0.tgz
 ```
 
 在 DSH 的插件详情页打开本插件配置，填写并保存。是否需要重新加载由宿主插件管理器提示决定；本仓库的开发任务不会自动安装或修改你的在用 profile。
@@ -61,15 +73,15 @@ bundle patch 选择 `web.searchProvider: web-search-provider`，并保留 `fetch
 可运行校验：
 
 ```sh
-pnpm --filter dsh-plugin-web-search typecheck
-pnpm --filter dsh-plugin-web-search build
-pnpm --filter dsh-plugin-web-search test
+pnpm --filter @caiqy/dsh-plugin-web-search typecheck
+pnpm --filter @caiqy/dsh-plugin-web-search build
+pnpm --filter @caiqy/dsh-plugin-web-search test
 ```
 
 真实调用入口从测试进程环境读取 `DSH_SEARCH_TEST_ENDPOINT`（完整 URL）、`DSH_SEARCH_TEST_KEY`、`DSH_SEARCH_TEST_MODEL`：
 
 ```sh
-pnpm --filter dsh-plugin-web-search test:live
+pnpm --filter @caiqy/dsh-plugin-web-search test:live
 ```
 
 本次经用户授权读取全局 OpenCode 配置，使用 `gpt-6-luna` 实测通过：1.225 秒返回 7,991 字符正文和 5 个来源，来源主机为 `docs.python.org`、`www.python.org`、`wiki.python.org`。密钥未打印或复制到仓库；这个模型只用于本次实测，不是插件的通用模型配置。

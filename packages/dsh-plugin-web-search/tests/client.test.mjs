@@ -119,7 +119,7 @@ test('shipped client factory registers the bundle page and passes accessible sta
   runInNewContext(await readFile(new URL('../lib/client.js', import.meta.url), 'utf8'), {
     window: { __ModuleLoader__: { load: entry => { loaded = entry } } }, structuredClone, URL,
   })
-  assert.equal(loaded.id, 'dsh-plugin-web-search')
+  assert.equal(loaded.id, '@caiqy/dsh-plugin-web-search')
   const plugin = loaded.factory(id => {
     if (id === '@deepseek-ai/dsh-client-ui-primitives') return primitives
     assert.ok(['react', 'react/jsx-runtime'].includes(id), `unexpected runtime dependency: ${id}`)
@@ -144,7 +144,7 @@ test('shipped client factory registers the bundle page and passes accessible sta
       register: (registration, component) => { entry = registration; Page = component; return () => { removed = true } },
     },
   })
-  assert.equal(entry.key, 'dsh-plugin-web-search')
+  assert.equal(entry.key, '@caiqy/dsh-plugin-web-search')
   const face = entry.inject()
   assert.equal(face.hooks.searchSettings, scope)
   const describe = await face.describeCredentials()

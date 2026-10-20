@@ -1,0 +1,51 @@
+{
+  "format": 1,
+  "title": "caiqy 的 DSH 插件",
+  "description": "BrowserSkill 增强版与 Web Search 插件发行索引。",
+  "plugins": [
+    {
+      "name": "@caiqy/browser-skill-dsh-plugin",
+      "title": "BrowserSkill 增强版",
+      "description": "BrowserSkill 浏览器自动化增强插件；需另行安装官方 CLI 和浏览器扩展 0.3.3，不能与官方 DSH 插件同时启用。",
+      "author": "caiqy",
+      "homepage": "https://github.com/caiqy/BrowserSkill/tree/dsh/plugin-parity-0.3.3/packages/dsh-plugin-browserskill#readme",
+      "repository": {
+        "url": "https://github.com/caiqy/BrowserSkill.git",
+        "directory": "packages/dsh-plugin-browserskill"
+      },
+      "versions": [
+        {
+          "version": "0.3.3-dsh.2",
+          "publishTimestamp": 1792485310,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org/"
+          },
+          "engines": {}
+        }
+      ]
+    },
+    {
+      "name": "@caiqy/dsh-plugin-web-search",
+      "title": "Web Search",
+      "description": "通过宿主搜索 provider 接口配置 OpenAI alpha 搜索服务，保留内置 web_search 工具和 web_fetch。",
+      "author": "caiqy",
+      "homepage": "https://github.com/caiqy/dsh-plugins/tree/main/packages/dsh-plugin-web-search#readme",
+      "repository": {
+        "url": "https://github.com/caiqy/dsh-plugins.git",
+        "directory": "packages/dsh-plugin-web-search"
+      },
+      "versions": [
+        {
+          "version": "0.1.0",
+          "publishTimestamp": 1792485500,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org/"
+          },
+          "engines": {}
+        }
+      ]
+    }
+  ]
+}

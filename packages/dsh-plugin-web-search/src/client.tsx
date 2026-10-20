@@ -150,6 +150,6 @@ export function apply(ctx: Context): void {
     },
   }
   ctx.effect(() => ctx.slots.inject('plugins.bundle.config', () => ctx.slots.register({
-    name: 'plugins.bundle.config', key: 'dsh-plugin-web-search', inject: () => face,
+    name: 'plugins.bundle.config', key: '@caiqy/dsh-plugin-web-search', inject: () => face,
   }, SearchSettingsPage)), 'web-search-provider: bundle settings')
 }

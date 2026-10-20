@@ -102,13 +102,13 @@ test('next requests resolve changed credentials and updated provider-only config
 test('the bundle patch selects only search and does not carry a tool replacement', async () => {
   const patch = parse(await readFile(new URL('../cordis.patch.yml', import.meta.url), 'utf8'))
   assert.deepEqual(patch[0], { id: 'web', config: { searchProvider: plugin.name, fetchProvider: 'http' } })
-  assert.deepEqual(patch[1].insert, [{ id: plugin.name, name: 'dsh-plugin-web-search' }])
+  assert.deepEqual(patch[1].insert, [{ id: plugin.name, name: '@caiqy/dsh-plugin-web-search' }])
   assert.equal('default' in plugin, false)
   const base = [{ id: 'web', name: '@deepseek-ai/dsh-web', config: { searchProvider: 'deepseek-official', fetchProvider: 'http' } }]
   const warn = message => assert.fail(message)
   const enabled = applyEntryPatches(base, patch, warn)
   assert.equal(enabled.find(row => row.id === 'web').config.searchProvider, plugin.name)
-  assert.equal(enabled.find(row => row.id === plugin.name).name, 'dsh-plugin-web-search')
+  assert.equal(enabled.find(row => row.id === plugin.name).name, '@caiqy/dsh-plugin-web-search')
   const disabled = applyEntryPatches(base, [], warn)
   assert.equal(disabled[0].config.searchProvider, 'deepseek-official')
   assert.equal(disabled.some(row => row.id === plugin.name), false)

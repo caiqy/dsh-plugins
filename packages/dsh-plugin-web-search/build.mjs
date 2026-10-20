@@ -16,6 +16,6 @@ await build({
   jsx: 'automatic',
   external,
   sourcemap: true,
-  banner: { js: 'window.__ModuleLoader__.load({id:"dsh-plugin-web-search",factory:(require)=>{var module={exports:{}};var exports=module.exports;' },
+  banner: { js: 'window.__ModuleLoader__.load({id:"@caiqy/dsh-plugin-web-search",factory:(require)=>{var module={exports:{}};var exports=module.exports;' },
   footer: { js: 'return module.exports;}});' },
 })

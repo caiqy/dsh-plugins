@@ -48,9 +48,9 @@ pnpm --filter dsh-plugin-example build
 pnpm --filter dsh-plugin-example test
 
 # Web Search：包括后端与客户端 bundle
-pnpm --filter dsh-plugin-web-search typecheck
-pnpm --filter dsh-plugin-web-search build
-pnpm --filter dsh-plugin-web-search test
+pnpm --filter @caiqy/dsh-plugin-web-search typecheck
+pnpm --filter @caiqy/dsh-plugin-web-search build
+pnpm --filter @caiqy/dsh-plugin-web-search test
 
 # 子代理注册表：check 同时检查 TS 与客户端构建
 pnpm -C packages/dsh-subagent-registry check
@@ -59,9 +59,9 @@ pnpm -C packages/dsh-subagent-registry test
 
 # BrowserSkill：在其独立 workspace 中安装和执行
 pnpm -C packages/browser-skill install
-pnpm -C packages/browser-skill --filter @wxg-prc-cpg/browser-skill-dsh-plugin typecheck
-pnpm -C packages/browser-skill --filter @wxg-prc-cpg/browser-skill-dsh-plugin build
-pnpm -C packages/browser-skill --filter @wxg-prc-cpg/browser-skill-dsh-plugin test
+pnpm -C packages/browser-skill --filter @caiqy/browser-skill-dsh-plugin typecheck
+pnpm -C packages/browser-skill --filter @caiqy/browser-skill-dsh-plugin build
+pnpm -C packages/browser-skill --filter @caiqy/browser-skill-dsh-plugin test
 ```
 
 注册表的真实宿主验证另有 `test:host` 和 `test:hosts`，所需隔离 SDK、环境变量见其 [开发说明](packages/dsh-subagent-registry/README.md#开发)。Web Search 的 `test:live` 依赖测试端点和凭据，属于真实网络调用；仅在任务需要且已获授权时运行，环境变量见其 [协议与验证](packages/dsh-plugin-web-search/README.md#协议与验证)。

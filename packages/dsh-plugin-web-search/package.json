@@ -1,9 +1,19 @@
 {
-  "name": "dsh-plugin-web-search",
+  "name": "@caiqy/dsh-plugin-web-search",
   "version": "0.1.0",
   "description": "Replace the built-in DSH web_search backend with configurable search providers; OpenAI alpha search first.",
   "type": "module",
   "license": "MIT",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/caiqy/dsh-plugins.git",
+    "directory": "packages/dsh-plugin-web-search"
+  },
+  "homepage": "https://github.com/caiqy/dsh-plugins/tree/main/packages/dsh-plugin-web-search#readme",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "exports": {
