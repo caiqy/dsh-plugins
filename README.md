@@ -23,12 +23,12 @@ BrowserSkill 增强版要求另行安装官方 CLI 和浏览器扩展（当前�
 
 ```sh
 pnpm release web-search 0.1.2
-pnpm release toolbox 0.2.2
+pnpm release toolbox 0.2.3
 pnpm release browser-skill 0.3.3-dsh.4
 
 # 使用现有版本验证 Actions 构建、测试与打包，不发布。
 pnpm release web-search 0.1.1 --check
-pnpm release toolbox 0.2.2 --check
+pnpm release toolbox 0.2.3 --check
 pnpm release browser-skill 0.3.3-dsh.3 --check
 ```
 
@@ -64,9 +64,9 @@ pnpm typecheck        # 全部类型检查
 pnpm test             # 全部冒烟测试（node --test，无框架）
 ```
 
-## DSH 工具箱（本地候选）
+## DSH 工具箱
 
-[DSH 工具箱](packages/dsh-plugin-toolbox/README.md)（`@caiqy/dsh-plugin-toolbox`）在设置中增加独立菜单，每项功能单独开关并自动保存。本版提供 Windows Desktop 的 VS Code 打开目录修复与 DSH Desktop 优雅重启（带超时兜底及无黑框静默执行），尚未发布 npm 或加入市场索引。
+[DSH 工具箱](packages/dsh-plugin-toolbox/README.md)（`@caiqy/dsh-plugin-toolbox`）在设置中增加独立菜单，每项功能单独开关并自动保存。提供 Windows Desktop 的 VS Code 打开目录修复与 DSH Desktop 优雅重启（带超时兜底及静默辅助程序），通过 npm 的 `dsh` 标签发行。
 
 ```sh
 pnpm --filter @caiqy/dsh-plugin-toolbox typecheck

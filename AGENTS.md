@@ -106,12 +106,12 @@ pnpm -C packages/browser-skill --filter @caiqy/browser-skill-dsh-plugin test
 ```sh
 # 版本号为示例，必须与远端对应 package.json 一致。
 pnpm release web-search 0.1.2
-pnpm release toolbox 0.2.2
+pnpm release toolbox 0.2.3
 pnpm release browser-skill 0.3.3-dsh.4
 
 # 先在 Actions 完整构建、测试和打包，但不发布 npm；可使用现有版本。
 pnpm release web-search 0.1.1 --check
-pnpm release toolbox 0.2.2 --check
+pnpm release toolbox 0.2.3 --check
 pnpm release browser-skill 0.3.3-dsh.3 --check
 
 # 默认分支之外的候选必须显式指定已推送的 ref。

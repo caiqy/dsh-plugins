@@ -24,11 +24,17 @@ DSH Desktop 使用 Electron 的 Node 模式运行宿主。右上角“用 VS Cod
 
 ## 发布与安装
 
-当前候选版本为 `0.2.2`，首次 npm 发布准备中。发布使用仓库的 `publish-toolbox.yml` 工作流和 npm Trusted Publishing；Windows runner 先验证 PowerShell 辅助程序，Linux runner 再构建、测试并打包，包内必须含 `res/restart-worker.ps1`。
+发布使用仓库的 `publish-toolbox.yml` 工作流和 npm Trusted Publishing（OIDC）；Windows runner 先验证 PowerShell 辅助程序，Linux runner 再构建、测试并打包，包内必须含 `res/restart-worker.ps1`。首次发布 `0.2.2` 用于初始化 npm 包；后续版本由 GitHub Actions 发布，不向 CI 复制本机凭据。
+
+从 npm 安装公开版本：
 
 ```sh
-pnpm release toolbox 0.2.2 --check  # 只构建、测试、打包
-pnpm release toolbox 0.2.2          # 发布已提交并推送的版本
+dsh plugin --profile desktop add @caiqy/dsh-plugin-toolbox@dsh
+```
+
+```sh
+pnpm release toolbox 0.2.3 --check  # 只构建、测试、打包
+pnpm release toolbox 0.2.3          # 发布已提交并推送的版本
 ```
 
 在仓库根目录构建与验证：
@@ -49,7 +55,7 @@ dsh plugin --profile plugins-dev add link:./packages/dsh-plugin-toolbox
 
 ```sh
 pnpm -C packages/dsh-plugin-toolbox pack --pack-destination ../../.tmp/toolbox-dist
-dsh plugin --profile desktop add ./.tmp/toolbox-dist/caiqy-dsh-plugin-toolbox-0.2.2.tgz
+dsh plugin --profile desktop add ./.tmp/toolbox-dist/caiqy-dsh-plugin-toolbox-0.2.3.tgz
 ```
 
 安装后在 **设置 → DSH 工具箱** 中管理功能。

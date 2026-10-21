@@ -1,6 +1,6 @@
 {
   "name": "@caiqy/dsh-plugin-toolbox",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "DSH 工具箱：实用工具、便捷操作与兼容性修复。",
   "type": "module",
   "license": "MIT",
