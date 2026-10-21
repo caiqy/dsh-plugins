@@ -16,6 +16,7 @@ https://raw.githubusercontent.com/caiqy/dsh-plugins/main/index.json
 | --- | --- | --- |
 | BrowserSkill 增强版 | `@caiqy/browser-skill-dsh-plugin` | `0.3.3-dsh.3` |
 | Web Search | `@caiqy/dsh-plugin-web-search` | `0.1.1` |
+| DSH 工具箱 | `@caiqy/dsh-plugin-toolbox` | `0.2.3` |
 
 BrowserSkill 增强版要求另行安装官方 CLI 和浏览器扩展（当前配套 0.3.3），不能与官方 DSH 插件同时启用。发行使用 npm 的 `dsh` 标签和索引中的精确版本，不覆盖官方 npm 包。
 

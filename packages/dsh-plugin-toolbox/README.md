@@ -26,6 +26,8 @@ DSH Desktop 使用 Electron 的 Node 模式运行宿主。右上角“用 VS Cod
 
 发布使用仓库的 `publish-toolbox.yml` 工作流和 npm Trusted Publishing（OIDC）；Windows runner 先验证 PowerShell 辅助程序，Linux runner 再构建、测试并打包，包内必须含 `res/restart-worker.ps1`。首次发布 `0.2.2` 用于初始化 npm 包；后续版本由 GitHub Actions 发布，不向 CI 复制本机凭据。
 
+`0.2.3` 已通过 [GitHub Actions OIDC 发布](https://github.com/caiqy/dsh-plugins/actions/runs/39527126991)，附带 SLSA provenance，公开 tarball 与 CI 产物的 SHA-512 校验一致。
+
 从 npm 安装公开版本：
 
 ```sh
