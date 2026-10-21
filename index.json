@@ -1,7 +1,7 @@
 {
   "format": 1,
   "title": "caiqy 的 DSH 插件",
-  "description": "BrowserSkill 增强版与 Web Search 插件发行索引。",
+  "description": "BrowserSkill 增强版、Web Search 与 DSH 工具箱插件发行索引。",
   "plugins": [
     {
       "name": "@caiqy/browser-skill-dsh-plugin",
@@ -57,6 +57,28 @@
         {
           "version": "0.1.0",
           "publishTimestamp": 1792485500,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org/"
+          },
+          "engines": {}
+        }
+      ]
+    },
+    {
+      "name": "@caiqy/dsh-plugin-toolbox",
+      "title": "DSH 工具箱",
+      "description": "独立设置菜单与逐项功能开关；提供 Windows Desktop 的 VS Code 启动修复和带超时兜底的静默重启。",
+      "author": "caiqy",
+      "homepage": "https://github.com/caiqy/dsh-plugins/tree/main/packages/dsh-plugin-toolbox#readme",
+      "repository": {
+        "url": "https://github.com/caiqy/dsh-plugins.git",
+        "directory": "packages/dsh-plugin-toolbox"
+      },
+      "versions": [
+        {
+          "version": "0.2.2",
+          "publishTimestamp": 1792545593,
           "source": {
             "type": "npm",
             "registry": "https://registry.npmjs.org/"
