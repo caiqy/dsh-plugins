@@ -12,6 +12,8 @@ export async function syncMarketIndex(original, selection = 'all', request = fet
   const index = structuredClone(original);
   for (const [key, target] of Object.entries(targets)) {
     if (selection !== 'all' && selection !== key) continue;
+    // Release targets may be prepared before their first public package is indexed.
+    if (selection === 'all' && !original.plugins.some(entry => entry.name === target.name)) continue;
     const response = await request(`${registry}${encodeURIComponent(target.name)}`, {
       redirect: 'error', headers: { 'cache-control': 'no-cache' }, signal: AbortSignal.timeout(15000),
     });

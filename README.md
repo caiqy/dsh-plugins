@@ -23,16 +23,18 @@ BrowserSkill 增强版要求另行安装官方 CLI 和浏览器扩展（当前�
 
 ```sh
 pnpm release web-search 0.1.2
+pnpm release toolbox 0.2.2
 pnpm release browser-skill 0.3.3-dsh.4
 
 # 使用现有版本验证 Actions 构建、测试与打包，不发布。
 pnpm release web-search 0.1.1 --check
+pnpm release toolbox 0.2.2 --check
 pnpm release browser-skill 0.3.3-dsh.3 --check
 ```
 
-本机需已登录 GitHub CLI；可用 `--ref <branch-or-tag>` 指定已推送的候选。两个插件在各自源码仓库运行发布工作流，只发布所选包。也可推送 `web-search-v<version>` / `caiqy-dsh-plugin-v<version>` tag 触发，或在对应仓库 Actions 手动运行。npm 发布仍需先为每个包配置 Trusted Publisher；新连接需在页面给出的期限内（通常 48 小时）完成一次真实 OIDC 发布来激活，检查模式不能激活连接。BrowserSkill 手动运行须选择增强分支 `dsh/plugin-parity-0.3.3`，不要使用跟随上游的 `main` 发布。
+本机需已登录 GitHub CLI；可用 `--ref <branch-or-tag>` 指定已推送的候选。各插件在自己的源码仓库运行发布工作流，只发布所选包。也可推送 `web-search-v<version>` / `toolbox-v<version>` / `caiqy-dsh-plugin-v<version>` tag 触发，或在对应仓库 Actions 手动运行。npm 发布仍需先为每个包配置 Trusted Publisher；新连接需在页面给出的期限内（通常 48 小时）完成一次真实 OIDC 发布来激活，检查模式不能激活连接。BrowserSkill 手动运行须选择增强分支 `dsh/plugin-parity-0.3.3`，不要使用跟随上游的 `main` 发布。
 
-工作流会类型检查、构建、测试、打包并验证真实公开 npm 包。市场索引在 Web Search 工作流成功后及每小时第 17、47 分钟同步；BrowserSkill 发行会由定时任务接入。也可以立即手动同步指定插件：
+工作流会类型检查、构建、测试、打包并验证真实公开 npm 包。市场索引在 Web Search / Toolbox 工作流成功后及每小时第 17、47 分钟同步；BrowserSkill 发行会由定时任务接入。也可以立即手动同步指定插件：
 
 ```sh
 gh workflow run sync-market-index.yml --repo caiqy/dsh-plugins -f plugin=browser-skill
@@ -64,7 +66,7 @@ pnpm test             # 全部冒烟测试（node --test，无框架）
 
 ## DSH 工具箱（本地候选）
 
-[DSH 工具箱](packages/dsh-plugin-toolbox/README.md)（`@caiqy/dsh-plugin-toolbox`）在设置中增加独立菜单，每项功能单独开关并自动保存。本版提供 Windows Desktop 的 VS Code 打开目录修复，尚未发布 npm 或加入市场索引。
+[DSH 工具箱](packages/dsh-plugin-toolbox/README.md)（`@caiqy/dsh-plugin-toolbox`）在设置中增加独立菜单，每项功能单独开关并自动保存。本版提供 Windows Desktop 的 VS Code 打开目录修复与 DSH Desktop 优雅重启（带超时兜底及无黑框静默执行），尚未发布 npm 或加入市场索引。
 
 ```sh
 pnpm --filter @caiqy/dsh-plugin-toolbox typecheck

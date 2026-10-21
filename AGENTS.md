@@ -12,7 +12,7 @@
 | --- | --- | --- |
 | [packages/dsh-plugin-example/](packages/dsh-plugin-example/) | 最小插件模板；从 [src/index.ts](packages/dsh-plugin-example/src/index.ts) 和 [冒烟测试](packages/dsh-plugin-example/test/smoke.test.mjs) 开始 | 根 workspace，普通目录 |
 | [packages/dsh-plugin-web-search/](packages/dsh-plugin-web-search/) | 替换宿主搜索 provider，含配置 UI；先读 [README](packages/dsh-plugin-web-search/README.md) | 根 workspace，普通目录 |
-| [packages/dsh-plugin-toolbox/](packages/dsh-plugin-toolbox/) | DSH 工具箱；设置菜单与逐项功能开关，当前提供 Windows VS Code 启动修复；先读 [README](packages/dsh-plugin-toolbox/README.md) | 根 workspace，普通目录 |
+| [packages/dsh-plugin-toolbox/](packages/dsh-plugin-toolbox/) | DSH 工具箱；设置菜单与逐项功能开关，提供 Windows VS Code 启动修复与 Desktop 重启功能；先读 [README](packages/dsh-plugin-toolbox/README.md) | 根 workspace，普通目录 |
 | [packages/dsh-subagent-registry/](packages/dsh-subagent-registry/) | 自定义子代理派发、续跑、后台追问及 Web 预设管理；先读 [README](packages/dsh-subagent-registry/README.md) | Git submodule，同时纳入根 workspace；自有依赖和 TS 配置 |
 | [packages/browser-skill/](packages/browser-skill/) | BrowserSkill fork；DSH 插件在 [packages/dsh-plugin-browserskill/](packages/browser-skill/packages/dsh-plugin-browserskill/) | Git submodule，明确排除在根 workspace 外；自有 pnpm workspace |
 | [vendor/deepseek-harness/](vendor/deepseek-harness/) | 共享宿主源码参考；用途和升级约定见 [vendor/README.md](vendor/README.md) | 本地 checkout（已忽略，不入库），不参与根构建 |
@@ -106,10 +106,12 @@ pnpm -C packages/browser-skill --filter @caiqy/browser-skill-dsh-plugin test
 ```sh
 # 版本号为示例，必须与远端对应 package.json 一致。
 pnpm release web-search 0.1.2
+pnpm release toolbox 0.2.2
 pnpm release browser-skill 0.3.3-dsh.4
 
 # 先在 Actions 完整构建、测试和打包，但不发布 npm；可使用现有版本。
 pnpm release web-search 0.1.1 --check
+pnpm release toolbox 0.2.2 --check
 pnpm release browser-skill 0.3.3-dsh.3 --check
 
 # 默认分支之外的候选必须显式指定已推送的 ref。
@@ -119,19 +121,22 @@ pnpm release browser-skill 0.3.3-dsh.4 --ref <branch-or-tag> --check
 | 选择名 | 仓库 / 默认 ref | 工作流 | 自动发布 tag 前缀 |
 | --- | --- | --- | --- |
 | `web-search` | `caiqy/dsh-plugins` / `main` | [.github/workflows/publish-web-search.yml](.github/workflows/publish-web-search.yml) | `web-search-v` |
+| `toolbox` | `caiqy/dsh-plugins` / `main` | [.github/workflows/publish-toolbox.yml](.github/workflows/publish-toolbox.yml) | `toolbox-v` |
 | `browser-skill` | `caiqy/BrowserSkill` / `dsh/plugin-parity-0.3.3` | [release-dsh-plugin.yml](packages/browser-skill/.github/workflows/release-dsh-plugin.yml) | `caiqy-dsh-plugin-v` |
 
-也可通过 `gh workflow run` 手动运行目标工作流，填写精确 `version` 和 `dry_run`。BrowserSkill 的默认 `main` 仍跟随上游，必须指定增强分支 `--ref dsh/plugin-parity-0.3.3`（推荐使用上面的统一入口）；不要在 `main` 运行上游发布工作流。Web Search 的 Actions 网页默认 `dry_run: true`，正式发布需取消该选项。输入版本或 tag 版本必须等于提交中的包版本；工作流不会替你修改版本。CLI 正式发版显式传 `dry_run=false`，`--check` 则传 `true`。命令返回只表示已提交运行请求，用对应仓库的 `gh run list` / `gh run view` 查看真实结果。BrowserSkill 继续独立使用 pnpm 10.17.0，Web Search 使用根 pnpm 9.15.9；均只构建所选插件，不发布官方 CLI、扩展、注册表或示例插件。
+也可通过 `gh workflow run` 手动运行目标工作流，填写精确 `version` 和 `dry_run`。BrowserSkill 的默认 `main` 仍跟随上游，必须指定增强分支 `--ref dsh/plugin-parity-0.3.3`（推荐使用上面的统一入口）；不要在 `main` 运行上游发布工作流。Web Search 和工具箱的 Actions 网页默认 `dry_run: true`，正式发布需取消该选项。输入版本或 tag 版本必须等于提交中的包版本；工作流不会替你修改版本。CLI 正式发版显式传 `dry_run=false`，`--check` 则传 `true`。命令返回只表示已提交运行请求，用对应仓库的 `gh run list` / `gh run view` 查看真实结果。BrowserSkill 继续独立使用 pnpm 10.17.0，Web Search 和工具箱使用根 pnpm 9.15.9；均只构建所选插件，不发布官方 CLI、扩展、注册表或示例插件。
 
-认证只使用 npm Trusted Publishing（OIDC）。在两个 npm 包各自 Settings → Trusted Publisher 配置 GitHub 用户 `caiqy`、上表仓库及**工作流文件名**（不填路径），Environment 均为 `npm-publish`，明确允许直接 `npm publish`。两个源码仓库分别发布，以匹配包的 `repository.url` 和 provenance。使用 GitHub-hosted runner、Node 24、npm 11，发布 job 有 `id-token: write`；不配置 `NPM_TOKEN`，不复制本机 npm 登录态，保留账号 2FA。首次配置或更改 npm 信任关系可能仍需人工安全验证。新连接可能显示 `Pending validation`，须在 npm 页面给出的期限内（通常 48 小时）通过该 OIDC 工作流成功发布一个新版本来激活；`--check` 或本机发布不能替代验证。应在新版本已准备好时配置连接，超时后需重新配置；以页面实际状态和截止时间为准。不要在 GitHub Environment 添加 required reviewers，除非明确需要每次人工批准。
+认证只使用 npm Trusted Publishing（OIDC）。在各 npm 包的 Settings → Trusted Publisher 配置 GitHub 用户 `caiqy`、上表仓库及**工作流文件名**（不填路径），Environment 均为 `npm-publish`，明确允许直接 `npm publish`。两个源码仓库分别发布，以匹配包的 `repository.url` 和 provenance。使用 GitHub-hosted runner、Node 24、npm 11，发布 job 有 `id-token: write`；不配置 `NPM_TOKEN`，不复制本机 npm 登录态，保留账号 2FA。首次配置或更改 npm 信任关系可能仍需人工安全验证。新连接可能显示 `Pending validation`，须在 npm 页面给出的期限内（通常 48 小时）通过该 OIDC 工作流成功发布一个新版本来激活；`--check` 或本机发布不能替代验证。应在新版本已准备好时配置连接，超时后需重新配置；以页面实际状态和截止时间为准。不要在 GitHub Environment 添加 required reviewers，除非明确需要每次人工批准。
+
+工具箱额外在 Windows runner 执行 PowerShell 编译与只读握手检查，不执行关闭或重启。首次公开发布前的 target 不自动纳入市场索引；`all` 只同步已经收录的插件。
 
 发版先类型检查、构建、测试，再 `npm pack --ignore-scripts`（BrowserSkill 另验打包技能资源）。检查通过的 tarball 会作为 Actions artifact 留存，正式发布使用同一个 tarball、公开访问及 npm `dsh` dist-tag。发布后等待精确版本可读，校验远端 SRI 和实际下载字节；不能只凭 `npm publish` 退出码判断成功。npm 版本不可覆盖，已发布版本不要重新发；如果包已经发布但后续步骤失败，单独同步索引，不通过盲目重试覆盖旧版本。
 
-市场索引由 [.github/workflows/sync-market-index.yml](.github/workflows/sync-market-index.yml) 管理：Web Search 工作流成功后触发，每小时第 17、47 分钟也会同步两包；BrowserSkill 发布由定时同步接入，不保存跨仓库写入 token。GitHub 调度可能延迟，DSH 默认另缓存 10 分钟。需要立即刷新或只同步指定插件时：
+市场索引由 [.github/workflows/sync-market-index.yml](.github/workflows/sync-market-index.yml) 管理：Web Search / Toolbox 工作流成功后触发，每小时第 17、47 分钟也会同步已收录包；BrowserSkill 发布由定时同步接入，不保存跨仓库写入 token。GitHub 调度可能延迟，DSH 默认另缓存 10 分钟。需要立即刷新或只同步指定插件时：
 
 ```sh
 gh workflow run sync-market-index.yml --repo caiqy/dsh-plugins -f plugin=browser-skill
-# plugin 也可以为 web-search 或 all；这里只同步索引，不发布任何包。
+# plugin 也可以为 web-search、toolbox 或 all；这里只同步索引，不发布任何包。
 
 pnpm test:release              # 原生 Node 发版/索引回归检查
 pnpm sync:index web-search     # 本地校验公共 npm 并更新索引，之后自行审查提交

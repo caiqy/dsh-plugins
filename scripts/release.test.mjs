@@ -27,6 +27,7 @@ function mockRegistry(change = () => {}, calls = []) {
 }
 
 test('release selects exactly one repository and supports verification without publishing', () => {
+  assert.deepEqual(releaseCommand(['toolbox', '0.2.2']), ['workflow', 'run', 'publish-toolbox.yml', '--repo', 'caiqy/dsh-plugins', '--ref', 'main', '--field', 'version=0.2.2', '--field', 'dry_run=false']);
   assert.deepEqual(releaseCommand(['web-search', '0.1.1']), ['workflow', 'run', 'publish-web-search.yml', '--repo', 'caiqy/dsh-plugins', '--ref', 'main', '--field', 'version=0.1.1', '--field', 'dry_run=false']);
   assert.deepEqual(releaseCommand(['browser-skill', '0.3.3-dsh.3', '--check', '--ref', 'candidate']), ['workflow', 'run', 'release-dsh-plugin.yml', '--repo', 'caiqy/BrowserSkill', '--ref', 'candidate', '--field', 'version=0.3.3-dsh.3', '--field', 'dry_run=true']);
   for (const argv of [['all', '1.0.0'], ['__proto__', '1.0.0'], ['web-search'], ['web-search', '1.0.0;echo bad'], ['web-search', '1.0.0', 'extra'], ['web-search', '1.0.0', '--ref', '']]) {
@@ -44,6 +45,15 @@ test('selected index sync preserves the other plugin, keeps old versions and is 
   assert.equal(initial.plugins[0].versions.length, 1);
   assert.equal(calls.length, 2);
   assert.deepEqual(await syncMarketIndex(result, 'web-search', mockRegistry()), result);
+});
+
+test('all sync leaves unreleased targets out until a verified market entry exists', async () => {
+  const existing = { ...initial, plugins: initial.plugins.filter(plugin => plugin.name !== targets.toolbox.name) };
+  const calls = [];
+  const result = await syncMarketIndex(existing, 'all', mockRegistry(undefined, calls));
+  assert.equal(result.plugins.length, existing.plugins.length);
+  assert(!calls.some(url => url.includes(encodeURIComponent(targets.toolbox.name))));
+  await assert.rejects(syncMarketIndex(existing, 'toolbox', mockRegistry()), /missing from index/);
 });
 
 test('all sync requires valid metadata, public tarballs and matching integrity before accepting changes', async () => {

@@ -4,7 +4,7 @@ on:
   schedule:
     - cron: '17,47 * * * *'
   workflow_run:
-    workflows: ['Publish Web Search']
+    workflows: ['Publish Web Search', 'Publish Toolbox']
     types: [completed]
   workflow_dispatch:
     inputs:
@@ -12,7 +12,7 @@ on:
         description: Plugin to synchronize from its published npm dsh tag
         type: choice
         default: all
-        options: [all, web-search, browser-skill]
+        options: [all, web-search, browser-skill, toolbox]
 
 permissions:
   contents: read
