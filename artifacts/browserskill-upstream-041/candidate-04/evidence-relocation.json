@@ -1,0 +1,62 @@
+{
+  "schema": "browserskill.evidence-relocation.v1",
+  "reason": "Two operator-created Edge result directories were moved after complete session cleanup to correct a result-root spelling error. Raw report JSON and actual operations were not replayed or rewritten; stored original baseline paths remain historical.",
+  "entries": [
+    {
+      "directory": "candidate04-live-edge-scope-current-unique",
+      "reportSha256": "8b265415f28bbd5aa1cdb48cc095ea1e187deeee3d857a9cb26683a29b1aa726",
+      "rawReportUnmodified": true,
+      "fields": [
+        {
+          "pointer": "/calls/5/args/saveFull",
+          "recordedOriginalPath": "D:\\Caiqy\\Projects\\Github\\dsh-plugins\\artifacts\\browskill-upstream-041\\candidate04-live-edge-scope-current-unique\\edge\\baseline.json",
+          "currentPath": "D:/Caiqy/Projects/Github/dsh-plugins/artifacts/browserskill-upstream-041/candidate04-live-edge-scope-current-unique/edge/baseline.json",
+          "existsAtCurrentPath": true,
+          "sha256AtCurrentPath": "e6d94ee1ad9f811256add3b3fa3e2366206d5550e6505dc5a3271ff3a2c3a363"
+        },
+        {
+          "pointer": "/calls/5/result/full_output_path",
+          "recordedOriginalPath": "D:\\Caiqy\\Projects\\Github\\dsh-plugins\\artifacts\\browskill-upstream-041\\candidate04-live-edge-scope-current-unique\\edge\\baseline.json",
+          "currentPath": "D:/Caiqy/Projects/Github/dsh-plugins/artifacts/browserskill-upstream-041/candidate04-live-edge-scope-current-unique/edge/baseline.json",
+          "existsAtCurrentPath": true,
+          "sha256AtCurrentPath": "e6d94ee1ad9f811256add3b3fa3e2366206d5550e6505dc5a3271ff3a2c3a363"
+        },
+        {
+          "pointer": "/calls/15/args/output",
+          "recordedOriginalPath": "D:\\Caiqy\\Projects\\Github\\dsh-plugins\\artifacts\\browskill-upstream-041\\candidate04-live-edge-scope-current-unique\\edge\\background-current.png",
+          "currentPath": "D:/Caiqy/Projects/Github/dsh-plugins/artifacts/browserskill-upstream-041/candidate04-live-edge-scope-current-unique/edge/background-current.png",
+          "existsAtCurrentPath": false,
+          "sha256AtCurrentPath": null
+        }
+      ]
+    },
+    {
+      "directory": "candidate04-live-edge-scope-follow-unique",
+      "reportSha256": "8fdb71f659e42fee28e5d0cb2758a5a5c1ea8ae0ae110377ed65b760c6aae308",
+      "rawReportUnmodified": true,
+      "fields": [
+        {
+          "pointer": "/calls/5/args/saveFull",
+          "recordedOriginalPath": "D:\\Caiqy\\Projects\\Github\\dsh-plugins\\artifacts\\browskill-upstream-041\\candidate04-live-edge-scope-follow-unique\\edge\\baseline.json",
+          "currentPath": "D:/Caiqy/Projects/Github/dsh-plugins/artifacts/browserskill-upstream-041/candidate04-live-edge-scope-follow-unique/edge/baseline.json",
+          "existsAtCurrentPath": true,
+          "sha256AtCurrentPath": "7d100468992a65ade650911095673525d0703c9f19eecf3178a03d4d0818c754"
+        },
+        {
+          "pointer": "/calls/5/result/full_output_path",
+          "recordedOriginalPath": "D:\\Caiqy\\Projects\\Github\\dsh-plugins\\artifacts\\browskill-upstream-041\\candidate04-live-edge-scope-follow-unique\\edge\\baseline.json",
+          "currentPath": "D:/Caiqy/Projects/Github/dsh-plugins/artifacts/browserskill-upstream-041/candidate04-live-edge-scope-follow-unique/edge/baseline.json",
+          "existsAtCurrentPath": true,
+          "sha256AtCurrentPath": "7d100468992a65ade650911095673525d0703c9f19eecf3178a03d4d0818c754"
+        },
+        {
+          "pointer": "/calls/15/args/output",
+          "recordedOriginalPath": "D:\\Caiqy\\Projects\\Github\\dsh-plugins\\artifacts\\browskill-upstream-041\\candidate04-live-edge-scope-follow-unique\\edge\\background-follow.png",
+          "currentPath": "D:/Caiqy/Projects/Github/dsh-plugins/artifacts/browserskill-upstream-041/candidate04-live-edge-scope-follow-unique/edge/background-follow.png",
+          "existsAtCurrentPath": false,
+          "sha256AtCurrentPath": null
+        }
+      ]
+    }
+  ]
+}

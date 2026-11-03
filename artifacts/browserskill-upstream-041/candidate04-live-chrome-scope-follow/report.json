@@ -1,0 +1,807 @@
+{
+  "candidate": "D:\\Caiqy\\Projects\\Github\\dsh-plugins\\artifacts\\browserskill-upstream-041\\candidate-04\\caiqy-browser-skill-dsh-plugin-0.4.1-dsh.1.tgz",
+  "bytes": 141007,
+  "sha256": "26ee94324c96d95a069ec4d9656f502dd380e9bfce3d431840e2809ea58c374f",
+  "startedAt": "2026-11-03T09:32:04.793Z",
+  "requestedScope": "follow",
+  "calls": [
+    {
+      "name": "bsk_session",
+      "args": {
+        "action": "browsers"
+      },
+      "elapsedMs": 45,
+      "ok": true,
+      "result": [
+        {
+          "instance_id": "d408371e",
+          "browser_name": "edge",
+          "browser_version": "156.0.0.0",
+          "extension_version": "0.4.1",
+          "label": "edge",
+          "session_count": 0,
+          "connected_at_ms": 1793685315757,
+          "version_skew": false,
+          "extension_protocol_version": "1.8",
+          "unresponsive": false
+        },
+        {
+          "instance_id": "2303ebf6",
+          "browser_name": "chrome",
+          "browser_version": "155.0.0.0",
+          "extension_version": "0.4.1",
+          "label": "chrome",
+          "session_count": 0,
+          "connected_at_ms": 1793685527467,
+          "version_skew": false,
+          "extension_protocol_version": "1.8",
+          "unresponsive": false
+        }
+      ]
+    },
+    {
+      "name": "bsk_session",
+      "args": {
+        "action": "list"
+      },
+      "elapsedMs": 0,
+      "ok": true,
+      "result": {
+        "pendingCleanup": 0,
+        "sessions": []
+      }
+    },
+    {
+      "name": "bsk_session",
+      "args": {
+        "action": "browsers"
+      },
+      "elapsedMs": 44,
+      "ok": true,
+      "result": [
+        {
+          "instance_id": "d408371e",
+          "browser_name": "edge",
+          "browser_version": "156.0.0.0",
+          "extension_version": "0.4.1",
+          "label": "edge",
+          "session_count": 0,
+          "connected_at_ms": 1793685315757,
+          "version_skew": false,
+          "extension_protocol_version": "1.8",
+          "unresponsive": false
+        },
+        {
+          "instance_id": "2303ebf6",
+          "browser_name": "chrome",
+          "browser_version": "155.0.0.0",
+          "extension_version": "0.4.1",
+          "label": "chrome",
+          "session_count": 0,
+          "connected_at_ms": 1793685527467,
+          "version_skew": false,
+          "extension_protocol_version": "1.8",
+          "unresponsive": false
+        }
+      ]
+    },
+    {
+      "name": "bsk_session",
+      "args": {
+        "action": "start",
+        "browser": "2303ebf6",
+        "name": "bsk-candidate-chrome",
+        "width": 1000,
+        "height": 800,
+        "noFocus": true
+      },
+      "elapsedMs": 646,
+      "ok": true,
+      "result": {
+        "sessionId": "djww",
+        "browserInstanceId": "2303ebf6"
+      }
+    },
+    {
+      "name": "bsk_tabs",
+      "args": {
+        "action": "list",
+        "session": "djww",
+        "scope": "agent"
+      },
+      "elapsedMs": 49,
+      "ok": true,
+      "result": {
+        "session": "djww",
+        "tabs": [
+          {
+            "active": true,
+            "scope": "agent"
+          }
+        ]
+      }
+    },
+    {
+      "name": "bsk_session",
+      "args": {
+        "action": "sync",
+        "session": "djww",
+        "policy": "auto",
+        "saveFull": "D:\\Caiqy\\Projects\\Github\\dsh-plugins\\artifacts\\browserskill-upstream-041\\candidate04-live-chrome-scope-follow\\chrome\\baseline.json"
+      },
+      "elapsedMs": 112,
+      "ok": true,
+      "result": {
+        "activity": [],
+        "context_id": "4413c0cd-d5bf-4611-a8c1-5c0a25dc49d3",
+        "control_policy": "target",
+        "full_output_path": "D:\\Caiqy\\Projects\\Github\\dsh-plugins\\artifacts\\browserskill-upstream-041\\candidate04-live-chrome-scope-follow\\chrome\\baseline.json",
+        "guidance": "This context remains valid for DOM-targeted actions until human control or the document changes. Supplementary reads do not invalidate it. Use explicit expect checks for business facts such as price, recipient or record ID. Scripts, untargeted keys and visual clicks require this sync's observation_id and retain strict content checks. Never replay an uncertain action; inspect its result first.",
+        "history_complete": false,
+        "kind": "baseline",
+        "observation": {
+          "observation_id": "5a1bb6f7-d6fc-4a8a-8cce-9e3dcf98cdd1",
+          "ref_count": 8,
+          "truncated": false
+        },
+        "observation_id": "1cc9983b-ea80-4cc8-ae17-58c707928df2",
+        "observation_origin": {
+          "capture_context_id": "4413c0cd-d5bf-4611-a8c1-5c0a25dc49d3",
+          "kind": "capture",
+          "payload_sha256": "cfb7d9027eb5c0681bd9c5a9da229de9d0c2212da4b5b0febc81bd280fb692f7",
+          "session_id": "djww"
+        },
+        "state": {
+          "editing": false,
+          "mode": "ready",
+          "revision": 7
+        }
+      }
+    },
+    {
+      "name": "bsk_inspect",
+      "args": {
+        "action": "observe",
+        "session": "djww"
+      },
+      "elapsedMs": 99,
+      "ok": true,
+      "result": {
+        "session": "djww",
+        "refCount": 8,
+        "truncated": false
+      }
+    },
+    {
+      "name": "bsk_session",
+      "args": {
+        "action": "start",
+        "browser": "2303ebf6",
+        "name": "bsk-background-shot-chrome",
+        "width": 1000,
+        "height": 800,
+        "noFocus": true
+      },
+      "elapsedMs": 600,
+      "ok": true,
+      "result": {
+        "sessionId": "ehmr",
+        "browserInstanceId": "2303ebf6"
+      }
+    },
+    {
+      "name": "bsk_tabs",
+      "args": {
+        "action": "list",
+        "session": "ehmr",
+        "scope": "agent"
+      },
+      "elapsedMs": 47,
+      "ok": true,
+      "result": {
+        "session": "ehmr",
+        "tabs": [
+          {
+            "active": true,
+            "scope": "agent"
+          }
+        ]
+      }
+    },
+    {
+      "name": "bsk_inspect",
+      "args": {
+        "action": "observe",
+        "session": "ehmr"
+      },
+      "elapsedMs": 93,
+      "ok": true,
+      "result": {
+        "session": "ehmr",
+        "refCount": 8,
+        "truncated": false
+      }
+    },
+    {
+      "name": "bsk_session",
+      "args": {
+        "action": "sync",
+        "session": "ehmr",
+        "policy": "auto"
+      },
+      "elapsedMs": 90,
+      "ok": true,
+      "result": {
+        "activity": [],
+        "context_id": "3f63293d-8ddb-4775-91f9-984a8ee6dab1",
+        "control_policy": "target",
+        "guidance": "This context remains valid for DOM-targeted actions until human control or the document changes. Supplementary reads do not invalidate it. Use explicit expect checks for business facts such as price, recipient or record ID. Scripts, untargeted keys and visual clicks require this sync's observation_id and retain strict content checks. Never replay an uncertain action; inspect its result first.",
+        "history_complete": false,
+        "kind": "baseline",
+        "observation": {
+          "observation_id": "25eca435-a28d-4bfd-b08e-939749e52a12",
+          "ref_count": 8,
+          "truncated": false
+        },
+        "observation_id": "db642569-bda2-404e-9435-0208386b8576",
+        "observation_origin": {
+          "capture_context_id": "3f63293d-8ddb-4775-91f9-984a8ee6dab1",
+          "kind": "capture",
+          "payload_sha256": "9274f45fd4ef47e44a1e7843f408db79a2a692f16bbeed1a605a5e2080c8c010",
+          "session_id": "ehmr"
+        },
+        "state": {
+          "editing": false,
+          "mode": "ready",
+          "revision": 7
+        }
+      }
+    },
+    {
+      "name": "bsk_session",
+      "args": {
+        "action": "sync",
+        "session": "ehmr",
+        "policy": "auto"
+      },
+      "elapsedMs": 45,
+      "ok": true,
+      "result": {
+        "activity": [],
+        "changes": [],
+        "context_id": "3f63293d-8ddb-4775-91f9-984a8ee6dab1",
+        "control_policy": "target",
+        "guidance": "This context remains valid for DOM-targeted actions until human control or the document changes. Supplementary reads do not invalidate it. Use explicit expect checks for business facts such as price, recipient or record ID. Scripts, untargeted keys and visual clicks require this sync's observation_id and retain strict content checks. Never replay an uncertain action; inspect its result first.",
+        "history_complete": true,
+        "kind": "unchanged",
+        "observation_id": "bb6ef802-4b89-4a8e-b02c-9a8a248ca0d4",
+        "previous_context_id": "3f63293d-8ddb-4775-91f9-984a8ee6dab1",
+        "state": {
+          "editing": false,
+          "mode": "ready",
+          "revision": 9
+        }
+      }
+    },
+    {
+      "name": "bsk_tabs",
+      "args": {
+        "action": "create",
+        "session": "ehmr",
+        "active": true,
+        "contextId": "3f63293d-8ddb-4775-91f9-984a8ee6dab1",
+        "observationId": "bb6ef802-4b89-4a8e-b02c-9a8a248ca0d4"
+      },
+      "elapsedMs": 190,
+      "ok": true,
+      "result": {
+        "session": "ehmr"
+      }
+    },
+    {
+      "name": "bsk_tabs",
+      "args": {
+        "action": "list",
+        "session": "ehmr",
+        "scope": "agent"
+      },
+      "elapsedMs": 59,
+      "ok": true,
+      "result": {
+        "session": "ehmr",
+        "tabs": [
+          {
+            "active": false,
+            "scope": "agent"
+          },
+          {
+            "active": true,
+            "scope": "agent"
+          }
+        ]
+      }
+    },
+    {
+      "name": "bsk_session",
+      "args": {
+        "action": "sync",
+        "session": "ehmr",
+        "policy": "auto"
+      },
+      "elapsedMs": 45,
+      "ok": true,
+      "result": {
+        "activity": [],
+        "changes": [],
+        "context_id": "d1cb8852-da0c-4ddc-aa28-b73cac30d41f",
+        "control_policy": "target",
+        "guidance": "This context remains valid for DOM-targeted actions until human control or the document changes. Supplementary reads do not invalidate it. Use explicit expect checks for business facts such as price, recipient or record ID. Scripts, untargeted keys and visual clicks require this sync's observation_id and retain strict content checks. Never replay an uncertain action; inspect its result first.",
+        "history_complete": true,
+        "kind": "unchanged",
+        "observation_id": "47519fc7-ba2b-4b4c-8006-26b1e8107593",
+        "previous_context_id": "3f63293d-8ddb-4775-91f9-984a8ee6dab1",
+        "state": {
+          "editing": false,
+          "mode": "ready",
+          "revision": 14
+        }
+      }
+    },
+    {
+      "name": "bsk_inspect",
+      "args": {
+        "action": "screenshot",
+        "session": "ehmr",
+        "fullPage": true,
+        "scope": "follow",
+        "output": "D:\\Caiqy\\Projects\\Github\\dsh-plugins\\artifacts\\browserskill-upstream-041\\candidate04-live-chrome-scope-follow\\chrome\\background-follow.png",
+        "timeoutMs": 30000,
+        "contextId": "d1cb8852-da0c-4ddc-aa28-b73cac30d41f",
+        "observationId": "47519fc7-ba2b-4b4c-8006-26b1e8107593"
+      },
+      "elapsedMs": 2537,
+      "ok": false,
+      "error": {
+        "message": "BskError: bsk screenshot failed: Full-page screenshot stopped because the page became hidden; keep the capture tab visible (hint: Inspect the application result and synchronize before choosing another action. Never replay an uncertain submission.)",
+        "code": "cdp_failed",
+        "data": {
+          "captured_height": 0,
+          "effect_state": "unknown",
+          "frames": 0,
+          "phase": "page begin",
+          "progress": 0,
+          "reason": "page_hidden",
+          "recovery": "Inspect the application result and synchronize before choosing another action. Never replay an uncertain submission."
+        },
+        "timedOut": false
+      }
+    },
+    {
+      "name": "bsk_session",
+      "args": {
+        "action": "stop",
+        "session": "ehmr"
+      },
+      "elapsedMs": 139,
+      "ok": true,
+      "result": {
+        "stopped": "ehmr",
+        "alreadyClosed": false
+      }
+    },
+    {
+      "name": "bsk_session",
+      "args": {
+        "action": "list"
+      },
+      "elapsedMs": 1,
+      "ok": true,
+      "result": {
+        "pendingCleanup": 0,
+        "sessions": [
+          {
+            "sessionId": "djww",
+            "browserInstanceId": "2303ebf6",
+            "current": true,
+            "state": "active"
+          }
+        ]
+      }
+    },
+    {
+      "name": "bsk_session",
+      "args": {
+        "action": "stop",
+        "session": "djww"
+      },
+      "elapsedMs": 113,
+      "ok": true,
+      "result": {
+        "stopped": "djww",
+        "alreadyClosed": false
+      }
+    },
+    {
+      "name": "bsk_session",
+      "args": {
+        "action": "list"
+      },
+      "elapsedMs": 0,
+      "ok": true,
+      "result": {
+        "pendingCleanup": 0,
+        "sessions": []
+      }
+    }
+  ],
+  "browsers": [
+    {
+      "label": "chrome",
+      "browser": "2303ebf6",
+      "results": {
+        "screenshotBackground": {
+          "limitation": true,
+          "browser": "2303ebf6",
+          "feature": "screenshotBackground",
+          "kind": "background-fullpage-page_hidden",
+          "reason": "Official full-page capture returned page_hidden in a proven non-foreground owned Agent Window; not equivalent capture success",
+          "evidence": {
+            "requestedScope": "follow",
+            "before": {
+              "targetTab": {
+                "scope": "agent",
+                "active": false
+              },
+              "siblingTab": {
+                "scope": "agent",
+                "active": true
+              },
+              "sameAgentWindow": true,
+              "foreground": {
+                "available": true,
+                "agentWindowFound": true,
+                "foregroundIsAgentWindow": false
+              }
+            },
+            "foregroundAfter": {
+              "available": true,
+              "agentWindowFound": true,
+              "foregroundIsAgentWindow": false
+            }
+          }
+        }
+      },
+      "passed": false,
+      "connection": {
+        "instance_id": "2303ebf6",
+        "browser_name": "chrome",
+        "browser_version": "155.0.0.0",
+        "extension_version": "0.4.1",
+        "label": "chrome",
+        "session_count": 0,
+        "connected_at_ms": 1793685527467,
+        "version_skew": false,
+        "extension_protocol_version": "1.8",
+        "unresponsive": false
+      },
+      "session": "djww",
+      "nameRequested": "bsk-candidate-chrome",
+      "startNoFocus": true,
+      "backgroundScreenshotEvidence": {
+        "follow": {
+          "requestedScope": "follow",
+          "before": {
+            "targetTab": {
+              "scope": "agent",
+              "active": false
+            },
+            "siblingTab": {
+              "scope": "agent",
+              "active": true
+            },
+            "sameAgentWindow": true,
+            "foreground": {
+              "available": true,
+              "agentWindowFound": true,
+              "foregroundIsAgentWindow": false
+            }
+          },
+          "failure": {
+            "requestedScope": "follow",
+            "before": {
+              "targetTab": {
+                "scope": "agent",
+                "active": false
+              },
+              "siblingTab": {
+                "scope": "agent",
+                "active": true
+              },
+              "sameAgentWindow": true,
+              "foreground": {
+                "available": true,
+                "agentWindowFound": true,
+                "foregroundIsAgentWindow": false
+              }
+            },
+            "foregroundAfter": {
+              "available": true,
+              "agentWindowFound": true,
+              "foregroundIsAgentWindow": false
+            },
+            "outputExists": false,
+            "attachmentCount": 0
+          }
+        }
+      },
+      "backgroundScreenshotCleanup": {
+        "requestedScope": "follow",
+        "stopped": true,
+        "retained": {
+          "follow": {
+            "outputExists": false,
+            "partialAttachmentCount": 0
+          }
+        }
+      },
+      "limitations": [
+        {
+          "browser": "2303ebf6",
+          "feature": "screenshotBackground",
+          "kind": "background-fullpage-page_hidden",
+          "reason": "Official full-page capture returned page_hidden in a proven non-foreground owned Agent Window; not equivalent capture success",
+          "evidence": {
+            "requestedScope": "follow",
+            "before": {
+              "targetTab": {
+                "scope": "agent",
+                "active": false
+              },
+              "siblingTab": {
+                "scope": "agent",
+                "active": true
+              },
+              "sameAgentWindow": true,
+              "foreground": {
+                "available": true,
+                "agentWindowFound": true,
+                "foregroundIsAgentWindow": false
+              }
+            },
+            "foregroundAfter": {
+              "available": true,
+              "agentWindowFound": true,
+              "foregroundIsAgentWindow": false
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "failures": [],
+  "limitations": [
+    {
+      "browser": "2303ebf6",
+      "feature": "screenshotBackground",
+      "kind": "background-fullpage-page_hidden",
+      "reason": "Official full-page capture returned page_hidden in a proven non-foreground owned Agent Window; not equivalent capture success",
+      "evidence": {
+        "requestedScope": "follow",
+        "before": {
+          "targetTab": {
+            "scope": "agent",
+            "active": false
+          },
+          "siblingTab": {
+            "scope": "agent",
+            "active": true
+          },
+          "sameAgentWindow": true,
+          "foreground": {
+            "available": true,
+            "agentWindowFound": true,
+            "foregroundIsAgentWindow": false
+          }
+        },
+        "foregroundAfter": {
+          "available": true,
+          "agentWindowFound": true,
+          "foregroundIsAgentWindow": false
+        }
+      }
+    }
+  ],
+  "cleanup": [
+    {
+      "browser": "2303ebf6",
+      "session": "djww",
+      "stopped": true,
+      "currentScreenshotRetained": false,
+      "followScreenshotRetained": false
+    }
+  ],
+  "fixtureBoundary": "Packed apply and all six public tools use the unmodified real runner/CLI/daemon/extensions. Context registration, image-capable model metadata and the durable local attachment store are host fixtures; no desktop GUI or actual DSH attachment service is claimed.",
+  "componentRequirement": {
+    "cli": "0.4.1",
+    "daemon": "0.4.1",
+    "extension": "0.4.1",
+    "protocol": "1.8",
+    "customizedComponentsAllowed": false
+  },
+  "package": {
+    "name": "@caiqy/browser-skill-dsh-plugin",
+    "description": "DeepSeek Harness tool plugin that exposes BrowserSkill browser automation (bsk_* tools) to the model",
+    "version": "0.4.1-dsh.1",
+    "license": "MIT",
+    "publishConfig": {
+      "access": "public",
+      "registry": "https://registry.npmjs.org/"
+    },
+    "repository": {
+      "type": "git",
+      "directory": "packages/dsh-plugin-browserskill"
+    },
+    "homepage": "https://github.com/caiqy/BrowserSkill/tree/dsh/plugin-parity-0.3.3/packages/dsh-plugin-browserskill#readme",
+    "bugs": {},
+    "keywords": [
+      "dsh-plugin",
+      "deepseek-harness",
+      "browserskill",
+      "browser-automation"
+    ],
+    "type": "module",
+    "main": "lib/index.mjs",
+    "types": "lib/index.d.mts",
+    "exports": {
+      ".": {
+        "types": "./lib/index.d.mts",
+        "default": "./lib/index.mjs"
+      },
+      "./client": {
+        "default": "./lib/client.cjs"
+      },
+      "./package.json": "./package.json"
+    },
+    "files": [
+      "lib",
+      "skill",
+      "cordis.patch.yml",
+      "LICENSE"
+    ],
+    "dsh": {
+      "bundle": {
+        "patch": "./cordis.patch.yml"
+      },
+      "client": {
+        "platform": "web",
+        "inject": [
+          "@deepseek-ai/dsh-client-ui-tool",
+          "@deepseek-ai/dsh-client-ui-layout"
+        ],
+        "external": [
+          "@deepseek-ai/dsh-client-ui-primitives"
+        ]
+      }
+    },
+    "scripts": {
+      "build": "node scripts/build-client-css.mjs && node scripts/build-skill-content.mjs && tsdown",
+      "typecheck": "pnpm run build:skill && tsc --noEmit",
+      "test": "pnpm run build:css && pnpm run build:skill && vitest run",
+      "build:css": "node scripts/build-client-css.mjs",
+      "build:skill": "node scripts/build-skill-content.mjs",
+      "prepack": "pnpm run build",
+      "lint:publint": "publint"
+    },
+    "peerDependencies": {
+      "@deepseek-ai/cordis": "^4.0.2",
+      "@deepseek-ai/dsh-attachment": "^0.1.5-rc.3 || ^0.2.0-rc.1",
+      "@deepseek-ai/dsh-client-ui-primitives": "^0.1.5-rc.3 || ^0.2.0-rc.1",
+      "@deepseek-ai/dsh-client-ui-tool": "^0.1.5-rc.3 || ^0.2.0-rc.1",
+      "@deepseek-ai/dsh-llm": "^0.1.5-rc.3 || ^0.2.0-rc.1",
+      "@deepseek-ai/dsh-tools": "^0.1.5-rc.3 || ^0.2.0-rc.1",
+      "@deepseek-ai/schemastery": "^3.18.2",
+      "react": "^18.2.0"
+    },
+    "peerDependenciesMeta": {
+      "@deepseek-ai/dsh-attachment": {
+        "optional": true
+      },
+      "@deepseek-ai/dsh-client-ui-primitives": {
+        "optional": true
+      },
+      "@deepseek-ai/dsh-client-ui-tool": {
+        "optional": true
+      },
+      "react": {
+        "optional": true
+      }
+    },
+    "devDependencies": {
+      "@browser-skill/ui": "workspace:*",
+      "@deepseek-ai/cordis": "4.0.2",
+      "@deepseek-ai/dsh-agent": "0.1.5-rc.3",
+      "@deepseek-ai/dsh-agent-loop": "0.1.5-rc.3",
+      "@deepseek-ai/dsh-api-session-controller": "0.1.5-rc.3",
+      "@deepseek-ai/dsh-attachment": "0.1.5-rc.3",
+      "@deepseek-ai/dsh-client-store": "0.1.5-rc.3",
+      "@deepseek-ai/dsh-client-ui-chat": "0.1.5-rc.3",
+      "@deepseek-ai/dsh-client-ui-conversation": "0.1.5-rc.3",
+      "@deepseek-ai/dsh-client-ui-layout": "0.1.5-rc.3",
+      "@deepseek-ai/dsh-client-ui-primitives": "0.1.5-rc.3",
+      "@deepseek-ai/dsh-client-ui-renderer": "0.1.5-rc.3",
+      "@deepseek-ai/dsh-client-ui-session": "0.1.5-rc.3",
+      "@deepseek-ai/dsh-client-ui-slots": "0.1.5-rc.3",
+      "@deepseek-ai/dsh-client-ui-tool": "0.1.5-rc.3",
+      "@deepseek-ai/dsh-llm": "0.1.5-rc.3",
+      "@deepseek-ai/dsh-scope": "0.1.5-rc.3",
+      "@deepseek-ai/dsh-session": "0.1.5-rc.3",
+      "@deepseek-ai/dsh-session-projection": "0.1.5-rc.3",
+      "@deepseek-ai/dsh-skill": "0.1.5-rc.3",
+      "@deepseek-ai/dsh-system-prompt": "0.1.5-rc.3",
+      "@deepseek-ai/dsh-tool-skill": "0.1.5-rc.3",
+      "@deepseek-ai/dsh-tools": "0.1.5-rc.3",
+      "@deepseek-ai/schemastery": "3.18.2",
+      "@remixicon/react": "^4.9.0",
+      "@tailwindcss/cli": "^4.3.3",
+      "@testing-library/react": "^16.1.0",
+      "@types/node": "^22.10.0",
+      "@types/react": "~18.3.1",
+      "@types/react-dom": "^18.3.0",
+      "@types/semver": "7.7.1",
+      "happy-dom": "^15.11.7",
+      "lightningcss": "^1.30.0",
+      "postcss": "^8.5.0",
+      "postcss-prefix-selector": "^2.1.1",
+      "react": "^18.2.0",
+      "react-dom": "^18.2.0",
+      "semver": "7.8.5",
+      "tailwindcss": "^4.3.3",
+      "tsdown": "^0.22.14",
+      "typescript": "^5.8.0",
+      "vitest": "^4.1.6"
+    }
+  },
+  "runtime": {
+    "cli": "bsk 0.4.1",
+    "daemon_version": "0.4.1",
+    "protocol_version": "1.8"
+  },
+  "connected": [
+    {
+      "instance_id": "d408371e",
+      "browser_name": "edge",
+      "browser_version": "156.0.0.0",
+      "extension_version": "0.4.1",
+      "label": "edge",
+      "session_count": 0,
+      "connected_at_ms": 1793685315757,
+      "version_skew": false,
+      "extension_protocol_version": "1.8",
+      "unresponsive": false
+    },
+    {
+      "instance_id": "2303ebf6",
+      "browser_name": "chrome",
+      "browser_version": "155.0.0.0",
+      "extension_version": "0.4.1",
+      "label": "chrome",
+      "session_count": 0,
+      "connected_at_ms": 1793685527467,
+      "version_skew": false,
+      "extension_protocol_version": "1.8",
+      "unresponsive": false
+    }
+  ],
+  "finishedAt": "2026-11-03T09:32:12.486Z",
+  "requestedBrowsers": [
+    [
+      "chrome",
+      "2303ebf6"
+    ]
+  ],
+  "requestedFeatures": [
+    "screenshotBackground"
+  ],
+  "outcome": "accepted-limitations",
+  "passed": false
+}

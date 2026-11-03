@@ -1,0 +1,363 @@
+{
+  "schema": "browserskill.report-index.v1",
+  "reports": [
+    {
+      "directory": "candidate04-live-chrome-main",
+      "reportSha256": "a5dba0386ec790da76ffd91a5c848f25758ba93cea6144a8408f7234767dd553",
+      "archivedOutcome": "failed",
+      "requestedScope": null,
+      "finalSessions": 0,
+      "pendingCleanup": 0,
+      "scopeConditionEvidenceUse": "historical-not-a-substitute-for-final-scope-conditions"
+    },
+    {
+      "directory": "candidate04-live-chrome-incognito",
+      "reportSha256": "588693d2c9da3e3c0a066f427a17993112993d7d2e56ceb1fb6a860c3b574e72",
+      "archivedOutcome": "passed",
+      "requestedScope": null,
+      "finalSessions": 0,
+      "pendingCleanup": 0,
+      "scopeConditionEvidenceUse": "historical-not-a-substitute-for-final-scope-conditions"
+    },
+    {
+      "directory": "candidate04-live-chrome-incognito-regular-tab",
+      "reportSha256": "8623dd53f02c0351cbf529bd1e556ad590b5d1ae5cdd5c1cb883bd3a02a633ad",
+      "archivedOutcome": "passed",
+      "requestedScope": null,
+      "finalSessions": 0,
+      "pendingCleanup": 0,
+      "scopeConditionEvidenceUse": "historical-not-a-substitute-for-final-scope-conditions"
+    },
+    {
+      "directory": "candidate04-live-edge-main",
+      "reportSha256": "2d7b3218b144daff9192fe032490e71853e5316c36215e72becd29cd14f37fba",
+      "archivedOutcome": "passed",
+      "requestedScope": null,
+      "finalSessions": 0,
+      "pendingCleanup": 0,
+      "scopeConditionEvidenceUse": "historical-not-a-substitute-for-final-scope-conditions"
+    },
+    {
+      "directory": "candidate04-live-edge-incognito-regular-tab",
+      "reportSha256": "be10b91792b421f57a7286ba8a8a63568437762345556eee6a47a4798979530e",
+      "archivedOutcome": "passed",
+      "requestedScope": null,
+      "finalSessions": 0,
+      "pendingCleanup": 0,
+      "scopeConditionEvidenceUse": "historical-not-a-substitute-for-final-scope-conditions"
+    },
+    {
+      "directory": "candidate04-live-edge-upload-single",
+      "reportSha256": "a427281bcd107934351c337887c98026cbc82acce06d3ddeeab2797f3e02475c",
+      "archivedOutcome": "passed",
+      "requestedScope": null,
+      "finalSessions": 0,
+      "pendingCleanup": 0,
+      "scopeConditionEvidenceUse": "historical-not-a-substitute-for-final-scope-conditions"
+    },
+    {
+      "directory": "candidate04-live-edge-upload-multiple",
+      "reportSha256": "020f65e2da669fbcb39b0ae22b87cb7aa270ea9489b7a1609f6de29cbc0cf523",
+      "archivedOutcome": "passed",
+      "requestedScope": null,
+      "finalSessions": 0,
+      "pendingCleanup": 0,
+      "scopeConditionEvidenceUse": "historical-not-a-substitute-for-final-scope-conditions"
+    },
+    {
+      "directory": "candidate04-live-edge-upload-drop",
+      "reportSha256": "b455fd88fc8894c021f7292f0b846ca36c85a64ed19edfd081751ddf836cd0ba",
+      "archivedOutcome": "passed",
+      "requestedScope": null,
+      "finalSessions": 0,
+      "pendingCleanup": 0,
+      "scopeConditionEvidenceUse": "historical-not-a-substitute-for-final-scope-conditions"
+    },
+    {
+      "directory": "candidate04-live-chrome-screenshot",
+      "reportSha256": "8629412ccf5d8fe8e99987ae721112fe6f6c4106694bd97d6231392661ba7489",
+      "archivedOutcome": "failed",
+      "requestedScope": null,
+      "finalSessions": 0,
+      "pendingCleanup": 0,
+      "scopeConditionEvidenceUse": "historical-not-a-substitute-for-final-scope-conditions"
+    },
+    {
+      "directory": "candidate04-live-edge-screenshot",
+      "reportSha256": "667e985dedd6912700037dfac76ebab9ccb5a458a62a7dc7b8d823482136c740",
+      "archivedOutcome": "accepted-limitations",
+      "requestedScope": null,
+      "finalSessions": 0,
+      "pendingCleanup": 0,
+      "scopeConditionEvidenceUse": "historical-not-a-substitute-for-final-scope-conditions"
+    },
+    {
+      "directory": "candidate04-live-chrome-background",
+      "reportSha256": "ea8706c3f4be6f26f6b2c517aba0f3abf58672ac372befd4f4c817401bd8c0aa",
+      "archivedOutcome": "accepted-limitations",
+      "requestedScope": null,
+      "finalSessions": 0,
+      "pendingCleanup": 0,
+      "scopeConditionEvidenceUse": "historical-not-a-substitute-for-final-scope-conditions"
+    },
+    {
+      "directory": "candidate04-live-edge-background",
+      "reportSha256": "a89f95a40f90e378be33c8f6743055bc5b2863f8891c25e0066407afacae4004",
+      "archivedOutcome": "accepted-limitations",
+      "requestedScope": null,
+      "finalSessions": 0,
+      "pendingCleanup": 0,
+      "scopeConditionEvidenceUse": "historical-not-a-substitute-for-final-scope-conditions"
+    },
+    {
+      "directory": "candidate04-live-chrome-html",
+      "reportSha256": "259a5f6cee44857c2a90eda7f36b08f362b3e94d363169ad4eda5de1d070be01",
+      "archivedOutcome": "passed",
+      "requestedScope": null,
+      "finalSessions": 0,
+      "pendingCleanup": 0,
+      "scopeConditionEvidenceUse": "historical-not-a-substitute-for-final-scope-conditions"
+    },
+    {
+      "directory": "candidate04-live-edge-html",
+      "reportSha256": "d5ab7b1ccdfe4d6fae441b047dc1501e6d23f5b201006c57af5b7abbec7a4b11",
+      "archivedOutcome": "passed",
+      "requestedScope": null,
+      "finalSessions": 0,
+      "pendingCleanup": 0,
+      "scopeConditionEvidenceUse": "historical-not-a-substitute-for-final-scope-conditions"
+    },
+    {
+      "directory": "candidate04-live-chrome-scope-current",
+      "reportSha256": "78ab6d771a3b7c4b833f160fabab410d2587c82033b23ddf4e0949dda9e958af",
+      "archivedOutcome": "failed",
+      "requestedScope": "current",
+      "finalSessions": 0,
+      "pendingCleanup": 0,
+      "scopeConditionEvidenceUse": "historical-not-a-substitute-for-final-scope-conditions"
+    },
+    {
+      "directory": "candidate04-live-chrome-scope-current-unique",
+      "reportSha256": "188df750b0863a5e2554c9e1331ae7a8786cdf11d085300f6aab4c913b74bade",
+      "archivedOutcome": "accepted-limitations",
+      "requestedScope": "current",
+      "finalSessions": 0,
+      "pendingCleanup": 0,
+      "scopeConditionEvidenceUse": "final-unique-window-evidence"
+    },
+    {
+      "directory": "candidate04-live-chrome-scope-follow",
+      "reportSha256": "e94600279112bbf6f2026a866ac56e865017215cceb85eca3a52618ce5cd5481",
+      "archivedOutcome": "accepted-limitations",
+      "requestedScope": "follow",
+      "finalSessions": 0,
+      "pendingCleanup": 0,
+      "scopeConditionEvidenceUse": "historical-not-a-substitute-for-final-scope-conditions"
+    },
+    {
+      "directory": "candidate04-live-chrome-scope-follow-unique",
+      "reportSha256": "5149da07abf465e95c7e1aecf6882cbd6c3dcf07f5d15097aff4ae36aed4da42",
+      "archivedOutcome": "accepted-limitations",
+      "requestedScope": "follow",
+      "finalSessions": 0,
+      "pendingCleanup": 0,
+      "scopeConditionEvidenceUse": "final-unique-window-evidence"
+    },
+    {
+      "directory": "candidate04-live-edge-scope-current",
+      "reportSha256": "f257c878f9d856d29e03e3783928f01129ec7ce1f7440aad23d38c91afbfaa14",
+      "archivedOutcome": "accepted-limitations",
+      "requestedScope": "current",
+      "finalSessions": 0,
+      "pendingCleanup": 0,
+      "scopeConditionEvidenceUse": "historical-not-a-substitute-for-final-scope-conditions"
+    },
+    {
+      "directory": "candidate04-live-edge-scope-current-unique",
+      "reportSha256": "8b265415f28bbd5aa1cdb48cc095ea1e187deeee3d857a9cb26683a29b1aa726",
+      "archivedOutcome": "accepted-limitations",
+      "requestedScope": "current",
+      "finalSessions": 0,
+      "pendingCleanup": 0,
+      "scopeConditionEvidenceUse": "final-unique-window-evidence"
+    },
+    {
+      "directory": "candidate04-live-edge-scope-follow",
+      "reportSha256": "737ac79257ede49dac3c6940000b7e0f7bf956b32c895f8b8304d73cb4307598",
+      "archivedOutcome": "accepted-limitations",
+      "requestedScope": "follow",
+      "finalSessions": 0,
+      "pendingCleanup": 0,
+      "scopeConditionEvidenceUse": "historical-not-a-substitute-for-final-scope-conditions"
+    },
+    {
+      "directory": "candidate04-live-edge-scope-follow-unique",
+      "reportSha256": "8fdb71f659e42fee28e5d0cb2758a5a5c1ea8ae0ae110377ed65b760c6aae308",
+      "archivedOutcome": "accepted-limitations",
+      "requestedScope": "follow",
+      "finalSessions": 0,
+      "pendingCleanup": 0,
+      "scopeConditionEvidenceUse": "final-unique-window-evidence"
+    }
+  ],
+  "ordinaryCoverage": [
+    {
+      "browser": "2303ebf6",
+      "passingFeatureGroups": 18,
+      "evidence": [
+        {
+          "feature": "wait",
+          "directory": "candidate04-live-chrome-main"
+        },
+        {
+          "feature": "control",
+          "directory": "candidate04-live-chrome-main"
+        },
+        {
+          "feature": "evaluate",
+          "directory": "candidate04-live-chrome-main"
+        },
+        {
+          "feature": "evaluateCancel",
+          "directory": "candidate04-live-chrome-main"
+        },
+        {
+          "feature": "evaluateTimeout",
+          "directory": "candidate04-live-chrome-main"
+        },
+        {
+          "feature": "uploadSingle",
+          "directory": "candidate04-live-chrome-main"
+        },
+        {
+          "feature": "uploadMultiple",
+          "directory": "candidate04-live-chrome-main"
+        },
+        {
+          "feature": "uploadDrop",
+          "directory": "candidate04-live-chrome-main"
+        },
+        {
+          "feature": "missingUpload",
+          "directory": "candidate04-live-chrome-main"
+        },
+        {
+          "feature": "download",
+          "directory": "candidate04-live-chrome-main"
+        },
+        {
+          "feature": "html",
+          "directory": "candidate04-live-chrome-html"
+        },
+        {
+          "feature": "emulate",
+          "directory": "candidate04-live-chrome-main"
+        },
+        {
+          "feature": "hover",
+          "directory": "candidate04-live-chrome-main"
+        },
+        {
+          "feature": "drag",
+          "directory": "candidate04-live-chrome-main"
+        },
+        {
+          "feature": "step",
+          "directory": "candidate04-live-chrome-main"
+        },
+        {
+          "feature": "view",
+          "directory": "candidate04-live-chrome-main"
+        },
+        {
+          "feature": "incognito",
+          "directory": "candidate04-live-chrome-incognito-regular-tab"
+        },
+        {
+          "feature": "dialog",
+          "directory": "candidate04-live-chrome-main"
+        }
+      ]
+    },
+    {
+      "browser": "d408371e",
+      "passingFeatureGroups": 18,
+      "evidence": [
+        {
+          "feature": "wait",
+          "directory": "candidate04-live-edge-main"
+        },
+        {
+          "feature": "control",
+          "directory": "candidate04-live-edge-main"
+        },
+        {
+          "feature": "evaluate",
+          "directory": "candidate04-live-edge-main"
+        },
+        {
+          "feature": "evaluateCancel",
+          "directory": "candidate04-live-edge-main"
+        },
+        {
+          "feature": "evaluateTimeout",
+          "directory": "candidate04-live-edge-main"
+        },
+        {
+          "feature": "missingUpload",
+          "directory": "candidate04-live-edge-main"
+        },
+        {
+          "feature": "download",
+          "directory": "candidate04-live-edge-main"
+        },
+        {
+          "feature": "html",
+          "directory": "candidate04-live-edge-html"
+        },
+        {
+          "feature": "emulate",
+          "directory": "candidate04-live-edge-main"
+        },
+        {
+          "feature": "hover",
+          "directory": "candidate04-live-edge-main"
+        },
+        {
+          "feature": "drag",
+          "directory": "candidate04-live-edge-main"
+        },
+        {
+          "feature": "step",
+          "directory": "candidate04-live-edge-main"
+        },
+        {
+          "feature": "view",
+          "directory": "candidate04-live-edge-main"
+        },
+        {
+          "feature": "incognito",
+          "directory": "candidate04-live-edge-incognito-regular-tab"
+        },
+        {
+          "feature": "dialog",
+          "directory": "candidate04-live-edge-main"
+        },
+        {
+          "feature": "uploadSingle",
+          "directory": "candidate04-live-edge-upload-single"
+        },
+        {
+          "feature": "uploadMultiple",
+          "directory": "candidate04-live-edge-upload-multiple"
+        },
+        {
+          "feature": "uploadDrop",
+          "directory": "candidate04-live-edge-upload-drop"
+        }
+      ]
+    }
+  ],
+  "finalScopeAudit": "scope-audit-unique.json",
+  "note": "Archived outcomes preserved. Only the four unique-window reports establish the final current/follow condition matrix. Earlier screenshot measurements and the first independent failure remain historical."
+}

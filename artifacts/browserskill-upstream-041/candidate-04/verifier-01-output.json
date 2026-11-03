@@ -1,0 +1,136 @@
+{
+  "schema": "comet.public-outcome-export.v1",
+  "runId": "browserskill-upstream-041",
+  "actionId": "browserskill-upstream-041:18",
+  "outcomeId": "browserskill-upstream-041-verifier-dsh-only-01-result-20261103-73c620f8",
+  "status": "succeeded",
+  "sourceRequestSha256": "fc300bbd4008ce4ff6ed96051f98ab97c824bd7c89050a8b1ab4d431e084c073",
+  "output": {
+    "candidateId": "cbc038138260f3edb5dca60ea345a44c7bcae1a6c310f8d69a7a59eb7455c130",
+    "verifierExecutionRef": "browserskill-upstream-041-verifier-dsh-only-01",
+    "response": {
+      "kind": "final-result",
+      "result": {
+        "iteration": 1,
+        "attempt": 1,
+        "verdict": "fail",
+        "acceptance": [
+          {
+            "id": "A1",
+            "result": "passed",
+            "reason": "Independent source audit of src/browser-tools.ts:127-136, src/tools.ts:102-174, src/sessions.ts:1-249 and src/queue.ts:1-63 confirms six public tools delegate through ownership validation, queued session execution, cancellation and timeout. Runtime actual full suite passed; tools tests cover external/foreign sessions and reservation races. Raw Chrome/Edge main reports use all six public tools and terminate owned sessions."
+          },
+          {
+            "id": "A2",
+            "result": "passed",
+            "reason": "Read sole evaluate handler in src/script-file-tools.ts: default true via official omission, explicit false flags and shared literal execution preserved. Actual candidate04 Chrome/Edge main evaluate results include Promise value42, remote descriptors with returnByValue=false, and official page-JS ok:false. Actual cancellation/timeout reports retain uncertainty, stop isolated sessions and do not replay."
+          },
+          {
+            "id": "A3",
+            "result": "passed",
+            "reason": "Independent input/drop handler audit confirms 1..20 nonempty paths, explicit modes and shared runner/ownership. Chrome main and three candidate04-live-edge-upload-{single,multiple,drop}/report.json independently inspected: successful names a.txt/b.txt and contentsMatch=true backed by script readback. Missing paths reject. script/test-enhancement-live.mjs:99-108,410-442 restricts unknown classification to exact official control_context_invalid/error and one readback then stop; no generic Edge fix inferred."
+          },
+          {
+            "id": "A4",
+            "result": "passed",
+            "reason": "Official download mapping retains output and explicit --overwrite only when requested; real Chrome/Edge main download outputs verify payload, exclusive refusal and overwrite. Read src/phase-one-tools-support.ts dialog/operation dispatch: pending operation await/cancel uses original ID without repeating download. Runtime full tests cover cancellation and atomic output contracts; actual main dialog groups exercise accept/resume/cancel of original operations."
+          },
+          {
+            "id": "A5",
+            "result": "failed",
+            "reason": "[Blocker] Current effective spec.md:240-243 and311-313 require current/follow and real recorded foreground/background conditions with pixels OR official error. All four current candidate04 screenshot reports dispatch only scope=current; independent extraction of every report call found ZERO scope=follow. Ordinary Chrome report.json:209-236 returns cdp_failed/page_hidden/frames0/effect_state unknown, :303-305 foreground probe unavailable, :526 outcome failed. This cannot establish actual foreground/background conditions or be upgraded to an accepted background limitation. Source tools.ts:1235-1317 and existing mocked tests retain attachment/exclusive output/cleanup; no independent actual follow branch exists. Accepted qualified background current refusals are valid limitations, not failures or functional success. Successful live PNG/attachment/EEXIST is NOT imposed as an extra unconditional gate: independent current/follow official refusals under verifiable conditions may satisfy the relevant real branch; unknown originals must never be replayed."
+          },
+          {
+            "id": "A6",
+            "result": "passed",
+            "reason": "No-session browsers and owned-only lists audited in source/tests. All14 raw candidate04 reports independently bind explicit responsive Chrome2303ebf6 or Edged408371e with extension/browser metadata and no fallback. Final bsk_session list in every report is sessions=[]/pendingCleanup=0; source registry rejects foreign IDs."
+          },
+          {
+            "id": "A7",
+            "result": "passed",
+            "reason": "Read tools.ts:1385-1457 full validation/mapping for device/width/height/dpr/mobile/ua/acceptLanguage/touch/maxTouchPoints and off. Explicit false retained. Raw Chrome/Edge main emulate results restore measured native10 touch points after applied5; no assumption of zero. Runtime enhancement/tool tests cover numeric/mutual-exclusion/off validation."
+          },
+          {
+            "id": "A8",
+            "result": "passed",
+            "reason": "Source observe adapter forwards probeHover/debugSurfaces/tab and diagnostic outputs with default probe omitted, classifies probing as concurrency-unsafe. Independently inspected Chrome/Edge main hover groups and actual passed Runtime enhancement/tools tests. Shared runBsk keeps effectful probes within owned-session queue."
+          },
+          {
+            "id": "A9",
+            "result": "passed",
+            "reason": "Read phase-one-tools-support.ts:425-463: inline/UTF8 wx export, signal checks, written byte count and cleanup on write/close/abort. Raw candidate04-live-{chrome,edge}-html reports and actual files independently checked:5784/5764 bytes, truncated1024 each, Chinese and emoji intact, existing-file refusal recorded. Old redacted main HTML nodes were not used. Runtime enhancement tests include disk/close/cancel cleanup."
+          },
+          {
+            "id": "A10",
+            "result": "passed",
+            "reason": "Official daemon wait-ms execution remains sessionless with integer0..300000 validation and shared cancellation. Chrome/Edge main raw wait nodes passed. Runtime enhancement regressions cover invalid bounds/fractions and cancellation; no browser-side sleep fallback added."
+          },
+          {
+            "id": "A11",
+            "result": "passed",
+            "reason": "Read tools.ts:296-459 startup/name/incognito and tracked-start recovery with no fallback. Chrome/Edge candidate04-live-*-incognito-regular-tab raw reports independently establish private isolation, ordinary regular-Agent-tab borrow rejection incognito_borrow_disabled, and final cleanup. Original Chrome-main helper failure was retained but not accepted as valid evidence."
+          },
+          {
+            "id": "A12",
+            "result": "passed",
+            "reason": "Actual package identity @caiqy/browser-skill-dsh-plugin, v3/v4 message-source.ts and release-dsh-plugin.yml read directly. Independent child pnpm --version=10.17.0. Runtime check browserskill-dsh-only-final-checks exit0 actual log:32files passed/1skipped,779tests passed/10default browser tests skipped, real CLI parser test passed,9 packed skill resources and unrelated-cwd apply passed. OIDC/fork guards and same-tarball release retained; remote CI was not run or claimed."
+          },
+          {
+            "id": "A13",
+            "result": "failed",
+            "reason": "[Blocker] Current spec.md:275 with313 requires final packed public-tool Chrome/Edge verification. Candidate identity, packed apply, all6 tools, official versions and truthful fixture/cleanup are independently confirmed across14 raw reports;18 ordinary feature groups each have passing Chrome/Edge evidence after valid supplements. Complete real screenshot branch verification is nevertheless absent: all4 attempts are current only, no follow dispatch, and ordinaryChrome condition probe unavailable remains failed. Therefore A13 full real-verification coverage is incomplete for the A5 branch; no claim of component mismatch or fabricated success is made."
+          },
+          {
+            "id": "A14",
+            "result": "passed",
+            "reason": "Independent archive hash/size=26ee94324c96d95a069ec4d9656f502dd380e9bfce3d431840e2809ea58c374f/141007bytes,16entries. Root603593ff960bda5bab775b8c0fb2cb3d989c499f and clean childfeaa7f60498f43bd6baf21575407ee797ced01c2 checked; official baseline peeled b8f2d4f0fa35c8c7c866229e1cf3b3329ae39de5.15/16 packed files byte-equal current outputs; client.cjs differs by one extra current .bsk-obs .contents{display:contents} rule and CSS-module export key order, normalized content equal. Traceability and rollback/source recreation documented; strict byte-for-byte rebuild NOT proven, caveat retained. No withdrawn custom extension evidence used."
+          },
+          {
+            "id": "A15",
+            "result": "passed",
+            "reason": "Read browser-tools.ts:127-136 control injection, tools.ts:102-174 and225-290 policy negotiation: context/observation/dependsOn/expect preserved, no optional guard stripping or unsafe downgrade. Raw Chrome/Edge main control groups exercise false expectation/stale-context refusals then fresh sync. Actual Runtime tests cover strict negotiation, supplementary reads, startup wait-user/bootstrap and navigation timeout behavior; official production guard source unchanged. Unknown business operations not replayed."
+          },
+          {
+            "id": "A16",
+            "result": "passed",
+            "reason": "Read gesture-observation-tools.ts:181-404: bounded drag, step executes runtime.run exactly once with allowStepResult and preserved receipt; saved view rejects live control fields. Read actual step-receipt.integration.test.ts:200-309 assertions preserving acknowledged/late cancellation while respecting host policy. Runtime tests passed. Raw main Chrome/Edge drag/step/view/dialog nodes verify drop effect, action_replayed=false, browser_calls0 historical view, original operation await/cancel."
+          },
+          {
+            "id": "A17",
+            "result": "passed",
+            "reason": "Independently parsed all14 raw report runtime fields: cli bsk0.4.1, daemon0.4.1/protocol1.8; every actual browser connection extension0.4.1/protocol1.8/version_skew=false/unresponsive=false. Reports use current candidate hash, not historical candidate03 or connection-only proof. Official source component diff also verified."
+          },
+          {
+            "id": "A18",
+            "result": "passed",
+            "reason": "Read tools.ts:130-131 flags precede --literal and src/runner.ts:1-320 spawn argv without shell, StringDecoder UTF8/EOF cancellation. Runtime full actual log confirms enhancement real-CLI parser test using BSK_PARSER_TEST_PATH=C:/Users/caiqy/.local/bin/bsk.exe passed; source tests cover15 routes with leading-hyphen literals through public tool/real runner and CLI no-session parse guards. SDK receipt integration tests retain single-run cancellation receipts."
+          },
+          {
+            "id": "A19",
+            "result": "passed",
+            "reason": "Independently ran git diff --name-status against official b8f2d4f0fa35c8c7c866229e1cf3b3329ae39de5 and git diff --exit-code for apps/extension crates packages/vom packages/i18n Cargo.toml Cargo.lock:zero production component differences; untracked component source list empty and child tree clean. Changes confined DSH plugin/docs/necessary fork identity and CI; no browser or bsk patch adopted."
+          },
+          {
+            "id": "A20",
+            "result": "passed",
+            "reason": "Current script exact official Edge-control predicate, source/readback/stop branches and actual upload reports inspected independently. All3 Edge supplemental fixtures succeeded with contents verified; no general epoch repair or causal cure inferred. DELIVERY and packaged enhancement/help docs explicitly retain official control_context_invalid/effect_state unknown limitation and forbid blind replay/private guard bypass."
+          },
+          {
+            "id": "A21",
+            "result": "passed",
+            "reason": "Read actual packaged README/skill/help/enhancement docs and candidate contents: stock official0.4.1/protocol1.8 requirements, no custom extension requirement, withdrawn ZIP not installation proof. Fixture host/model/attachment registration is explicitly distinct from actual Desktop UI/authorization. This Verifier made no source/docs/test edits, browser calls, installs/restarts/publishes/push/CI requests, or subordinate-agent calls."
+          }
+        ],
+        "risks": [
+          "Accepted limitation, not functional success: verified-background current screenshots return official page_hidden/frames0/unknown on both browsers; do not force focus, record video or bypass guards. Ordinary Chrome screenshot lacks condition proof and remains failed. Follow actual coverage remains missing.",
+          "Minimal further evidence after Runtime returns Build: independent fresh Chrome/Edge fixtures/sessions for current and follow, fresh official sync/observation before each, actual verifiable foreground/background booleans and either pixels or precise official error. Stop each unknown session; never replay original uncertain screenshot. Valid official refusals under recorded conditions can satisfy these real branches without requiring successfulPNG or a new product decision.",
+          "[Suggestion] Strict artifact byte reproducibility is unverified: packed client.cjs202580 characters versus current rebuilt output202616; only extra .bsk-obs .contents{display:contents} and CSS-module key ordering found, equal after narrowly normalizing those differences (both202445). Cause/function impact not empirically established; do not describe archive as a bit-identical current rebuild.",
+          "Host registration/model metadata/attachment store were fixtures. Actual in-use Desktop UI and attachment authorization, installation/restart, remote CI and external publishing were neither performed nor asserted. Existing Runtime10browser-default skips are disclosed;14 real candidate reports were independently audited separately.",
+          "Checks reused only after verifying actual receipt/log: browserskill-dsh-only-final-checks exit0/logSHA25601f5f9c17b133650aadd26db54000cae8040725246217083a82d21b189260e01; browserskill-live-policy-assertions exit0. Candidate unchanged before/after Runtime checks. Independent archive/source/report/UTF8/diff audits completed; no background jobs or terminals created."
+        ],
+        "summary": "独立只读验收完成，verdict=fail；21项逐项覆盖，19passed，A5/A13failed。只按当前唯一Requirement browserskill-current-contract及已确认Q6判定，未采纳Builder/旧Reviewer自评。失败为缺少follow真实派发和普通Chrome前后台条件证据，非要求后台等效成功；已接受官方限制保留而不计功能成功。Runtime两typed checks实际成功、14原始报告候选/版本/清理及18普通功能组均已独立核对。候选未安装/发布，生产组件与官方零差异。请由主会话按Runtime返回继续Build补证，本Verifier不修实现。"
+      }
+    }
+  },
+  "note": "Exact output from the independently submitted SDK outcome; public dispatch accepted it. Evidence export only, not a manually authored Runtime verification.md."
+}

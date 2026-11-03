@@ -1,0 +1,40 @@
+{
+  "schema": "browserskill.dsh-only-source-provenance.v1",
+  "sourceRevision": "8558a89fbc1eb2cc303ef17b9845c81615f4de11",
+  "sourceBranch": "dsh/plugin-parity-0.3.3",
+  "clean": true,
+  "officialRevision": "b8f2d4f0fa35c8c7c866229e1cf3b3329ae39de5",
+  "officialComponentPaths": [
+    "apps/extension",
+    "crates",
+    "packages/vom",
+    "packages/i18n",
+    "Cargo.toml",
+    "Cargo.lock"
+  ],
+  "officialTrackedComponentChanges": [],
+  "officialUntrackedComponentChanges": [],
+  "archive": {
+    "name": "caiqy-browser-skill-dsh-plugin-0.4.1-dsh.1.tgz",
+    "sha256": "26ee94324c96d95a069ec4d9656f502dd380e9bfce3d431840e2809ea58c374f",
+    "bytes": 141007
+  },
+  "liveScriptSha256": "5e4554d734e4bd25bf56dc9cb449c4dbcda92a8b925833f65fedc8e56919b714",
+  "effectiveCoverageAudit": "live-report-audit-final.json",
+  "actualComponents": {
+    "cli": "0.4.1",
+    "daemon": "0.4.1",
+    "extension": "0.4.1",
+    "protocol": "1.8"
+  },
+  "noDesktopInstallation": true,
+  "noCustomComponentLoaded": true,
+  "noPublishingOrPush": true,
+  "priorSourceRecord": "source-provenance-final.json",
+  "changesFromPriorSource": [
+    "packages/dsh-plugin-browserskill/scripts/test-enhancement-live.mjs"
+  ],
+  "scopeCoverageAudit": "scope-audit-unique.json",
+  "strictByteRebuildProven": false,
+  "note": "Production plugin source, tests, package, skill and official components unchanged from the prior formally checked source. The fixed candidate archive is unchanged. Current/follow use independent new fixtures with unique target-window proof; prior ambiguous measurements are not substituted."
+}
