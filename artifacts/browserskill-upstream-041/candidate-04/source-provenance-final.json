@@ -1,0 +1,33 @@
+{
+  "schema": "browserskill.dsh-only-source-provenance.v1",
+  "sourceRevision": "feaa7f60498f43bd6baf21575407ee797ced01c2",
+  "sourceBranch": "dsh/plugin-parity-0.3.3",
+  "clean": true,
+  "officialRevision": "b8f2d4f0fa35c8c7c866229e1cf3b3329ae39de5",
+  "officialComponentPaths": [
+    "apps/extension",
+    "crates",
+    "packages/vom",
+    "packages/i18n",
+    "Cargo.toml",
+    "Cargo.lock"
+  ],
+  "officialTrackedComponentChanges": [],
+  "officialUntrackedComponentChanges": [],
+  "archive": {
+    "name": "caiqy-browser-skill-dsh-plugin-0.4.1-dsh.1.tgz",
+    "sha256": "26ee94324c96d95a069ec4d9656f502dd380e9bfce3d431840e2809ea58c374f",
+    "bytes": 141007
+  },
+  "liveScriptSha256": "3c394b3b25f49445f23c0b505df910b9c1c33083818f153664731d8801ee9e35",
+  "effectiveCoverageAudit": "live-report-audit-final.json",
+  "actualComponents": {
+    "cli": "0.4.1",
+    "daemon": "0.4.1",
+    "extension": "0.4.1",
+    "protocol": "1.8"
+  },
+  "noDesktopInstallation": true,
+  "noCustomComponentLoaded": true,
+  "noPublishingOrPush": true
+}

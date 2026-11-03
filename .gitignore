@@ -7,6 +7,10 @@ Thumbs.db
 .tmp/
 *.tgz
 coverage/
+# 未采用的 BrowserSkill 候选及诊断留在本机，最终候选证据另行提交
+/artifacts/browserskill-upstream-041/candidate-0[123]/
+/artifacts/browserskill-upstream-041/live-chrome-*/
+/artifacts/browserskill-upstream-041/candidate02-live-*/
 # 本地环境变量
 .env
 .env.*
@@ -21,4 +25,23 @@ coverage/
 !/.comet/
 /.comet/*
 !/.comet/config.yaml
+.comet-archive-staging/
+.*.comet-archive-cas-*
+.*.comet-runtime-migration.json*
+.*.comet-runtime-source-*
+.*.comet-runtime-stage-*
+**/comet/changes/*/runtime
+**/comet/archive/*/runtime
+**/.comet/run-state.json
+**/.comet/pending-action.json
+**/.comet/trajectory.jsonl
+**/.comet/context.md
+**/.comet/artifacts.json
+**/.comet/checkpoint.json
+**/.comet/skill-snapshots
+**/.comet/checks
+**/.comet/coordination.json
+**/.comet/subagent-progress.md
+.comet-state.lock
+.comet-state-transaction.json
 # <<< Comet managed project state <<<

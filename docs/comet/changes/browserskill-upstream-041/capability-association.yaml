@@ -1,0 +1,13 @@
+schema: comet.capability-association.v1
+status: explicit
+workflow: native
+capability: browserskill-dsh-capabilities
+current_spec: docs/comet/specs/browserskill-dsh-capabilities/spec.md
+current_hash: d64d26d55f8ead2f610a7e57ac9dd510370112ef21cc301b38127e2618ad4f6a
+confidence: high
+query: 采用合理的方案合并上游更新，上游新增的功能覆盖增强版时，如果最终效果一致，则以官方为准，如果不一致则说明差异让我选择
+reason: 用户显式指定能力，已直接核对当前总 Spec 路径。
+historical_sources: []
+evidence:
+  - source: docs/comet/specs/browserskill-dsh-capabilities/spec.md
+    kind: native-spec

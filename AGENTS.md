@@ -97,7 +97,9 @@ pnpm -C packages/browser-skill --filter @caiqy/browser-skill-dsh-plugin test
 
 ### BrowserSkill
 
-先读 [插件 README](packages/browser-skill/packages/dsh-plugin-browserskill/README.md) 和 [开发说明](packages/browser-skill/packages/dsh-plugin-browserskill/docs/development.md)。增强范围默认限于 DSH 插件层，Chrome/Edge 继续使用官方扩展，遵循 [根 README 的子仓库约定](README.md#browserskill-子仓库)。修改公开工具时同步核对 [tool-names.json](packages/browser-skill/packages/dsh-plugin-browserskill/src/tool-names.json)、客户端视图、包内 skill 与测试。保留会话所有权、取消、清理和本地 HTTP 路由的信任边界。
+先读 [插件 README](packages/browser-skill/packages/dsh-plugin-browserskill/README.md) 和 [开发说明](packages/browser-skill/packages/dsh-plugin-browserskill/docs/development.md)。增强方案只能修改 DSH 插件层，遵循 [根 README 的子仓库约定](README.md#browserskill-子仓库)；浏览器扩展和 bsk CLI/daemon 必须保持官方原版，不定制、不打补丁，本需求也没有例外。上游官方更新可以作为基线合并；DSH 插件层不能达到等效效果时，说明实际差异并让用户选择，不得改用组件补丁。修改公开工具时同步核对 [tool-names.json](packages/browser-skill/packages/dsh-plugin-browserskill/src/tool-names.json)、客户端视图、包内 skill 与测试。保留会话所有权、取消、清理和本地 HTTP 路由的信任边界，不绕过官方控制守卫。
+
+0.4.1 候选采用官方共享控制流程：从 `sync` 获取上下文与观察凭据，按目标策略传递 `contextId`、`observationId` 和必要的 `expect`；不能省略守卫来兼容旧脚本。页面 JS 异常沿用官方 `ok: false` 结构化结果。CLI、daemon、扩展与候选插件须配套验证，旧版浏览器报告不能作为新版通过证据。真实候选脚本使用打包后的 `apply` 和公开工具；宿主 fixture 与实际 Desktop 验证分别报告。
 
 ## 按插件发版（GitHub Actions）
 
@@ -150,5 +152,5 @@ pnpm sync:index web-search     # 本地校验公共 npm 并更新索引，之后
 - [vendor/deepseek-harness/](vendor/deepseek-harness/) 是本地参考 checkout（忽略不入库），用于核对宿主契约，默认不直接修改。升级宿主需同时核对 SDK、peer 范围与 [vendor/README.md](vendor/README.md) 记录的固定版本，不自动跟随上游分支。
 - 本地联调优先使用隔离 profile `plugins-dev`，流程见 [本地联调说明](README.md#本地联调)。安装或更新插件、重启在用 profile、发布 npm 包属于额外操作，按用户授权执行；普通开发与文档任务不默认包含这些动作。
 - 客户端改动必须运行包内完整构建；源码或类型检查通过不代表已运行宿主加载了新 bundle。实际 UI 验证需确认目标 profile 加载了新产物，再刷新或按宿主要求重载。
-- 使用 Comet 时，先读取项目配置和当前 selection，再遵循选中 change 的阶段规则；Native 正式产物位于 `docs/comet/changes/<change>/`，运行时数据位于 `.comet/runtime/native/`。没有活跃 change 的普通任务不必创建 change，不手工修改 Runtime 状态，不把 archive 当作当前任务。
+- 使用 Comet 时，先读取项目配置和当前 selection，再遵循选中 change 的阶段规则；Native 正式产物位于 `docs/comet/changes/<change>/`；运行时数据以当前 Runtime 返回的位置为准，新版位于用户目录 `~/.comet/workspaces/<workspace-id>/runtime/native/`，不要沿用旧 `.comet/runtime/native/` 路径或手工迁移。没有活跃 change 的普通任务不必创建 change，不手工修改 Runtime 状态，不把 archive 当作当前任务。
 - 有 CodeGraph 索引时优先使用其探索入口；无索引时按包范围搜索，避开依赖、构建产物及无关子模块。项目结构或脚本变化后同步更新本文件，详细契约仍链接到各包说明，避免复制易过期的版本和配置表。

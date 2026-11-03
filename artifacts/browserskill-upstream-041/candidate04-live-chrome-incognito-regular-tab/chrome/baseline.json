@@ -1,0 +1,28 @@
+{
+  "activity": [],
+  "context_id": "9ec64925-1318-479f-9910-59448488909f",
+  "control_policy": "target",
+  "guidance": "This context remains valid for DOM-targeted actions until human control or the document changes. Supplementary reads do not invalidate it. Use explicit expect checks for business facts such as price, recipient or record ID. Scripts, untargeted keys and visual clicks require this sync's observation_id and retain strict content checks. Never replay an uncertain action; inspect its result first.",
+  "history_complete": false,
+  "kind": "baseline",
+  "observation": {
+    "observation_id": "88024a3e-24eb-480e-a41b-9abed58de500",
+    "ref_count": 8,
+    "tab_id": 1448789490,
+    "text": "@vom 1\n@view 969x705\n@layers 1 focus=L1\nL1 page\n  RootWebArea \"BrowserSkill candidate smoke bsk-fixture-5d00255e-bb51-4221-b46f-625930e2a0d6\"\n    heading \"BrowserSkill 本地候选测试 💡\"\n      StaticText \"BrowserSkill 本地候选测试 💡\"\n    LabelText \"Single file\"\n      @e1 button \"Single file\"\n      StaticText \"Single file\"\n    LabelText \"Multiple files\"\n      @e2 button \"Multiple files\"\n      StaticText \"Multiple files\"\n    StaticText \"Drop test files\"\n    @e3 link \"Download test file\"\n    @e4 button \"Hover test menu [has-submenu]\"\n    @e5 button \"Run step\"\n    @e6 button \"Open prompt\"\n    @e7 button \"Open confirm\"\n    @e8 group [draggable] \"Drag source\"\n      StaticText \"Drag source\"\n    StaticText \"Drop target\"\n    status\n    StaticText \"Full-page test spacer\"\n    paragraph \"End of test page\"\n      StaticText \"End of test page\"",
+    "truncated": false
+  },
+  "observation_id": "0f00855f-6be6-4d18-b922-1a05a129502b",
+  "observation_origin": {
+    "capture_context_id": "9ec64925-1318-479f-9910-59448488909f",
+    "kind": "capture",
+    "payload_sha256": "144f986529dc152d6b180cce9096d0f333e373645436d5f4a6e0230f42a46f09",
+    "session_id": "qqaz"
+  },
+  "state": {
+    "editing": false,
+    "mode": "ready",
+    "revision": 7
+  },
+  "tab_id": 1448789490
+}

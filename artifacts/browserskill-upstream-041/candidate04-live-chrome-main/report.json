@@ -1,0 +1,3223 @@
+{
+  "candidate": "D:\\Caiqy\\Projects\\Github\\dsh-plugins\\artifacts\\browserskill-upstream-041\\candidate-04\\caiqy-browser-skill-dsh-plugin-0.4.1-dsh.1.tgz",
+  "bytes": 141007,
+  "sha256": "26ee94324c96d95a069ec4d9656f502dd380e9bfce3d431840e2809ea58c374f",
+  "startedAt": "2026-11-03T08:31:13.183Z",
+  "calls": [
+    {
+      "name": "bsk_session",
+      "args": {
+        "action": "browsers"
+      },
+      "elapsedMs": 44,
+      "ok": true,
+      "result": [
+        {
+          "instance_id": "d408371e",
+          "browser_name": "edge",
+          "browser_version": "156.0.0.0",
+          "extension_version": "0.4.1",
+          "label": "edge",
+          "session_count": 0,
+          "connected_at_ms": 1793685315757,
+          "version_skew": false,
+          "extension_protocol_version": "1.8",
+          "unresponsive": false
+        },
+        {
+          "instance_id": "2303ebf6",
+          "browser_name": "chrome",
+          "browser_version": "155.0.0.0",
+          "extension_version": "0.4.1",
+          "label": "chrome",
+          "session_count": 0,
+          "connected_at_ms": 1793685527467,
+          "version_skew": false,
+          "extension_protocol_version": "1.8",
+          "unresponsive": false
+        }
+      ]
+    },
+    {
+      "name": "bsk_session",
+      "args": {
+        "action": "list"
+      },
+      "elapsedMs": 0,
+      "ok": true,
+      "result": {
+        "pendingCleanup": 0,
+        "sessions": []
+      }
+    },
+    {
+      "name": "bsk_session",
+      "args": {
+        "action": "browsers"
+      },
+      "elapsedMs": 41,
+      "ok": true,
+      "result": [
+        {
+          "instance_id": "d408371e",
+          "browser_name": "edge",
+          "browser_version": "156.0.0.0",
+          "extension_version": "0.4.1",
+          "label": "edge",
+          "session_count": 0,
+          "connected_at_ms": 1793685315757,
+          "version_skew": false,
+          "extension_protocol_version": "1.8",
+          "unresponsive": false
+        },
+        {
+          "instance_id": "2303ebf6",
+          "browser_name": "chrome",
+          "browser_version": "155.0.0.0",
+          "extension_version": "0.4.1",
+          "label": "chrome",
+          "session_count": 0,
+          "connected_at_ms": 1793685527467,
+          "version_skew": false,
+          "extension_protocol_version": "1.8",
+          "unresponsive": false
+        }
+      ]
+    },
+    {
+      "name": "bsk_session",
+      "args": {
+        "action": "start",
+        "browser": "2303ebf6",
+        "name": "bsk-candidate-chrome",
+        "width": 1000,
+        "height": 800,
+        "noFocus": true
+      },
+      "elapsedMs": 673,
+      "ok": true,
+      "result": {
+        "sessionId": "njxo",
+        "browserInstanceId": "2303ebf6"
+      }
+    },
+    {
+      "name": "bsk_tabs",
+      "args": {
+        "action": "list",
+        "session": "njxo",
+        "scope": "agent"
+      },
+      "elapsedMs": 52,
+      "ok": true,
+      "result": {
+        "session": "njxo",
+        "tabs": [
+          {
+            "active": true,
+            "scope": "agent"
+          }
+        ]
+      }
+    },
+    {
+      "name": "bsk_session",
+      "args": {
+        "action": "sync",
+        "session": "njxo",
+        "policy": "auto",
+        "saveFull": "D:\\Caiqy\\Projects\\Github\\dsh-plugins\\artifacts\\browserskill-upstream-041\\candidate04-live-chrome-main\\chrome\\baseline.json"
+      },
+      "elapsedMs": 130,
+      "ok": true,
+      "result": {
+        "activity": [],
+        "context_id": "7d086008-0c3b-4eb4-8c0d-767599ca3e1c",
+        "control_policy": "target",
+        "full_output_path": "D:\\Caiqy\\Projects\\Github\\dsh-plugins\\artifacts\\browserskill-upstream-041\\candidate04-live-chrome-main\\chrome\\baseline.json",
+        "guidance": "This context remains valid for DOM-targeted actions until human control or the document changes. Supplementary reads do not invalidate it. Use explicit expect checks for business facts such as price, recipient or record ID. Scripts, untargeted keys and visual clicks require this sync's observation_id and retain strict content checks. Never replay an uncertain action; inspect its result first.",
+        "history_complete": false,
+        "kind": "baseline",
+        "observation": {
+          "observation_id": "a083e89f-b9e9-4da9-be2c-946e729d8584",
+          "ref_count": 8,
+          "truncated": false
+        },
+        "observation_id": "fc175c85-fee1-4b0b-9eeb-d2bb5b0d2261",
+        "observation_origin": {
+          "capture_context_id": "7d086008-0c3b-4eb4-8c0d-767599ca3e1c",
+          "kind": "capture",
+          "payload_sha256": "132a95629bf57fbcb1a8f50b318e4dde3aef14d3dc0c265eee0f429a99afc8b2",
+          "session_id": "njxo"
+        },
+        "state": {
+          "editing": false,
+          "mode": "ready",
+          "revision": 8
+        }
+      }
+    },
+    {
+      "name": "bsk_inspect",
+      "args": {
+        "action": "observe",
+        "session": "njxo"
+      },
+      "elapsedMs": 96,
+      "ok": true,
+      "result": {
+        "session": "njxo",
+        "refCount": 8,
+        "truncated": false
+      }
+    },
+    {
+      "name": "bsk_session",
+      "args": {
+        "action": "sync",
+        "session": "njxo",
+        "policy": "auto"
+      },
+      "elapsedMs": 90,
+      "ok": true,
+      "result": {
+        "activity": [],
+        "context_id": "7d086008-0c3b-4eb4-8c0d-767599ca3e1c",
+        "control_policy": "target",
+        "guidance": "This context remains valid for DOM-targeted actions until human control or the document changes. Supplementary reads do not invalidate it. Use explicit expect checks for business facts such as price, recipient or record ID. Scripts, untargeted keys and visual clicks require this sync's observation_id and retain strict content checks. Never replay an uncertain action; inspect its result first.",
+        "history_complete": true,
+        "kind": "baseline",
+        "observation": {
+          "observation_id": "5de4b8c6-c033-4c92-a5a4-43e06fb305ac",
+          "ref_count": 8,
+          "truncated": false
+        },
+        "observation_id": "a52d06b4-2564-46d4-af27-20f87e0c2cce",
+        "observation_origin": {
+          "capture_context_id": "7d086008-0c3b-4eb4-8c0d-767599ca3e1c",
+          "kind": "capture",
+          "payload_sha256": "3271d6dc2fd72e666fa73d9a826e9abe0f78fae0e11b6df760d9f387ad06157d",
+          "session_id": "njxo"
+        },
+        "state": {
+          "editing": false,
+          "mode": "ready",
+          "revision": 10
+        }
+      }
+    },
+    {
+      "name": "bsk_interact",
+      "args": {
+        "action": "click",
+        "session": "njxo",
+        "target": "#step-button",
+        "contextId": "7d086008-0c3b-4eb4-8c0d-767599ca3e1c",
+        "observationId": "a52d06b4-2564-46d4-af27-20f87e0c2cce",
+        "expect": [
+          {
+            "target": "#step-button",
+            "field": "text",
+            "equals": "not the button label"
+          }
+        ]
+      },
+      "elapsedMs": 59,
+      "ok": false,
+      "error": {
+        "message": "BskError: bsk click failed: Precondition failed: #step-button text (hint: Read the changed business fact and decide again. Do not replace the expected value without reconsidering the action.)",
+        "code": "permission_denied",
+        "data": {
+          "actual": "Run step",
+          "effect_state": "none",
+          "expected": "not the button label",
+          "field": "text",
+          "phase": "precondition",
+          "reason": "precondition_failed",
+          "recovery": "Read the changed business fact and decide again. Do not replace the expected value without reconsidering the action.",
+          "target": "#step-button"
+        },
+        "timedOut": false
+      }
+    },
+    {
+      "name": "bsk_interact",
+      "args": {
+        "action": "click",
+        "session": "njxo",
+        "target": "#step-button",
+        "contextId": "stale-context-from-fixture",
+        "observationId": "a52d06b4-2564-46d4-af27-20f87e0c2cce",
+        "expect": [
+          {
+            "target": "#step-button",
+            "field": "exists",
+            "equals": true
+          }
+        ]
+      },
+      "elapsedMs": 44,
+      "ok": false,
+      "error": {
+        "message": "BskError: bsk click failed: This control context is no longer valid for this session and tab (hint: Synchronize the intended tab after control is returned, inspect the current state and decide again.)",
+        "code": "permission_denied",
+        "data": {
+          "effect_state": "none",
+          "phase": "control",
+          "reason": "control_context_invalid",
+          "recovery": "Synchronize the intended tab after control is returned, inspect the current state and decide again."
+        },
+        "timedOut": false
+      }
+    },
+    {
+      "name": "bsk_interact",
+      "args": {
+        "action": "click",
+        "session": "njxo",
+        "target": "--literal-target",
+        "contextId": "7d086008-0c3b-4eb4-8c0d-767599ca3e1c",
+        "observationId": "a52d06b4-2564-46d4-af27-20f87e0c2cce",
+        "expect": [
+          {
+            "target": "--literal-target",
+            "field": "exists",
+            "equals": true
+          }
+        ]
+      },
+      "elapsedMs": 49,
+      "ok": false,
+      "error": {
+        "message": "BskError: bsk click failed: selector --literal-target did not match any element (hint: Observe the current page and choose a target again. Nothing was sent.)",
+        "code": "not_found",
+        "data": {
+          "effect_state": "none",
+          "phase": "target",
+          "reason": "selector_not_found",
+          "recovery": "Observe the current page and choose a target again. Nothing was sent."
+        },
+        "timedOut": false
+      }
+    },
+    {
+      "name": "bsk_session",
+      "args": {
+        "action": "sync",
+        "session": "njxo",
+        "policy": "auto"
+      },
+      "elapsedMs": 44,
+      "ok": true,
+      "result": {
+        "activity": [],
+        "changes": [],
+        "context_id": "7d086008-0c3b-4eb4-8c0d-767599ca3e1c",
+        "control_policy": "target",
+        "guidance": "This context remains valid for DOM-targeted actions until human control or the document changes. Supplementary reads do not invalidate it. Use explicit expect checks for business facts such as price, recipient or record ID. Scripts, untargeted keys and visual clicks require this sync's observation_id and retain strict content checks. Never replay an uncertain action; inspect its result first.",
+        "history_complete": true,
+        "kind": "unchanged",
+        "observation_id": "159d8529-c950-4afb-a3bf-7e9d077e7c8e",
+        "previous_context_id": "7d086008-0c3b-4eb4-8c0d-767599ca3e1c",
+        "state": {
+          "editing": false,
+          "mode": "ready",
+          "revision": 14
+        }
+      }
+    },
+    {
+      "name": "bsk_interact",
+      "args": {
+        "action": "evaluate",
+        "session": "njxo",
+        "contextId": "7d086008-0c3b-4eb4-8c0d-767599ca3e1c",
+        "observationId": "159d8529-c950-4afb-a3bf-7e9d077e7c8e"
+      },
+      "elapsedMs": 48,
+      "ok": true,
+      "result": {
+        "session": "njxo",
+        "ok": true,
+        "value": true
+      }
+    },
+    {
+      "name": "bsk_page",
+      "args": {
+        "action": "wait-ms",
+        "durationMs": 0
+      },
+      "elapsedMs": 44,
+      "ok": true,
+      "result": {
+        "waitedMs": 0
+      }
+    },
+    {
+      "name": "bsk_page",
+      "args": {
+        "action": "wait-ms",
+        "durationMs": 20
+      },
+      "elapsedMs": 68,
+      "ok": true,
+      "result": {
+        "waitedMs": 20
+      }
+    },
+    {
+      "name": "bsk_page",
+      "args": {
+        "action": "wait-ms",
+        "durationMs": -1
+      },
+      "elapsedMs": 0,
+      "ok": false,
+      "error": {
+        "message": "Error: durationMs must be an integer in 0..300000"
+      }
+    },
+    {
+      "name": "bsk_page",
+      "args": {
+        "action": "wait-ms",
+        "durationMs": 300001
+      },
+      "elapsedMs": 1,
+      "ok": false,
+      "error": {
+        "message": "Error: durationMs must be an integer in 0..300000"
+      }
+    },
+    {
+      "name": "bsk_page",
+      "args": {
+        "action": "wait-ms",
+        "durationMs": 10000
+      },
+      "elapsedMs": 313,
+      "ok": false,
+      "error": {
+        "message": "AbortError: tool call aborted"
+      }
+    },
+    {
+      "name": "bsk_session",
+      "args": {
+        "action": "sync",
+        "session": "njxo",
+        "policy": "auto"
+      },
+      "elapsedMs": 46,
+      "ok": true,
+      "result": {
+        "activity": [],
+        "changes": [],
+        "context_id": "7d086008-0c3b-4eb4-8c0d-767599ca3e1c",
+        "control_policy": "target",
+        "guidance": "This context remains valid for DOM-targeted actions until human control or the document changes. Supplementary reads do not invalidate it. Use explicit expect checks for business facts such as price, recipient or record ID. Scripts, untargeted keys and visual clicks require this sync's observation_id and retain strict content checks. Never replay an uncertain action; inspect its result first.",
+        "history_complete": true,
+        "kind": "unchanged",
+        "observation_id": "846d9c0f-c0c5-4e2e-89a9-070bf4840a5e",
+        "previous_context_id": "7d086008-0c3b-4eb4-8c0d-767599ca3e1c",
+        "state": {
+          "editing": false,
+          "mode": "ready",
+          "revision": 18
+        }
+      }
+    },
+    {
+      "name": "bsk_interact",
+      "args": {
+        "action": "evaluate",
+        "session": "njxo",
+        "contextId": "7d086008-0c3b-4eb4-8c0d-767599ca3e1c",
+        "observationId": "846d9c0f-c0c5-4e2e-89a9-070bf4840a5e"
+      },
+      "elapsedMs": 52,
+      "ok": true,
+      "result": {
+        "session": "njxo",
+        "ok": true,
+        "value": -1
+      }
+    },
+    {
+      "name": "bsk_session",
+      "args": {
+        "action": "sync",
+        "session": "njxo",
+        "policy": "auto"
+      },
+      "elapsedMs": 82,
+      "ok": true,
+      "result": {
+        "activity": [],
+        "changes": [],
+        "context_id": "7d086008-0c3b-4eb4-8c0d-767599ca3e1c",
+        "control_policy": "target",
+        "guidance": "This context remains valid for DOM-targeted actions until human control or the document changes. Supplementary reads do not invalidate it. Use explicit expect checks for business facts such as price, recipient or record ID. Scripts, untargeted keys and visual clicks require this sync's observation_id and retain strict content checks. Never replay an uncertain action; inspect its result first.",
+        "history_complete": true,
+        "kind": "unchanged",
+        "observation_id": "61d0f326-85e1-492e-80c7-8efed8e67c06",
+        "previous_context_id": "7d086008-0c3b-4eb4-8c0d-767599ca3e1c",
+        "state": {
+          "editing": false,
+          "mode": "ready",
+          "revision": 22
+        }
+      }
+    },
+    {
+      "name": "bsk_interact",
+      "args": {
+        "action": "evaluate",
+        "session": "njxo",
+        "contextId": "7d086008-0c3b-4eb4-8c0d-767599ca3e1c",
+        "observationId": "61d0f326-85e1-492e-80c7-8efed8e67c06"
+      },
+      "elapsedMs": 62,
+      "ok": true,
+      "result": {
+        "session": "njxo",
+        "ok": true,
+        "value": 42
+      }
+    },
+    {
+      "name": "bsk_session",
+      "args": {
+        "action": "sync",
+        "session": "njxo",
+        "policy": "auto"
+      },
+      "elapsedMs": 70,
+      "ok": true,
+      "result": {
+        "activity": [],
+        "changes": [],
+        "context_id": "7d086008-0c3b-4eb4-8c0d-767599ca3e1c",
+        "control_policy": "target",
+        "guidance": "This context remains valid for DOM-targeted actions until human control or the document changes. Supplementary reads do not invalidate it. Use explicit expect checks for business facts such as price, recipient or record ID. Scripts, untargeted keys and visual clicks require this sync's observation_id and retain strict content checks. Never replay an uncertain action; inspect its result first.",
+        "history_complete": true,
+        "kind": "unchanged",
+        "observation_id": "9cb0d887-4062-4a42-8e94-2819b9a033fb",
+        "previous_context_id": "7d086008-0c3b-4eb4-8c0d-767599ca3e1c",
+        "state": {
+          "editing": false,
+          "mode": "ready",
+          "revision": 26
+        }
+      }
+    },
+    {
+      "name": "bsk_interact",
+      "args": {
+        "action": "evaluate",
+        "session": "njxo",
+        "awaitPromise": false,
+        "returnByValue": false,
+        "contextId": "7d086008-0c3b-4eb4-8c0d-767599ca3e1c",
+        "observationId": "9cb0d887-4062-4a42-8e94-2819b9a033fb"
+      },
+      "elapsedMs": 76,
+      "ok": true,
+      "result": {
+        "session": "njxo",
+        "ok": true,
+        "value": {
+          "className": "Promise",
+          "description": "Promise",
+          "objectId": "-3095897426087165402.2.6",
+          "subtype": "promise",
+          "type": "object"
+        }
+      }
+    },
+    {
+      "name": "bsk_session",
+      "args": {
+        "action": "sync",
+        "session": "njxo",
+        "policy": "auto"
+      },
+      "elapsedMs": 70,
+      "ok": true,
+      "result": {
+        "activity": [],
+        "changes": [],
+        "context_id": "7d086008-0c3b-4eb4-8c0d-767599ca3e1c",
+        "control_policy": "target",
+        "guidance": "This context remains valid for DOM-targeted actions until human control or the document changes. Supplementary reads do not invalidate it. Use explicit expect checks for business facts such as price, recipient or record ID. Scripts, untargeted keys and visual clicks require this sync's observation_id and retain strict content checks. Never replay an uncertain action; inspect its result first.",
+        "history_complete": true,
+        "kind": "unchanged",
+        "observation_id": "318072d0-b782-4d8e-b61d-a00eeecfb0f0",
+        "previous_context_id": "7d086008-0c3b-4eb4-8c0d-767599ca3e1c",
+        "state": {
+          "editing": false,
+          "mode": "ready",
+          "revision": 30
+        }
+      }
+    },
+    {
+      "name": "bsk_interact",
+      "args": {
+        "action": "evaluate",
+        "session": "njxo",
+        "contextId": "7d086008-0c3b-4eb4-8c0d-767599ca3e1c",
+        "observationId": "318072d0-b782-4d8e-b61d-a00eeecfb0f0"
+      },
+      "elapsedMs": 73,
+      "ok": true,
+      "result": {
+        "session": "njxo",
+        "ok": false,
+        "error": {
+          "line": 1,
+          "column": 6
+        }
+      }
+    },
+    {
+      "name": "bsk_session",
+      "args": {
+        "action": "start",
+        "browser": "2303ebf6",
+        "name": "bsk-eval-cancel-chrome",
+        "noFocus": true,
+        "width": 900,
+        "height": 700
+      },
+      "elapsedMs": 699,
+      "ok": true,
+      "result": {
+        "sessionId": "bwsh",
+        "browserInstanceId": "2303ebf6"
+      }
+    },
+    {
+      "name": "bsk_tabs",
+      "args": {
+        "action": "list",
+        "session": "bwsh",
+        "scope": "agent"
+      },
+      "elapsedMs": 51,
+      "ok": true,
+      "result": {
+        "session": "bwsh",
+        "tabs": [
+          {
+            "active": true,
+            "scope": "agent"
+          }
+        ]
+      }
+    },
+    {
+      "name": "bsk_inspect",
+      "args": {
+        "action": "observe",
+        "session": "bwsh"
+      },
+      "elapsedMs": 109,
+      "ok": true,
+      "result": {
+        "session": "bwsh",
+        "refCount": 8,
+        "truncated": false
+      }
+    },
+    {
+      "name": "bsk_session",
+      "args": {
+        "action": "sync",
+        "session": "bwsh",
+        "policy": "auto"
+      },
+      "elapsedMs": 102,
+      "ok": true,
+      "result": {
+        "activity": [],
+        "context_id": "72da2d49-b033-48ec-be35-af6f23c0a759",
+        "control_policy": "target",
+        "guidance": "This context remains valid for DOM-targeted actions until human control or the document changes. Supplementary reads do not invalidate it. Use explicit expect checks for business facts such as price, recipient or record ID. Scripts, untargeted keys and visual clicks require this sync's observation_id and retain strict content checks. Never replay an uncertain action; inspect its result first.",
+        "history_complete": false,
+        "kind": "baseline",
+        "observation": {
+          "observation_id": "acff67c5-cdcd-4a93-9b84-d600e3c4b177",
+          "ref_count": 8,
+          "truncated": false
+        },
+        "observation_id": "9263389c-96af-4a6d-b462-a6cf829c999a",
+        "observation_origin": {
+          "capture_context_id": "72da2d49-b033-48ec-be35-af6f23c0a759",
+          "kind": "capture",
+          "payload_sha256": "771fee43c12a76a2cf28cdeae15af83e0a8c9ca6a76b73edec86e0ec68de0d40",
+          "session_id": "bwsh"
+        },
+        "state": {
+          "editing": false,
+          "mode": "ready",
+          "revision": 7
+        }
+      }
+    },
+    {
+      "name": "bsk_session",
+      "args": {
+        "action": "sync",
+        "session": "bwsh",
+        "policy": "auto"
+      },
+      "elapsedMs": 49,
+      "ok": true,
+      "result": {
+        "activity": [],
+        "changes": [],
+        "context_id": "72da2d49-b033-48ec-be35-af6f23c0a759",
+        "control_policy": "target",
+        "guidance": "This context remains valid for DOM-targeted actions until human control or the document changes. Supplementary reads do not invalidate it. Use explicit expect checks for business facts such as price, recipient or record ID. Scripts, untargeted keys and visual clicks require this sync's observation_id and retain strict content checks. Never replay an uncertain action; inspect its result first.",
+        "history_complete": true,
+        "kind": "unchanged",
+        "observation_id": "5fab7145-beca-4457-83b4-b09992697c4c",
+        "previous_context_id": "72da2d49-b033-48ec-be35-af6f23c0a759",
+        "state": {
+          "editing": false,
+          "mode": "ready",
+          "revision": 9
+        }
+      }
+    },
+    {
+      "name": "bsk_interact",
+      "args": {
+        "action": "evaluate",
+        "session": "bwsh",
+        "contextId": "72da2d49-b033-48ec-be35-af6f23c0a759",
+        "observationId": "5fab7145-beca-4457-83b4-b09992697c4c"
+      },
+      "elapsedMs": 2372,
+      "ok": false,
+      "error": {
+        "message": "AbortError: tool call aborted"
+      }
+    },
+    {
+      "name": "bsk_session",
+      "args": {
+        "action": "stop",
+        "session": "bwsh"
+      },
+      "elapsedMs": 113,
+      "ok": true,
+      "result": {
+        "stopped": "bwsh",
+        "alreadyClosed": false
+      }
+    },
+    {
+      "name": "bsk_session",
+      "args": {
+        "action": "start",
+        "browser": "2303ebf6",
+        "name": "bsk-eval-timeout-chrome",
+        "noFocus": true,
+        "width": 900,
+        "height": 700
+      },
+      "elapsedMs": 606,
+      "ok": true,
+      "result": {
+        "sessionId": "rhti",
+        "browserInstanceId": "2303ebf6"
+      }
+    },
+    {
+      "name": "bsk_tabs",
+      "args": {
+        "action": "list",
+        "session": "rhti",
+        "scope": "agent"
+      },
+      "elapsedMs": 50,
+      "ok": true,
+      "result": {
+        "session": "rhti",
+        "tabs": [
+          {
+            "active": true,
+            "scope": "agent"
+          }
+        ]
+      }
+    },
+    {
+      "name": "bsk_inspect",
+      "args": {
+        "action": "observe",
+        "session": "rhti"
+      },
+      "elapsedMs": 95,
+      "ok": true,
+      "result": {
+        "session": "rhti",
+        "refCount": 8,
+        "truncated": false
+      }
+    },
+    {
+      "name": "bsk_session",
+      "args": {
+        "action": "sync",
+        "session": "rhti",
+        "policy": "auto"
+      },
+      "elapsedMs": 91,
+      "ok": true,
+      "result": {
+        "activity": [],
+        "context_id": "fcf05860-d324-4105-9994-c500dc8b69b0",
+        "control_policy": "target",
+        "guidance": "This context remains valid for DOM-targeted actions until human control or the document changes. Supplementary reads do not invalidate it. Use explicit expect checks for business facts such as price, recipient or record ID. Scripts, untargeted keys and visual clicks require this sync's observation_id and retain strict content checks. Never replay an uncertain action; inspect its result first.",
+        "history_complete": false,
+        "kind": "baseline",
+        "observation": {
+          "observation_id": "d1b5b634-fac5-49a5-958d-9b6230180634",
+          "ref_count": 8,
+          "truncated": false
+        },
+        "observation_id": "eb925c59-beff-4312-973a-c0dc1b3da860",
+        "observation_origin": {
+          "capture_context_id": "fcf05860-d324-4105-9994-c500dc8b69b0",
+          "kind": "capture",
+          "payload_sha256": "f0602f5aa810f4f53d61f5ff71337b5621bdf621f4d599a1ace35e1b17150cd1",
+          "session_id": "rhti"
+        },
+        "state": {
+          "editing": false,
+          "mode": "ready",
+          "revision": 8
+        }
+      }
+    },
+    {
+      "name": "bsk_session",
+      "args": {
+        "action": "sync",
+        "session": "rhti",
+        "policy": "auto"
+      },
+      "elapsedMs": 44,
+      "ok": true,
+      "result": {
+        "activity": [],
+        "changes": [],
+        "context_id": "fcf05860-d324-4105-9994-c500dc8b69b0",
+        "control_policy": "target",
+        "guidance": "This context remains valid for DOM-targeted actions until human control or the document changes. Supplementary reads do not invalidate it. Use explicit expect checks for business facts such as price, recipient or record ID. Scripts, untargeted keys and visual clicks require this sync's observation_id and retain strict content checks. Never replay an uncertain action; inspect its result first.",
+        "history_complete": true,
+        "kind": "unchanged",
+        "observation_id": "0f623b72-c6e5-4992-b6ec-658120e9da3d",
+        "previous_context_id": "fcf05860-d324-4105-9994-c500dc8b69b0",
+        "state": {
+          "editing": false,
+          "mode": "ready",
+          "revision": 10
+        }
+      }
+    },
+    {
+      "name": "bsk_interact",
+      "args": {
+        "action": "evaluate",
+        "session": "rhti",
+        "timeoutMs": 150,
+        "contextId": "fcf05860-d324-4105-9994-c500dc8b69b0",
+        "observationId": "0f623b72-c6e5-4992-b6ec-658120e9da3d"
+      },
+      "elapsedMs": 2198,
+      "ok": false,
+      "error": {
+        "message": "BskError: bsk evaluate failed: page operation timed out and extension cleanup could not be confirmed; page effects may have occurred (hint: the operation may already have taken effect; observe the page before deciding whether to retry)",
+        "code": "timeout",
+        "data": {
+          "effect_state": "unknown",
+          "reason": "cancel_cleanup_timeout"
+        },
+        "timedOut": false
+      }
+    },
+    {
+      "name": "bsk_session",
+      "args": {
+        "action": "stop",
+        "session": "rhti"
+      },
+      "elapsedMs": 108,
+      "ok": true,
+      "result": {
+        "stopped": "rhti",
+        "alreadyClosed": false
+      }
+    },
+    {
+      "name": "bsk_session",
+      "args": {
+        "action": "sync",
+        "session": "njxo",
+        "policy": "auto"
+      },
+      "elapsedMs": 49,
+      "ok": true,
+      "result": {
+        "activity": [],
+        "changes": [],
+        "context_id": "7d086008-0c3b-4eb4-8c0d-767599ca3e1c",
+        "control_policy": "target",
+        "guidance": "This context remains valid for DOM-targeted actions until human control or the document changes. Supplementary reads do not invalidate it. Use explicit expect checks for business facts such as price, recipient or record ID. Scripts, untargeted keys and visual clicks require this sync's observation_id and retain strict content checks. Never replay an uncertain action; inspect its result first.",
+        "history_complete": true,
+        "kind": "unchanged",
+        "observation_id": "5a74255a-1c6f-4bde-b74c-a88bf9b828f5",
+        "previous_context_id": "7d086008-0c3b-4eb4-8c0d-767599ca3e1c",
+        "state": {
+          "editing": false,
+          "mode": "ready",
+          "revision": 34
+        }
+      }
+    },
+    {
+      "name": "bsk_interact",
+      "args": {
+        "action": "upload",
+        "session": "njxo",
+        "target": "#single",
+        "files": [
+          "a.txt"
+        ],
+        "contextId": "7d086008-0c3b-4eb4-8c0d-767599ca3e1c",
+        "expect": [
+          {
+            "target": "#single",
+            "field": "exists",
+            "equals": true
+          }
+        ]
+      },
+      "elapsedMs": 171,
+      "ok": true,
+      "result": {
+        "session": "njxo",
+        "used_ref": "e10",
+        "used_selector": "#single",
+        "file_names": [
+          "a.txt"
+        ]
+      }
+    },
+    {
+      "name": "bsk_session",
+      "args": {
+        "action": "sync",
+        "session": "njxo",
+        "policy": "auto"
+      },
+      "elapsedMs": 107,
+      "ok": true,
+      "result": {
+        "control_policy": "target",
+        "contextIdPresent": true,
+        "observationIdPresent": true
+      }
+    },
+    {
+      "name": "bsk_interact",
+      "args": {
+        "action": "evaluate",
+        "session": "njxo",
+        "contextIdPresent": true,
+        "observationIdPresent": true,
+        "awaitPromise": true,
+        "returnByValue": true
+      },
+      "elapsedMs": 52,
+      "ok": true,
+      "result": {
+        "ok": true,
+        "names": [
+          "a.txt"
+        ],
+        "contentsMatch": true
+      }
+    },
+    {
+      "name": "bsk_session",
+      "args": {
+        "action": "sync",
+        "session": "njxo",
+        "policy": "auto"
+      },
+      "elapsedMs": 46,
+      "ok": true,
+      "result": {
+        "activity": [],
+        "changes": [],
+        "context_id": "7d086008-0c3b-4eb4-8c0d-767599ca3e1c",
+        "control_policy": "target",
+        "guidance": "This context remains valid for DOM-targeted actions until human control or the document changes. Supplementary reads do not invalidate it. Use explicit expect checks for business facts such as price, recipient or record ID. Scripts, untargeted keys and visual clicks require this sync's observation_id and retain strict content checks. Never replay an uncertain action; inspect its result first.",
+        "history_complete": true,
+        "kind": "unchanged",
+        "observation_id": "dc7be728-5a6b-4e52-8bee-5b3fefaeebd8",
+        "previous_context_id": "7d086008-0c3b-4eb4-8c0d-767599ca3e1c",
+        "state": {
+          "editing": false,
+          "mode": "ready",
+          "revision": 44,
+          "target": {
+            "expires": 1793694683355,
+            "x": 166.5,
+            "y": 154.71875
+          }
+        }
+      }
+    },
+    {
+      "name": "bsk_interact",
+      "args": {
+        "action": "upload",
+        "session": "njxo",
+        "target": "#multi",
+        "files": [
+          "a.txt",
+          "b.txt"
+        ],
+        "mode": "input",
+        "contextId": "7d086008-0c3b-4eb4-8c0d-767599ca3e1c",
+        "expect": [
+          {
+            "target": "#multi",
+            "field": "exists",
+            "equals": true
+          }
+        ]
+      },
+      "elapsedMs": 134,
+      "ok": true,
+      "result": {
+        "session": "njxo",
+        "used_ref": "e11",
+        "used_selector": "#multi",
+        "file_names": [
+          "a.txt",
+          "b.txt"
+        ]
+      }
+    },
+    {
+      "name": "bsk_session",
+      "args": {
+        "action": "sync",
+        "session": "njxo",
+        "policy": "auto"
+      },
+      "elapsedMs": 92,
+      "ok": true,
+      "result": {
+        "control_policy": "target",
+        "contextIdPresent": true,
+        "observationIdPresent": true
+      }
+    },
+    {
+      "name": "bsk_interact",
+      "args": {
+        "action": "evaluate",
+        "session": "njxo",
+        "contextIdPresent": true,
+        "observationIdPresent": true,
+        "awaitPromise": true,
+        "returnByValue": true
+      },
+      "elapsedMs": 53,
+      "ok": true,
+      "result": {
+        "ok": true,
+        "names": [
+          "a.txt",
+          "b.txt"
+        ],
+        "contentsMatch": true
+      }
+    },
+    {
+      "name": "bsk_session",
+      "args": {
+        "action": "sync",
+        "session": "njxo",
+        "policy": "auto"
+      },
+      "elapsedMs": 44,
+      "ok": true,
+      "result": {
+        "activity": [],
+        "changes": [],
+        "context_id": "7d086008-0c3b-4eb4-8c0d-767599ca3e1c",
+        "control_policy": "target",
+        "guidance": "This context remains valid for DOM-targeted actions until human control or the document changes. Supplementary reads do not invalidate it. Use explicit expect checks for business facts such as price, recipient or record ID. Scripts, untargeted keys and visual clicks require this sync's observation_id and retain strict content checks. Never replay an uncertain action; inspect its result first.",
+        "history_complete": true,
+        "kind": "unchanged",
+        "observation_id": "d3c18a87-009c-47a3-bcfc-ff24fc2fa833",
+        "previous_context_id": "7d086008-0c3b-4eb4-8c0d-767599ca3e1c",
+        "state": {
+          "editing": false,
+          "mode": "ready",
+          "revision": 56,
+          "target": {
+            "expires": 1793694683704,
+            "x": 166.5,
+            "y": 237.71875
+          }
+        }
+      }
+    },
+    {
+      "name": "bsk_interact",
+      "args": {
+        "action": "upload",
+        "session": "njxo",
+        "target": "#drop",
+        "files": [
+          "a.txt",
+          "b.txt"
+        ],
+        "mode": "drop",
+        "contextId": "7d086008-0c3b-4eb4-8c0d-767599ca3e1c",
+        "expect": [
+          {
+            "target": "#drop",
+            "field": "exists",
+            "equals": true
+          }
+        ]
+      },
+      "elapsedMs": 1895,
+      "ok": true,
+      "result": {
+        "session": "njxo",
+        "used_ref": "e12",
+        "used_selector": "#drop",
+        "file_names": [
+          "a.txt",
+          "b.txt"
+        ]
+      }
+    },
+    {
+      "name": "bsk_session",
+      "args": {
+        "action": "sync",
+        "session": "njxo",
+        "policy": "auto"
+      },
+      "elapsedMs": 44,
+      "ok": true,
+      "result": {
+        "control_policy": "target",
+        "contextIdPresent": true,
+        "observationIdPresent": true
+      }
+    },
+    {
+      "name": "bsk_interact",
+      "args": {
+        "action": "evaluate",
+        "session": "njxo",
+        "contextIdPresent": true,
+        "observationIdPresent": true,
+        "awaitPromise": true,
+        "returnByValue": true
+      },
+      "elapsedMs": 48,
+      "ok": true,
+      "result": {
+        "ok": true,
+        "names": [
+          "a.txt",
+          "b.txt"
+        ],
+        "contentsMatch": true
+      }
+    },
+    {
+      "name": "bsk_session",
+      "args": {
+        "action": "sync",
+        "session": "njxo",
+        "policy": "auto"
+      },
+      "elapsedMs": 46,
+      "ok": true,
+      "result": {
+        "activity": [],
+        "changes": [],
+        "context_id": "7d086008-0c3b-4eb4-8c0d-767599ca3e1c",
+        "control_policy": "target",
+        "guidance": "This context remains valid for DOM-targeted actions until human control or the document changes. Supplementary reads do not invalidate it. Use explicit expect checks for business facts such as price, recipient or record ID. Scripts, untargeted keys and visual clicks require this sync's observation_id and retain strict content checks. Never replay an uncertain action; inspect its result first.",
+        "history_complete": true,
+        "kind": "unchanged",
+        "observation_id": "53127b68-306c-44da-8e03-697d441950f3",
+        "previous_context_id": "7d086008-0c3b-4eb4-8c0d-767599ca3e1c",
+        "state": {
+          "editing": false,
+          "mode": "ready",
+          "revision": 64,
+          "target": {
+            "expires": 1793694683704,
+            "x": 166.5,
+            "y": 237.71875
+          }
+        }
+      }
+    },
+    {
+      "name": "bsk_interact",
+      "args": {
+        "action": "upload",
+        "session": "njxo",
+        "target": "#single",
+        "files": [
+          "missing.txt"
+        ],
+        "contextId": "7d086008-0c3b-4eb4-8c0d-767599ca3e1c",
+        "expect": [
+          {
+            "target": "#single",
+            "field": "exists",
+            "equals": true
+          }
+        ]
+      },
+      "elapsedMs": 48,
+      "ok": false,
+      "error": {
+        "message": "BskError: bsk upload failed: open upload file C:\\Users\\caiqy\\AppData\\Local\\Temp\\bsk-candidate-live-ifMGkr\\missing.txt: 系统找不到指定的文件。 (os error 2) (hint: is the daemon running? try `bsk daemon start` or `bsk status`)",
+        "code": null,
+        "timedOut": false
+      }
+    },
+    {
+      "name": "bsk_session",
+      "args": {
+        "action": "sync",
+        "session": "njxo",
+        "policy": "auto"
+      },
+      "elapsedMs": 49,
+      "ok": true,
+      "result": {
+        "activity": [],
+        "changes": [],
+        "context_id": "7d086008-0c3b-4eb4-8c0d-767599ca3e1c",
+        "control_policy": "target",
+        "guidance": "This context remains valid for DOM-targeted actions until human control or the document changes. Supplementary reads do not invalidate it. Use explicit expect checks for business facts such as price, recipient or record ID. Scripts, untargeted keys and visual clicks require this sync's observation_id and retain strict content checks. Never replay an uncertain action; inspect its result first.",
+        "history_complete": true,
+        "kind": "unchanged",
+        "observation_id": "ecc5a007-7fb5-4321-ae6d-1491ade53e28",
+        "previous_context_id": "7d086008-0c3b-4eb4-8c0d-767599ca3e1c",
+        "state": {
+          "editing": false,
+          "mode": "ready",
+          "revision": 66,
+          "target": {
+            "expires": 1793694683704,
+            "x": 166.5,
+            "y": 237.71875
+          }
+        }
+      }
+    },
+    {
+      "name": "bsk_interact",
+      "args": {
+        "action": "download",
+        "session": "njxo",
+        "target": "#download",
+        "output": "D:\\Caiqy\\Projects\\Github\\dsh-plugins\\artifacts\\browserskill-upstream-041\\candidate04-live-chrome-main\\chrome\\download.txt",
+        "contextId": "7d086008-0c3b-4eb4-8c0d-767599ca3e1c",
+        "expect": [
+          {
+            "target": "#download",
+            "field": "exists",
+            "equals": true
+          }
+        ]
+      },
+      "elapsedMs": 494,
+      "ok": true,
+      "result": {
+        "session": "njxo",
+        "byte_size": 26,
+        "danger": "safe",
+        "mime": "text/plain",
+        "path": "D:\\Caiqy\\Projects\\Github\\dsh-plugins\\artifacts\\browserskill-upstream-041\\candidate04-live-chrome-main\\chrome\\download.txt",
+        "suggested_filename": "bsk-smoke.txt",
+        "used_ref": "e13",
+        "used_selector": "#download"
+      }
+    },
+    {
+      "name": "bsk_session",
+      "args": {
+        "action": "sync",
+        "session": "njxo",
+        "policy": "auto"
+      },
+      "elapsedMs": 108,
+      "ok": true,
+      "result": {
+        "activity": [],
+        "context_id": "7d086008-0c3b-4eb4-8c0d-767599ca3e1c",
+        "control_policy": "target",
+        "guidance": "This context remains valid for DOM-targeted actions until human control or the document changes. Supplementary reads do not invalidate it. Use explicit expect checks for business facts such as price, recipient or record ID. Scripts, untargeted keys and visual clicks require this sync's observation_id and retain strict content checks. Never replay an uncertain action; inspect its result first.",
+        "history_complete": true,
+        "kind": "baseline",
+        "observation": {
+          "observation_id": "96379599-ce83-41b3-83e3-78390b4b57c3",
+          "ref_count": 8,
+          "truncated": false
+        },
+        "observation_id": "d913228d-640b-4963-87cc-5ef0176085c7",
+        "observation_origin": {
+          "capture_context_id": "7d086008-0c3b-4eb4-8c0d-767599ca3e1c",
+          "kind": "capture",
+          "payload_sha256": "a2dd2cbc65536af57057dc349a3265ef29f3f7b358d6253bd5f21c12c46212c7",
+          "session_id": "njxo"
+        },
+        "state": {
+          "editing": false,
+          "mode": "ready",
+          "revision": 73,
+          "target": {
+            "expires": 1793694686169,
+            "x": 484.5,
+            "y": 373.21875
+          }
+        }
+      }
+    },
+    {
+      "name": "bsk_interact",
+      "args": {
+        "action": "download",
+        "session": "njxo",
+        "target": "#download",
+        "output": "D:\\Caiqy\\Projects\\Github\\dsh-plugins\\artifacts\\browserskill-upstream-041\\candidate04-live-chrome-main\\chrome\\download.txt",
+        "contextId": "7d086008-0c3b-4eb4-8c0d-767599ca3e1c",
+        "expect": [
+          {
+            "target": "#download",
+            "field": "exists",
+            "equals": true
+          }
+        ]
+      },
+      "elapsedMs": 45,
+      "ok": false,
+      "error": {
+        "message": "BskError: bsk download failed: output already exists (pass --overwrite to replace it): D:\\Caiqy\\Projects\\Github\\dsh-plugins\\artifacts\\browserskill-upstream-041\\candidate04-live-chrome-main\\chrome\\download.txt (hint: is the daemon running? try `bsk daemon start` or `bsk status`)",
+        "code": null,
+        "timedOut": false
+      }
+    },
+    {
+      "name": "bsk_session",
+      "args": {
+        "action": "sync",
+        "session": "njxo",
+        "policy": "auto"
+      },
+      "elapsedMs": 48,
+      "ok": true,
+      "result": {
+        "activity": [],
+        "changes": [],
+        "context_id": "7d086008-0c3b-4eb4-8c0d-767599ca3e1c",
+        "control_policy": "target",
+        "guidance": "This context remains valid for DOM-targeted actions until human control or the document changes. Supplementary reads do not invalidate it. Use explicit expect checks for business facts such as price, recipient or record ID. Scripts, untargeted keys and visual clicks require this sync's observation_id and retain strict content checks. Never replay an uncertain action; inspect its result first.",
+        "history_complete": true,
+        "kind": "unchanged",
+        "observation_id": "f6b706d5-e47d-41b2-9c1c-5aceaf182c00",
+        "previous_context_id": "7d086008-0c3b-4eb4-8c0d-767599ca3e1c",
+        "state": {
+          "editing": false,
+          "mode": "ready",
+          "revision": 75,
+          "target": {
+            "expires": 1793694686169,
+            "x": 484.5,
+            "y": 373.21875
+          }
+        }
+      }
+    },
+    {
+      "name": "bsk_interact",
+      "args": {
+        "action": "download",
+        "session": "njxo",
+        "target": "#download",
+        "output": "D:\\Caiqy\\Projects\\Github\\dsh-plugins\\artifacts\\browserskill-upstream-041\\candidate04-live-chrome-main\\chrome\\download.txt",
+        "overwrite": true,
+        "contextId": "7d086008-0c3b-4eb4-8c0d-767599ca3e1c",
+        "expect": [
+          {
+            "target": "#download",
+            "field": "exists",
+            "equals": true
+          }
+        ]
+      },
+      "elapsedMs": 352,
+      "ok": true,
+      "result": {
+        "session": "njxo",
+        "byte_size": 26,
+        "danger": "safe",
+        "mime": "text/plain",
+        "path": "D:\\Caiqy\\Projects\\Github\\dsh-plugins\\artifacts\\browserskill-upstream-041\\candidate04-live-chrome-main\\chrome\\download.txt",
+        "suggested_filename": "bsk-smoke.txt",
+        "used_ref": "e13",
+        "used_selector": "#download"
+      }
+    },
+    {
+      "name": "bsk_inspect",
+      "args": {
+        "action": "html",
+        "session": "njxo"
+      },
+      "elapsedMs": 54,
+      "ok": true,
+      "result": {
+        "session": "njxo",
+        "truncated": false,
+        "byteSize": 5784
+      }
+    },
+    {
+      "name": "bsk_inspect",
+      "args": {
+        "action": "html",
+        "session": "njxo",
+        "output": "D:\\Caiqy\\Projects\\Github\\dsh-plugins\\artifacts\\browserskill-upstream-041\\candidate04-live-chrome-main\\chrome\\page.html"
+      },
+      "elapsedMs": 49,
+      "ok": true,
+      "result": {
+        "session": "njxo",
+        "truncated": false,
+        "byteSize": 5784,
+        "path": "D:\\Caiqy\\Projects\\Github\\dsh-plugins\\artifacts\\browserskill-upstream-041\\candidate04-live-chrome-main\\chrome\\page.html",
+        "writtenBytes": 5784
+      }
+    },
+    {
+      "name": "bsk_inspect",
+      "args": {
+        "action": "html",
+        "session": "njxo",
+        "output": "D:\\Caiqy\\Projects\\Github\\dsh-plugins\\artifacts\\browserskill-upstream-041\\candidate04-live-chrome-main\\chrome\\page-truncated.html",
+        "maxBytes": 1024
+      },
+      "elapsedMs": 53,
+      "ok": true,
+      "result": {
+        "session": "njxo",
+        "truncated": true,
+        "byteSize": 5784,
+        "path": "D:\\Caiqy\\Projects\\Github\\dsh-plugins\\artifacts\\browserskill-upstream-041\\candidate04-live-chrome-main\\chrome\\page-truncated.html",
+        "writtenBytes": 1024
+      }
+    },
+    {
+      "name": "bsk_inspect",
+      "args": {
+        "action": "html",
+        "session": "njxo",
+        "output": "D:\\Caiqy\\Projects\\Github\\dsh-plugins\\artifacts\\browserskill-upstream-041\\candidate04-live-chrome-main\\chrome\\page.html"
+      },
+      "elapsedMs": 48,
+      "ok": false,
+      "error": {
+        "message": "Error: EEXIST: file already exists, open 'D:\\Caiqy\\Projects\\Github\\dsh-plugins\\artifacts\\browserskill-upstream-041\\candidate04-live-chrome-main\\chrome\\page.html'",
+        "code": "EEXIST"
+      }
+    },
+    {
+      "name": "bsk_session",
+      "args": {
+        "action": "sync",
+        "session": "njxo",
+        "policy": "auto"
+      },
+      "elapsedMs": 48,
+      "ok": true,
+      "result": {
+        "activity": [],
+        "changes": [],
+        "context_id": "7d086008-0c3b-4eb4-8c0d-767599ca3e1c",
+        "control_policy": "target",
+        "guidance": "This context remains valid for DOM-targeted actions until human control or the document changes. Supplementary reads do not invalidate it. Use explicit expect checks for business facts such as price, recipient or record ID. Scripts, untargeted keys and visual clicks require this sync's observation_id and retain strict content checks. Never replay an uncertain action; inspect its result first.",
+        "history_complete": true,
+        "kind": "unchanged",
+        "observation_id": "6f6d0d62-dea6-47cc-9078-3208f5335e17",
+        "previous_context_id": "7d086008-0c3b-4eb4-8c0d-767599ca3e1c",
+        "state": {
+          "editing": false,
+          "mode": "ready",
+          "revision": 81,
+          "target": {
+            "expires": 1793694686861,
+            "x": 484.5,
+            "y": 373.21875
+          }
+        }
+      }
+    },
+    {
+      "name": "bsk_interact",
+      "args": {
+        "action": "evaluate",
+        "session": "njxo",
+        "contextId": "7d086008-0c3b-4eb4-8c0d-767599ca3e1c",
+        "observationId": "6f6d0d62-dea6-47cc-9078-3208f5335e17"
+      },
+      "elapsedMs": 52,
+      "ok": true,
+      "result": {
+        "session": "njxo",
+        "ok": true,
+        "value": 10
+      }
+    },
+    {
+      "name": "bsk_session",
+      "args": {
+        "action": "sync",
+        "session": "njxo",
+        "policy": "auto"
+      },
+      "elapsedMs": 53,
+      "ok": true,
+      "result": {
+        "activity": [],
+        "changes": [],
+        "context_id": "7d086008-0c3b-4eb4-8c0d-767599ca3e1c",
+        "control_policy": "target",
+        "guidance": "This context remains valid for DOM-targeted actions until human control or the document changes. Supplementary reads do not invalidate it. Use explicit expect checks for business facts such as price, recipient or record ID. Scripts, untargeted keys and visual clicks require this sync's observation_id and retain strict content checks. Never replay an uncertain action; inspect its result first.",
+        "history_complete": true,
+        "kind": "unchanged",
+        "observation_id": "7e83feb2-6ff9-4dd2-9916-6edf6bd3e218",
+        "previous_context_id": "7d086008-0c3b-4eb4-8c0d-767599ca3e1c",
+        "state": {
+          "editing": false,
+          "mode": "ready",
+          "revision": 85,
+          "target": {
+            "expires": 1793694686861,
+            "x": 484.5,
+            "y": 373.21875
+          }
+        }
+      }
+    },
+    {
+      "name": "bsk_assist",
+      "args": {
+        "action": "emulate",
+        "session": "njxo",
+        "device": "iphone-14",
+        "width": 430,
+        "height": 932,
+        "mobile": false,
+        "dpr": 2,
+        "ua": "BrowserSkillSmoke/1.0",
+        "acceptLanguage": "en-US",
+        "maxTouchPoints": 5,
+        "touch": true,
+        "contextId": "7d086008-0c3b-4eb4-8c0d-767599ca3e1c",
+        "observationId": "7e83feb2-6ff9-4dd2-9916-6edf6bd3e218"
+      },
+      "elapsedMs": 61,
+      "ok": true,
+      "result": {
+        "session": "njxo",
+        "cleared": false
+      }
+    },
+    {
+      "name": "bsk_session",
+      "args": {
+        "action": "sync",
+        "session": "njxo",
+        "policy": "auto"
+      },
+      "elapsedMs": 51,
+      "ok": true,
+      "result": {
+        "activity": [],
+        "changes": [],
+        "context_id": "7d086008-0c3b-4eb4-8c0d-767599ca3e1c",
+        "control_policy": "target",
+        "guidance": "This context remains valid for DOM-targeted actions until human control or the document changes. Supplementary reads do not invalidate it. Use explicit expect checks for business facts such as price, recipient or record ID. Scripts, untargeted keys and visual clicks require this sync's observation_id and retain strict content checks. Never replay an uncertain action; inspect its result first.",
+        "history_complete": true,
+        "kind": "unchanged",
+        "observation_id": "163516fe-383b-49d2-865f-5f5e8ad66615",
+        "previous_context_id": "7d086008-0c3b-4eb4-8c0d-767599ca3e1c",
+        "state": {
+          "editing": false,
+          "mode": "ready",
+          "revision": 89,
+          "target": {
+            "expires": 1793694686861,
+            "x": 484.5,
+            "y": 373.21875
+          }
+        }
+      }
+    },
+    {
+      "name": "bsk_interact",
+      "args": {
+        "action": "evaluate",
+        "session": "njxo",
+        "contextId": "7d086008-0c3b-4eb4-8c0d-767599ca3e1c",
+        "observationId": "163516fe-383b-49d2-865f-5f5e8ad66615"
+      },
+      "elapsedMs": 50,
+      "ok": true,
+      "result": {
+        "session": "njxo",
+        "ok": true,
+        "value": {
+          "dpr": 2,
+          "height": 932,
+          "language": "en-US",
+          "touch": 5,
+          "ua": "BrowserSkillSmoke/1.0",
+          "width": 430
+        }
+      }
+    },
+    {
+      "name": "bsk_session",
+      "args": {
+        "action": "sync",
+        "session": "njxo",
+        "policy": "auto"
+      },
+      "elapsedMs": 51,
+      "ok": true,
+      "result": {
+        "activity": [],
+        "changes": [],
+        "context_id": "7d086008-0c3b-4eb4-8c0d-767599ca3e1c",
+        "control_policy": "target",
+        "guidance": "This context remains valid for DOM-targeted actions until human control or the document changes. Supplementary reads do not invalidate it. Use explicit expect checks for business facts such as price, recipient or record ID. Scripts, untargeted keys and visual clicks require this sync's observation_id and retain strict content checks. Never replay an uncertain action; inspect its result first.",
+        "history_complete": true,
+        "kind": "unchanged",
+        "observation_id": "5c32238e-52e9-48b7-92a4-31520e0675f7",
+        "previous_context_id": "7d086008-0c3b-4eb4-8c0d-767599ca3e1c",
+        "state": {
+          "editing": false,
+          "mode": "ready",
+          "revision": 93,
+          "target": {
+            "expires": 1793694686861,
+            "x": 484.5,
+            "y": 373.21875
+          }
+        }
+      }
+    },
+    {
+      "name": "bsk_assist",
+      "args": {
+        "action": "emulate",
+        "session": "njxo",
+        "device": "iphone-14",
+        "width": 430,
+        "height": 932,
+        "mobile": false,
+        "dpr": 2,
+        "ua": "BrowserSkillSmoke/1.0",
+        "acceptLanguage": "en-US",
+        "maxTouchPoints": 5,
+        "touch": false,
+        "contextId": "7d086008-0c3b-4eb4-8c0d-767599ca3e1c",
+        "observationId": "5c32238e-52e9-48b7-92a4-31520e0675f7"
+      },
+      "elapsedMs": 54,
+      "ok": true,
+      "result": {
+        "session": "njxo",
+        "cleared": false
+      }
+    },
+    {
+      "name": "bsk_session",
+      "args": {
+        "action": "sync",
+        "session": "njxo",
+        "policy": "auto"
+      },
+      "elapsedMs": 44,
+      "ok": true,
+      "result": {
+        "activity": [],
+        "changes": [],
+        "context_id": "7d086008-0c3b-4eb4-8c0d-767599ca3e1c",
+        "control_policy": "target",
+        "guidance": "This context remains valid for DOM-targeted actions until human control or the document changes. Supplementary reads do not invalidate it. Use explicit expect checks for business facts such as price, recipient or record ID. Scripts, untargeted keys and visual clicks require this sync's observation_id and retain strict content checks. Never replay an uncertain action; inspect its result first.",
+        "history_complete": true,
+        "kind": "unchanged",
+        "observation_id": "55ebc270-bfd3-41a6-9b8b-e8f5ddbc4dcc",
+        "previous_context_id": "7d086008-0c3b-4eb4-8c0d-767599ca3e1c",
+        "state": {
+          "editing": false,
+          "mode": "ready",
+          "revision": 97,
+          "target": {
+            "expires": 1793694686861,
+            "x": 484.5,
+            "y": 373.21875
+          }
+        }
+      }
+    },
+    {
+      "name": "bsk_interact",
+      "args": {
+        "action": "evaluate",
+        "session": "njxo",
+        "contextId": "7d086008-0c3b-4eb4-8c0d-767599ca3e1c",
+        "observationId": "55ebc270-bfd3-41a6-9b8b-e8f5ddbc4dcc"
+      },
+      "elapsedMs": 57,
+      "ok": true,
+      "result": {
+        "session": "njxo",
+        "ok": true,
+        "value": 10
+      }
+    },
+    {
+      "name": "bsk_session",
+      "args": {
+        "action": "sync",
+        "session": "njxo",
+        "policy": "auto"
+      },
+      "elapsedMs": 49,
+      "ok": true,
+      "result": {
+        "activity": [],
+        "changes": [],
+        "context_id": "7d086008-0c3b-4eb4-8c0d-767599ca3e1c",
+        "control_policy": "target",
+        "guidance": "This context remains valid for DOM-targeted actions until human control or the document changes. Supplementary reads do not invalidate it. Use explicit expect checks for business facts such as price, recipient or record ID. Scripts, untargeted keys and visual clicks require this sync's observation_id and retain strict content checks. Never replay an uncertain action; inspect its result first.",
+        "history_complete": true,
+        "kind": "unchanged",
+        "observation_id": "5d7a0dfd-3b1d-489a-8353-0227a0fe103a",
+        "previous_context_id": "7d086008-0c3b-4eb4-8c0d-767599ca3e1c",
+        "state": {
+          "editing": false,
+          "mode": "ready",
+          "revision": 101,
+          "target": {
+            "expires": 1793694686861,
+            "x": 484.5,
+            "y": 373.21875
+          }
+        }
+      }
+    },
+    {
+      "name": "bsk_assist",
+      "args": {
+        "action": "emulate",
+        "session": "njxo",
+        "off": true,
+        "touch": false,
+        "contextId": "7d086008-0c3b-4eb4-8c0d-767599ca3e1c",
+        "observationId": "5d7a0dfd-3b1d-489a-8353-0227a0fe103a"
+      },
+      "elapsedMs": 0,
+      "ok": false,
+      "error": {
+        "message": "Error: off is mutually exclusive with emulation overrides"
+      }
+    },
+    {
+      "name": "bsk_session",
+      "args": {
+        "action": "sync",
+        "session": "njxo",
+        "policy": "auto"
+      },
+      "elapsedMs": 47,
+      "ok": true,
+      "result": {
+        "activity": [],
+        "changes": [],
+        "context_id": "7d086008-0c3b-4eb4-8c0d-767599ca3e1c",
+        "control_policy": "target",
+        "guidance": "This context remains valid for DOM-targeted actions until human control or the document changes. Supplementary reads do not invalidate it. Use explicit expect checks for business facts such as price, recipient or record ID. Scripts, untargeted keys and visual clicks require this sync's observation_id and retain strict content checks. Never replay an uncertain action; inspect its result first.",
+        "history_complete": true,
+        "kind": "unchanged",
+        "observation_id": "3eef301e-4d1e-4a04-864a-bd0439fb2c77",
+        "previous_context_id": "7d086008-0c3b-4eb4-8c0d-767599ca3e1c",
+        "state": {
+          "editing": false,
+          "mode": "ready",
+          "revision": 103,
+          "target": {
+            "expires": 1793694686861,
+            "x": 484.5,
+            "y": 373.21875
+          }
+        }
+      }
+    },
+    {
+      "name": "bsk_assist",
+      "args": {
+        "action": "emulate",
+        "session": "njxo",
+        "off": true,
+        "contextId": "7d086008-0c3b-4eb4-8c0d-767599ca3e1c",
+        "observationId": "3eef301e-4d1e-4a04-864a-bd0439fb2c77"
+      },
+      "elapsedMs": 54,
+      "ok": true,
+      "result": {
+        "session": "njxo",
+        "cleared": true
+      }
+    },
+    {
+      "name": "bsk_session",
+      "args": {
+        "action": "sync",
+        "session": "njxo",
+        "policy": "auto"
+      },
+      "elapsedMs": 48,
+      "ok": true,
+      "result": {
+        "activity": [],
+        "changes": [],
+        "context_id": "7d086008-0c3b-4eb4-8c0d-767599ca3e1c",
+        "control_policy": "target",
+        "guidance": "This context remains valid for DOM-targeted actions until human control or the document changes. Supplementary reads do not invalidate it. Use explicit expect checks for business facts such as price, recipient or record ID. Scripts, untargeted keys and visual clicks require this sync's observation_id and retain strict content checks. Never replay an uncertain action; inspect its result first.",
+        "history_complete": true,
+        "kind": "unchanged",
+        "observation_id": "f2c9ffbf-9f76-4175-9cfd-674cc4c13423",
+        "previous_context_id": "7d086008-0c3b-4eb4-8c0d-767599ca3e1c",
+        "state": {
+          "editing": false,
+          "mode": "ready",
+          "revision": 107,
+          "target": {
+            "expires": 1793694686861,
+            "x": 484.5,
+            "y": 373.21875
+          }
+        }
+      }
+    },
+    {
+      "name": "bsk_interact",
+      "args": {
+        "action": "evaluate",
+        "session": "njxo",
+        "contextId": "7d086008-0c3b-4eb4-8c0d-767599ca3e1c",
+        "observationId": "f2c9ffbf-9f76-4175-9cfd-674cc4c13423"
+      },
+      "elapsedMs": 53,
+      "ok": true,
+      "result": {
+        "session": "njxo",
+        "ok": true,
+        "value": 10
+      }
+    },
+    {
+      "name": "bsk_session",
+      "args": {
+        "action": "sync",
+        "session": "njxo",
+        "policy": "auto"
+      },
+      "elapsedMs": 50,
+      "ok": true,
+      "result": {
+        "activity": [],
+        "changes": [],
+        "context_id": "7d086008-0c3b-4eb4-8c0d-767599ca3e1c",
+        "control_policy": "target",
+        "guidance": "This context remains valid for DOM-targeted actions until human control or the document changes. Supplementary reads do not invalidate it. Use explicit expect checks for business facts such as price, recipient or record ID. Scripts, untargeted keys and visual clicks require this sync's observation_id and retain strict content checks. Never replay an uncertain action; inspect its result first.",
+        "history_complete": true,
+        "kind": "unchanged",
+        "observation_id": "3a63e57b-a028-4d8d-9b77-ddb7aa3be754",
+        "previous_context_id": "7d086008-0c3b-4eb4-8c0d-767599ca3e1c",
+        "state": {
+          "editing": false,
+          "mode": "ready",
+          "revision": 111,
+          "target": {
+            "expires": 1793694686861,
+            "x": 484.5,
+            "y": 373.21875
+          }
+        }
+      }
+    },
+    {
+      "name": "bsk_assist",
+      "args": {
+        "action": "emulate",
+        "session": "njxo",
+        "off": true,
+        "contextId": "7d086008-0c3b-4eb4-8c0d-767599ca3e1c",
+        "observationId": "3a63e57b-a028-4d8d-9b77-ddb7aa3be754"
+      },
+      "elapsedMs": 52,
+      "ok": true,
+      "result": {
+        "session": "njxo",
+        "cleared": true
+      }
+    },
+    {
+      "name": "bsk_session",
+      "args": {
+        "action": "sync",
+        "session": "njxo",
+        "policy": "auto"
+      },
+      "elapsedMs": 46,
+      "ok": true,
+      "result": {
+        "activity": [],
+        "changes": [],
+        "context_id": "7d086008-0c3b-4eb4-8c0d-767599ca3e1c",
+        "control_policy": "target",
+        "guidance": "This context remains valid for DOM-targeted actions until human control or the document changes. Supplementary reads do not invalidate it. Use explicit expect checks for business facts such as price, recipient or record ID. Scripts, untargeted keys and visual clicks require this sync's observation_id and retain strict content checks. Never replay an uncertain action; inspect its result first.",
+        "history_complete": true,
+        "kind": "unchanged",
+        "observation_id": "4bebf009-a2b1-44bc-988b-89cd1870d05a",
+        "previous_context_id": "7d086008-0c3b-4eb4-8c0d-767599ca3e1c",
+        "state": {
+          "editing": false,
+          "mode": "ready",
+          "revision": 115,
+          "target": {
+            "expires": 1793694686861,
+            "x": 484.5,
+            "y": 373.21875
+          }
+        }
+      }
+    },
+    {
+      "name": "bsk_inspect",
+      "args": {
+        "action": "observe",
+        "session": "njxo",
+        "probeHover": true,
+        "debugSurfaces": true,
+        "contextId": "7d086008-0c3b-4eb4-8c0d-767599ca3e1c",
+        "observationId": "4bebf009-a2b1-44bc-988b-89cd1870d05a"
+      },
+      "elapsedMs": 15734,
+      "ok": true,
+      "result": {
+        "session": "njxo",
+        "refCount": 8,
+        "truncated": false,
+        "hoverProbe": {
+          "performed": true,
+          "revealed_content": true
+        },
+        "debug": {
+          "surface_probes": [
+            {
+              "trigger_backend_node_id": 51,
+              "trigger_point": {
+                "x": 207.5,
+                "y": 467.21875
+              },
+              "trigger_action": "hover",
+              "sub_items": [
+                "Hidden action"
+              ],
+              "confidence": "medium"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "bsk_session",
+      "args": {
+        "action": "sync",
+        "session": "njxo",
+        "policy": "auto"
+      },
+      "elapsedMs": 88,
+      "ok": true,
+      "result": {
+        "activity": [],
+        "context_id": "7d086008-0c3b-4eb4-8c0d-767599ca3e1c",
+        "control_policy": "target",
+        "guidance": "This context remains valid for DOM-targeted actions until human control or the document changes. Supplementary reads do not invalidate it. Use explicit expect checks for business facts such as price, recipient or record ID. Scripts, untargeted keys and visual clicks require this sync's observation_id and retain strict content checks. Never replay an uncertain action; inspect its result first.",
+        "history_complete": true,
+        "kind": "baseline",
+        "observation": {
+          "observation_id": "611b7532-4f79-4234-987a-bc67b461c6bd",
+          "ref_count": 8,
+          "truncated": false
+        },
+        "observation_id": "64592241-abdd-4de6-a200-489268c955fd",
+        "observation_origin": {
+          "capture_context_id": "7d086008-0c3b-4eb4-8c0d-767599ca3e1c",
+          "kind": "capture",
+          "payload_sha256": "55da1a12725622028c9bf76d27d922d32cc4b457480d2884efb578b5b242cbed",
+          "session_id": "njxo"
+        },
+        "state": {
+          "editing": false,
+          "mode": "ready",
+          "revision": 119,
+          "target": {
+            "expires": 1793694686861,
+            "x": 484.5,
+            "y": 373.21875
+          }
+        }
+      }
+    },
+    {
+      "name": "bsk_interact",
+      "args": {
+        "action": "drag",
+        "session": "njxo",
+        "target": "#drag-source",
+        "to": "#drag-target",
+        "durationMs": 250,
+        "contextId": "7d086008-0c3b-4eb4-8c0d-767599ca3e1c",
+        "expect": [
+          {
+            "target": "#drag-source",
+            "field": "exists",
+            "equals": true
+          },
+          {
+            "target": "#drag-target",
+            "field": "exists",
+            "equals": true
+          }
+        ]
+      },
+      "elapsedMs": 450,
+      "ok": true,
+      "result": {
+        "source": {
+          "x": 484.5,
+          "y": 568.21875
+        },
+        "target": {
+          "x": 484.5,
+          "y": 594.21875
+        }
+      }
+    },
+    {
+      "name": "bsk_session",
+      "args": {
+        "action": "sync",
+        "session": "njxo",
+        "policy": "auto"
+      },
+      "elapsedMs": 85,
+      "ok": true,
+      "result": {
+        "activity": [],
+        "context_id": "7d086008-0c3b-4eb4-8c0d-767599ca3e1c",
+        "control_policy": "target",
+        "guidance": "This context remains valid for DOM-targeted actions until human control or the document changes. Supplementary reads do not invalidate it. Use explicit expect checks for business facts such as price, recipient or record ID. Scripts, untargeted keys and visual clicks require this sync's observation_id and retain strict content checks. Never replay an uncertain action; inspect its result first.",
+        "history_complete": true,
+        "kind": "baseline",
+        "observation": {
+          "observation_id": "6685d7bc-cd36-482a-94ab-44645d208c24",
+          "ref_count": 8,
+          "truncated": false
+        },
+        "observation_id": "f6507902-e263-424b-a622-3508f7e74b48",
+        "observation_origin": {
+          "capture_context_id": "7d086008-0c3b-4eb4-8c0d-767599ca3e1c",
+          "kind": "capture",
+          "payload_sha256": "088c011d30159fc91256955601c9b5c9907b7676bbb54b5907638f854ff4dba3",
+          "session_id": "njxo"
+        },
+        "state": {
+          "editing": false,
+          "mode": "ready",
+          "revision": 126,
+          "target": {
+            "expires": 1793694704220,
+            "x": 484.5,
+            "y": 568.21875
+          }
+        }
+      }
+    },
+    {
+      "name": "bsk_interact",
+      "args": {
+        "action": "evaluate",
+        "session": "njxo",
+        "contextId": "7d086008-0c3b-4eb4-8c0d-767599ca3e1c",
+        "observationId": "f6507902-e263-424b-a622-3508f7e74b48"
+      },
+      "elapsedMs": 50,
+      "ok": true,
+      "result": {
+        "session": "njxo",
+        "ok": true,
+        "value": "source"
+      }
+    },
+    {
+      "name": "bsk_session",
+      "args": {
+        "action": "sync",
+        "session": "njxo",
+        "policy": "auto"
+      },
+      "elapsedMs": 46,
+      "ok": true,
+      "result": {
+        "activity": [],
+        "changes": [],
+        "context_id": "7d086008-0c3b-4eb4-8c0d-767599ca3e1c",
+        "control_policy": "target",
+        "guidance": "This context remains valid for DOM-targeted actions until human control or the document changes. Supplementary reads do not invalidate it. Use explicit expect checks for business facts such as price, recipient or record ID. Scripts, untargeted keys and visual clicks require this sync's observation_id and retain strict content checks. Never replay an uncertain action; inspect its result first.",
+        "history_complete": true,
+        "kind": "unchanged",
+        "observation_id": "77fbed70-7bb7-4aae-81eb-86d996123725",
+        "previous_context_id": "7d086008-0c3b-4eb4-8c0d-767599ca3e1c",
+        "state": {
+          "editing": false,
+          "mode": "ready",
+          "revision": 130,
+          "target": {
+            "expires": 1793694704220,
+            "x": 484.5,
+            "y": 568.21875
+          }
+        }
+      }
+    },
+    {
+      "name": "bsk_interact",
+      "args": {
+        "action": "step",
+        "session": "njxo",
+        "stepAction": "click",
+        "params": "{\"selector\":\"#step-button\"}",
+        "untilVisible": "#step-done",
+        "saveFull": "D:\\Caiqy\\Projects\\Github\\dsh-plugins\\artifacts\\browserskill-upstream-041\\candidate04-live-chrome-main\\chrome\\step.json",
+        "waitTimeoutMs": 4000,
+        "contextId": "7d086008-0c3b-4eb4-8c0d-767599ca3e1c",
+        "expect": [
+          {
+            "target": "#step-button",
+            "field": "exists",
+            "equals": true
+          }
+        ]
+      },
+      "elapsedMs": 270,
+      "ok": true,
+      "result": {
+        "action": {
+          "result": {
+            "used_ref": "e9",
+            "used_selector": "#step-button",
+            "x": 74.6796875,
+            "y": 454.71875
+          }
+        },
+        "action_replayed": false,
+        "full_output_path": "D:\\Caiqy\\Projects\\Github\\dsh-plugins\\artifacts\\browserskill-upstream-041\\candidate04-live-chrome-main\\chrome\\step.json",
+        "ok": true,
+        "phase": "observed",
+        "post": {
+          "activity": [],
+          "context_id": "7d086008-0c3b-4eb4-8c0d-767599ca3e1c",
+          "control_policy": "target",
+          "guidance": "This context remains valid for DOM-targeted actions until human control or the document changes. Supplementary reads do not invalidate it. Use explicit expect checks for business facts such as price, recipient or record ID. Scripts, untargeted keys and visual clicks require this sync's observation_id and retain strict content checks. Never replay an uncertain action; inspect its result first.",
+          "history_complete": true,
+          "kind": "baseline",
+          "observation": {
+            "observation_id": "18ade5f0-c588-4839-ba2f-b00b25e4ea59",
+            "ref_count": 8,
+            "truncated": false
+          },
+          "observation_id": "6a486253-7465-4045-9f67-09117852a786",
+          "observation_origin": {
+            "capture_context_id": "7d086008-0c3b-4eb4-8c0d-767599ca3e1c",
+            "kind": "capture",
+            "payload_sha256": "56a8a76b3f01832d4c0811065b6ea54a148791ccccc5bb2b2a854553f7beaefb",
+            "session_id": "njxo"
+          },
+          "settle": {
+            "outcome": "synchronized",
+            "sync_attempts": 1
+          },
+          "state": {
+            "editing": false,
+            "mode": "ready",
+            "revision": 137,
+            "target": {
+              "expires": 1793694704793,
+              "x": 74.6796875,
+              "y": 454.71875
+            }
+          }
+        },
+        "readiness": {
+          "attached": true,
+          "elapsed_ms": 4,
+          "satisfied": true,
+          "used_selector": "#step-done",
+          "visible": true
+        },
+        "rpc_calls": 3,
+        "timing_ms": {
+          "action": 171,
+          "readiness": 6,
+          "sync": 41,
+          "total": 218
+        }
+      }
+    },
+    {
+      "name": "bsk_inspect",
+      "args": {
+        "action": "view",
+        "file": "D:\\Caiqy\\Projects\\Github\\dsh-plugins\\artifacts\\browserskill-upstream-041\\candidate04-live-chrome-main\\chrome\\baseline.json",
+        "find": "BrowserSkill"
+      },
+      "elapsedMs": 40,
+      "ok": true,
+      "result": {
+        "browser_calls": 0,
+        "capture_truncated": false,
+        "changes": null,
+        "end_line": 26,
+        "historical": true,
+        "matching_lines": [
+          5,
+          6,
+          7
+        ],
+        "no_match": false,
+        "observation_id": "a083e89f-b9e9-4da9-be2c-946e729d8584",
+        "observation_origin": {
+          "capture_context_id": "7d086008-0c3b-4eb4-8c0d-767599ca3e1c",
+          "kind": "capture",
+          "payload_sha256": "132a95629bf57fbcb1a8f50b318e4dde3aef14d3dc0c265eee0f429a99afc8b2",
+          "session_id": "njxo"
+        },
+        "partial_view": false,
+        "source_context_id": "7d086008-0c3b-4eb4-8c0d-767599ca3e1c",
+        "source_file": "D:\\Caiqy\\Projects\\Github\\dsh-plugins\\artifacts\\browserskill-upstream-041\\candidate04-live-chrome-main\\chrome\\baseline.json",
+        "start_line": 1,
+        "total_lines": 26,
+        "warning": "Historical local view; no new action context. Missing/truncated lines are unknown. Validate live state before acting; a new view does not refresh refs."
+      }
+    },
+    {
+      "name": "bsk_inspect",
+      "args": {
+        "action": "view",
+        "file": "D:\\Caiqy\\Projects\\Github\\dsh-plugins\\artifacts\\browserskill-upstream-041\\candidate04-live-chrome-main\\chrome\\baseline.json",
+        "contextId": "7d086008-0c3b-4eb4-8c0d-767599ca3e1c"
+      },
+      "elapsedMs": 0,
+      "ok": false,
+      "error": {
+        "message": "Error: view is historical and does not accept session, tabId, contextId, dependsOn, observationId or expect"
+      }
+    },
+    {
+      "name": "bsk_session",
+      "args": {
+        "action": "start",
+        "browser": "2303ebf6",
+        "name": "bsk-incognito-chrome",
+        "incognito": true,
+        "noFocus": true,
+        "width": 900,
+        "height": 700
+      },
+      "elapsedMs": 626,
+      "ok": true,
+      "result": {
+        "sessionId": "joox",
+        "browserInstanceId": "2303ebf6"
+      }
+    },
+    {
+      "name": "bsk_tabs",
+      "args": {
+        "action": "list",
+        "session": "joox",
+        "scope": "agent"
+      },
+      "elapsedMs": 71,
+      "ok": true,
+      "result": {
+        "session": "joox",
+        "tabs": [
+          {
+            "active": true,
+            "scope": "agent"
+          }
+        ]
+      }
+    },
+    {
+      "name": "bsk_inspect",
+      "args": {
+        "action": "observe",
+        "session": "joox"
+      },
+      "elapsedMs": 122,
+      "ok": true,
+      "result": {
+        "session": "joox",
+        "refCount": 8,
+        "truncated": false
+      }
+    },
+    {
+      "name": "bsk_session",
+      "args": {
+        "action": "sync",
+        "session": "joox",
+        "policy": "auto"
+      },
+      "elapsedMs": 94,
+      "ok": true,
+      "result": {
+        "activity": [],
+        "context_id": "a42df2cd-25e1-4dd1-8a64-50b93bf0dec8",
+        "control_policy": "target",
+        "guidance": "This context remains valid for DOM-targeted actions until human control or the document changes. Supplementary reads do not invalidate it. Use explicit expect checks for business facts such as price, recipient or record ID. Scripts, untargeted keys and visual clicks require this sync's observation_id and retain strict content checks. Never replay an uncertain action; inspect its result first.",
+        "history_complete": false,
+        "kind": "baseline",
+        "observation": {
+          "observation_id": "b48e463b-62d0-47c6-ad2d-4f1704811023",
+          "ref_count": 8,
+          "truncated": false
+        },
+        "observation_id": "3d4b54ce-4a8b-4679-b9a8-08d7fc696b37",
+        "observation_origin": {
+          "capture_context_id": "a42df2cd-25e1-4dd1-8a64-50b93bf0dec8",
+          "kind": "capture",
+          "payload_sha256": "ae8d7fce9cd40c75eb8ac6f3d3247d7cf50c345236cdbf2e7926d12d7c6d55a0",
+          "session_id": "joox"
+        },
+        "state": {
+          "editing": false,
+          "mode": "ready",
+          "revision": 9
+        }
+      }
+    },
+    {
+      "name": "bsk_session",
+      "args": {
+        "action": "sync",
+        "session": "joox",
+        "policy": "auto"
+      },
+      "elapsedMs": 44,
+      "ok": false,
+      "error": {
+        "message": "BskError: bsk cooperate sync failed: tab 1448789456 not found in session scope (hint: the session, tab, or browser may have stopped; run `bsk session list` / `bsk browsers` to see current state)",
+        "code": "not_found",
+        "timedOut": false
+      }
+    },
+    {
+      "name": "bsk_session",
+      "args": {
+        "action": "stop",
+        "session": "joox"
+      },
+      "elapsedMs": 131,
+      "ok": true,
+      "result": {
+        "stopped": "joox",
+        "alreadyClosed": false
+      }
+    },
+    {
+      "name": "bsk_session",
+      "args": {
+        "action": "sync",
+        "session": "njxo",
+        "policy": "auto"
+      },
+      "elapsedMs": 50,
+      "ok": true,
+      "result": {
+        "activity": [],
+        "changes": [],
+        "context_id": "7d086008-0c3b-4eb4-8c0d-767599ca3e1c",
+        "control_policy": "target",
+        "guidance": "This context remains valid for DOM-targeted actions until human control or the document changes. Supplementary reads do not invalidate it. Use explicit expect checks for business facts such as price, recipient or record ID. Scripts, untargeted keys and visual clicks require this sync's observation_id and retain strict content checks. Never replay an uncertain action; inspect its result first.",
+        "history_complete": true,
+        "kind": "unchanged",
+        "observation_id": "e01819aa-b26f-4e90-bd19-b641b4e5faa8",
+        "previous_context_id": "7d086008-0c3b-4eb4-8c0d-767599ca3e1c",
+        "state": {
+          "editing": false,
+          "mode": "ready",
+          "revision": 140,
+          "target": {
+            "expires": 1793694704793,
+            "x": 74.6796875,
+            "y": 454.71875
+          }
+        }
+      }
+    },
+    {
+      "name": "bsk_interact",
+      "args": {
+        "action": "click",
+        "session": "njxo",
+        "target": "#dialog-accept",
+        "contextId": "7d086008-0c3b-4eb4-8c0d-767599ca3e1c",
+        "expect": [
+          {
+            "target": "#dialog-accept",
+            "field": "exists",
+            "equals": true
+          }
+        ]
+      },
+      "elapsedMs": 122,
+      "ok": false,
+      "error": {
+        "message": "BskError: bsk click failed: Original operation is suspended for a dialog decision; do not repeat it (hint: inspect `bsk dialog status --session <id> --json`; decide with dialog accept/dismiss, then retrieve the ORIGINAL result with `bsk operation await <operation-id> --session <id> --json`. Do not repeat the original action.)\nPending dialog and original operation: {\"dialog\":{\"decision_deadline\":1793694765608,\"default_prompt\":\"default\",\"id\":\"8c3291bc-3422-4683-b36a-0a25baa7a916\",\"message\":\"Candidate prompt\",\"sequence\":1,\"tab_id\":1448789456,\"type\":\"prompt\",\"url\":\"<fixture-url>\"},\"dispatched\":true,\"method\":\"tool.click\",\"operation_id\":\"op-be41635b-cc62-448b-98a8-9a86d74d205b\",\"reason\":\"dialog_pending\",\"session_id\":\"njxo\",\"state\":\"waiting_for_dialog\"}",
+        "code": "dialog_pending",
+        "data": {
+          "dialog": {
+            "decision_deadline": 1793694765608,
+            "default_prompt": "default",
+            "id": "8c3291bc-3422-4683-b36a-0a25baa7a916",
+            "message": "Candidate prompt",
+            "sequence": 1,
+            "type": "prompt"
+          },
+          "dispatched": true,
+          "method": "tool.click",
+          "operation_id": "op-be41635b-cc62-448b-98a8-9a86d74d205b",
+          "reason": "dialog_pending",
+          "session_id": "njxo",
+          "state": "waiting_for_dialog"
+        },
+        "timedOut": false
+      }
+    },
+    {
+      "name": "bsk_assist",
+      "args": {
+        "action": "dialog-status",
+        "session": "njxo"
+      },
+      "elapsedMs": 46,
+      "ok": true,
+      "result": {
+        "dialogs": [
+          {
+            "decision_deadline": 1793694765608,
+            "default_prompt": "default",
+            "id": "8c3291bc-3422-4683-b36a-0a25baa7a916",
+            "message": "Candidate prompt",
+            "sequence": 1,
+            "type": "prompt"
+          }
+        ],
+        "session_id": "njxo"
+      }
+    },
+    {
+      "name": "bsk_assist",
+      "args": {
+        "action": "dialog-accept",
+        "session": "njxo",
+        "dialogId": "8c3291bc-3422-4683-b36a-0a25baa7a916"
+      },
+      "elapsedMs": 50,
+      "ok": true,
+      "result": {
+        "dialog": {
+          "default_prompt": "default",
+          "handled": "accepted",
+          "has_browser_handler": true,
+          "message": "Candidate prompt",
+          "sequence": 1,
+          "type": "prompt"
+        },
+        "session_id": "njxo"
+      }
+    },
+    {
+      "name": "bsk_assist",
+      "args": {
+        "action": "operation-await",
+        "session": "njxo",
+        "operationId": "op-be41635b-cc62-448b-98a8-9a86d74d205b",
+        "waitMs": 0
+      },
+      "elapsedMs": 49,
+      "ok": true,
+      "result": {
+        "method": "tool.click",
+        "operation_id": "op-be41635b-cc62-448b-98a8-9a86d74d205b",
+        "result": {
+          "dialogs": [
+            {
+              "default_prompt": "default",
+              "handled": "accepted",
+              "has_browser_handler": true,
+              "message": "Candidate prompt",
+              "sequence": 1,
+              "type": "prompt"
+            }
+          ],
+          "used_ref": "e16",
+          "used_selector": "#dialog-accept",
+          "x": 86.90625,
+          "y": 537.71875
+        },
+        "state": "completed"
+      }
+    },
+    {
+      "name": "bsk_session",
+      "args": {
+        "action": "sync",
+        "session": "njxo",
+        "policy": "auto"
+      },
+      "elapsedMs": 92,
+      "ok": true,
+      "result": {
+        "activity": [],
+        "context_id": "7d086008-0c3b-4eb4-8c0d-767599ca3e1c",
+        "control_policy": "target",
+        "guidance": "This context remains valid for DOM-targeted actions until human control or the document changes. Supplementary reads do not invalidate it. Use explicit expect checks for business facts such as price, recipient or record ID. Scripts, untargeted keys and visual clicks require this sync's observation_id and retain strict content checks. Never replay an uncertain action; inspect its result first.",
+        "history_complete": true,
+        "kind": "baseline",
+        "observation": {
+          "observation_id": "8d50149f-8098-4a7e-80c7-908fb0c469ed",
+          "ref_count": 8,
+          "truncated": false
+        },
+        "observation_id": "7fec6bfc-f113-44b1-8757-ecbc3235d6f8",
+        "observation_origin": {
+          "capture_context_id": "7d086008-0c3b-4eb4-8c0d-767599ca3e1c",
+          "kind": "capture",
+          "payload_sha256": "e8a2aea6c80cefafdf563897763921505e75e3cb394611bbe7a6bd456bab2cf3",
+          "session_id": "njxo"
+        },
+        "state": {
+          "editing": false,
+          "mode": "ready",
+          "revision": 147,
+          "target": {
+            "expires": 1793694706244,
+            "x": 86.90625,
+            "y": 537.71875
+          }
+        }
+      }
+    },
+    {
+      "name": "bsk_interact",
+      "args": {
+        "action": "evaluate",
+        "session": "njxo",
+        "contextId": "7d086008-0c3b-4eb4-8c0d-767599ca3e1c",
+        "observationId": "7fec6bfc-f113-44b1-8757-ecbc3235d6f8"
+      },
+      "elapsedMs": 49,
+      "ok": true,
+      "result": {
+        "session": "njxo",
+        "ok": true,
+        "value": "accepted"
+      }
+    },
+    {
+      "name": "bsk_session",
+      "args": {
+        "action": "sync",
+        "session": "njxo",
+        "policy": "auto"
+      },
+      "elapsedMs": 51,
+      "ok": true,
+      "result": {
+        "activity": [],
+        "changes": [],
+        "context_id": "7d086008-0c3b-4eb4-8c0d-767599ca3e1c",
+        "control_policy": "target",
+        "guidance": "This context remains valid for DOM-targeted actions until human control or the document changes. Supplementary reads do not invalidate it. Use explicit expect checks for business facts such as price, recipient or record ID. Scripts, untargeted keys and visual clicks require this sync's observation_id and retain strict content checks. Never replay an uncertain action; inspect its result first.",
+        "history_complete": true,
+        "kind": "unchanged",
+        "observation_id": "c6723f16-b407-4e0e-92f4-ee2ba4580fa8",
+        "previous_context_id": "7d086008-0c3b-4eb4-8c0d-767599ca3e1c",
+        "state": {
+          "editing": false,
+          "mode": "ready",
+          "revision": 151,
+          "target": {
+            "expires": 1793694706244,
+            "x": 86.90625,
+            "y": 537.71875
+          }
+        }
+      }
+    },
+    {
+      "name": "bsk_interact",
+      "args": {
+        "action": "click",
+        "session": "njxo",
+        "target": "#dialog-cancel",
+        "contextId": "7d086008-0c3b-4eb4-8c0d-767599ca3e1c",
+        "expect": [
+          {
+            "target": "#dialog-cancel",
+            "field": "exists",
+            "equals": true
+          }
+        ]
+      },
+      "elapsedMs": 124,
+      "ok": false,
+      "error": {
+        "message": "BskError: bsk click failed: Original operation is suspended for a dialog decision; do not repeat it (hint: inspect `bsk dialog status --session <id> --json`; decide with dialog accept/dismiss, then retrieve the ORIGINAL result with `bsk operation await <operation-id> --session <id> --json`. Do not repeat the original action.)\nPending dialog and original operation: {\"dialog\":{\"decision_deadline\":1793694766069,\"default_prompt\":\"\",\"id\":\"f5210043-4e22-4203-89b6-5e8b8b5bb27a\",\"message\":\"Candidate cancel\",\"sequence\":2,\"tab_id\":1448789456,\"type\":\"confirm\",\"url\":\"<fixture-url>\"},\"dispatched\":true,\"method\":\"tool.click\",\"operation_id\":\"op-8c0511ac-0ef3-4406-9a61-a5dd10fd5377\",\"reason\":\"dialog_pending\",\"session_id\":\"njxo\",\"state\":\"waiting_for_dialog\"}",
+        "code": "dialog_pending",
+        "data": {
+          "dialog": {
+            "decision_deadline": 1793694766069,
+            "default_prompt": "",
+            "id": "f5210043-4e22-4203-89b6-5e8b8b5bb27a",
+            "message": "Candidate cancel",
+            "sequence": 2,
+            "type": "confirm"
+          },
+          "dispatched": true,
+          "method": "tool.click",
+          "operation_id": "op-8c0511ac-0ef3-4406-9a61-a5dd10fd5377",
+          "reason": "dialog_pending",
+          "session_id": "njxo",
+          "state": "waiting_for_dialog"
+        },
+        "timedOut": false
+      }
+    },
+    {
+      "name": "bsk_assist",
+      "args": {
+        "action": "operation-cancel",
+        "session": "njxo",
+        "operationId": "op-8c0511ac-0ef3-4406-9a61-a5dd10fd5377"
+      },
+      "elapsedMs": 49,
+      "ok": true,
+      "result": {
+        "cancelled": true
+      }
+    },
+    {
+      "name": "bsk_session",
+      "args": {
+        "action": "stop",
+        "session": "njxo"
+      },
+      "elapsedMs": 120,
+      "ok": true,
+      "result": {
+        "stopped": "njxo",
+        "alreadyClosed": false
+      }
+    },
+    {
+      "name": "bsk_session",
+      "args": {
+        "action": "list"
+      },
+      "elapsedMs": 0,
+      "ok": true,
+      "result": {
+        "pendingCleanup": 0,
+        "sessions": []
+      }
+    }
+  ],
+  "browsers": [
+    {
+      "label": "chrome",
+      "browser": "2303ebf6",
+      "results": {
+        "control": {
+          "passed": true,
+          "value": {
+            "policy": "target",
+            "contextIdIssued": true,
+            "expectRejected": true,
+            "staleContextRejected": true
+          }
+        },
+        "wait": {
+          "passed": true,
+          "value": {
+            "min": 0,
+            "max": 300000,
+            "cancellation": "aborted"
+          }
+        },
+        "evaluate": {
+          "passed": true,
+          "value": {
+            "session": "njxo",
+            "ok": true,
+            "value": {
+              "className": "Promise",
+              "description": "Promise",
+              "objectId": "-3095897426087165402.2.6",
+              "subtype": "promise",
+              "type": "object"
+            }
+          }
+        },
+        "evaluateCancel": {
+          "passed": true,
+          "value": {
+            "aborted": true
+          }
+        },
+        "evaluateTimeout": {
+          "passed": true,
+          "value": {
+            "message": "BskError: bsk evaluate failed: page operation timed out and extension cleanup could not be confirmed; page effects may have occurred (hint: the operation may already have taken effect; observe the page before deciding whether to retry)",
+            "code": "timeout",
+            "data": {
+              "effect_state": "unknown",
+              "reason": "cancel_cleanup_timeout"
+            },
+            "timedOut": false
+          }
+        },
+        "uploadSingle": {
+          "passed": true,
+          "value": {
+            "status": "verified",
+            "names": [
+              "a.txt"
+            ],
+            "contentsMatch": true
+          }
+        },
+        "uploadMultiple": {
+          "passed": true,
+          "value": {
+            "status": "verified",
+            "names": [
+              "a.txt",
+              "b.txt"
+            ],
+            "contentsMatch": true
+          }
+        },
+        "uploadDrop": {
+          "passed": true,
+          "value": {
+            "status": "verified",
+            "names": [
+              "a.txt",
+              "b.txt"
+            ],
+            "contentsMatch": true
+          }
+        },
+        "missingUpload": {
+          "passed": true
+        },
+        "download": {
+          "passed": true
+        },
+        "emulate": {
+          "passed": true,
+          "value": {
+            "baselineTouch": 10,
+            "applied": {
+              "session": "njxo",
+              "cleared": false
+            },
+            "emulated": {
+              "dpr": 2,
+              "height": 932,
+              "language": "en-US",
+              "touch": 5,
+              "ua": "BrowserSkillSmoke/1.0",
+              "width": 430
+            },
+            "disabled": {
+              "session": "njxo",
+              "cleared": false
+            },
+            "afterDisabled": 10,
+            "cleared": {
+              "session": "njxo",
+              "cleared": true
+            },
+            "afterOff": 10
+          }
+        },
+        "hover": {
+          "passed": true,
+          "value": {
+            "hoverProbe": {
+              "performed": true,
+              "revealed_content": true
+            },
+            "debug": {
+              "surface_probes": [
+                {
+                  "trigger_backend_node_id": 51,
+                  "trigger_point": {
+                    "x": 207.5,
+                    "y": 467.21875
+                  },
+                  "trigger_action": "hover",
+                  "sub_items": [
+                    "Hidden action"
+                  ],
+                  "confidence": "medium"
+                }
+              ]
+            }
+          }
+        },
+        "drag": {
+          "passed": true,
+          "value": {
+            "result": {
+              "source": {
+                "x": 484.5,
+                "y": 568.21875
+              },
+              "target": {
+                "x": 484.5,
+                "y": 594.21875
+              }
+            },
+            "dropped": "source"
+          }
+        },
+        "step": {
+          "passed": true,
+          "value": {
+            "action": {
+              "result": {
+                "used_ref": "e9",
+                "used_selector": "#step-button",
+                "x": 74.6796875,
+                "y": 454.71875
+              }
+            },
+            "action_replayed": false,
+            "full_output_path": "D:\\Caiqy\\Projects\\Github\\dsh-plugins\\artifacts\\browserskill-upstream-041\\candidate04-live-chrome-main\\chrome\\step.json",
+            "ok": true,
+            "phase": "observed",
+            "post": {
+              "activity": [],
+              "context_id": "7d086008-0c3b-4eb4-8c0d-767599ca3e1c",
+              "control_policy": "target",
+              "guidance": "This context remains valid for DOM-targeted actions until human control or the document changes. Supplementary reads do not invalidate it. Use explicit expect checks for business facts such as price, recipient or record ID. Scripts, untargeted keys and visual clicks require this sync's observation_id and retain strict content checks. Never replay an uncertain action; inspect its result first.",
+              "history_complete": true,
+              "kind": "baseline",
+              "observation": {
+                "observation_id": "18ade5f0-c588-4839-ba2f-b00b25e4ea59",
+                "ref_count": 8,
+                "truncated": false
+              },
+              "observation_id": "6a486253-7465-4045-9f67-09117852a786",
+              "observation_origin": {
+                "capture_context_id": "7d086008-0c3b-4eb4-8c0d-767599ca3e1c",
+                "kind": "capture",
+                "payload_sha256": "56a8a76b3f01832d4c0811065b6ea54a148791ccccc5bb2b2a854553f7beaefb",
+                "session_id": "njxo"
+              },
+              "settle": {
+                "outcome": "synchronized",
+                "sync_attempts": 1
+              },
+              "state": {
+                "editing": false,
+                "mode": "ready",
+                "revision": 137,
+                "target": {
+                  "expires": 1793694704793,
+                  "x": 74.6796875,
+                  "y": 454.71875
+                }
+              }
+            },
+            "readiness": {
+              "attached": true,
+              "elapsed_ms": 4,
+              "satisfied": true,
+              "used_selector": "#step-done",
+              "visible": true
+            },
+            "rpc_calls": 3,
+            "timing_ms": {
+              "action": 171,
+              "readiness": 6,
+              "sync": 41,
+              "total": 218
+            }
+          }
+        },
+        "view": {
+          "passed": true,
+          "value": {
+            "browser_calls": 0,
+            "capture_truncated": false,
+            "changes": null,
+            "end_line": 26,
+            "historical": true,
+            "matching_lines": [
+              5,
+              6,
+              7
+            ],
+            "no_match": false,
+            "observation_id": "a083e89f-b9e9-4da9-be2c-946e729d8584",
+            "observation_origin": {
+              "capture_context_id": "7d086008-0c3b-4eb4-8c0d-767599ca3e1c",
+              "kind": "capture",
+              "payload_sha256": "132a95629bf57fbcb1a8f50b318e4dde3aef14d3dc0c265eee0f429a99afc8b2",
+              "session_id": "njxo"
+            },
+            "partial_view": false,
+            "source_context_id": "7d086008-0c3b-4eb4-8c0d-767599ca3e1c",
+            "source_file": "D:\\Caiqy\\Projects\\Github\\dsh-plugins\\artifacts\\browserskill-upstream-041\\candidate04-live-chrome-main\\chrome\\baseline.json",
+            "start_line": 1,
+            "total_lines": 26,
+            "warning": "Historical local view; no new action context. Missing/truncated lines are unknown. Validate live state before acting; a new view does not refresh refs."
+          }
+        },
+        "incognito": {
+          "passed": false,
+          "error": {
+            "message": "AssertionError [ERR_ASSERTION]: The input did not match the regular expression /incognito|borrow/i. Input:\n\n'BskError: bsk cooperate sync failed: tab 1448789456 not found in session scope (hint: the session, tab, or browser may have stopped; run `bsk session list` / `bsk browsers` to see current state)'\n",
+            "code": "ERR_ASSERTION"
+          }
+        },
+        "dialog": {
+          "passed": true,
+          "value": {
+            "acceptedOperation": {
+              "method": "tool.click",
+              "operation_id": "op-be41635b-cc62-448b-98a8-9a86d74d205b",
+              "result": {
+                "dialogs": [
+                  {
+                    "default_prompt": "default",
+                    "handled": "accepted",
+                    "has_browser_handler": true,
+                    "message": "Candidate prompt",
+                    "sequence": 1,
+                    "type": "prompt"
+                  }
+                ],
+                "used_ref": "e16",
+                "used_selector": "#dialog-accept",
+                "x": 86.90625,
+                "y": 537.71875
+              },
+              "state": "completed"
+            },
+            "cancelledOperation": "op-8c0511ac-0ef3-4406-9a61-a5dd10fd5377"
+          }
+        }
+      },
+      "passed": false,
+      "connection": {
+        "instance_id": "2303ebf6",
+        "browser_name": "chrome",
+        "browser_version": "155.0.0.0",
+        "extension_version": "0.4.1",
+        "label": "chrome",
+        "session_count": 0,
+        "connected_at_ms": 1793685527467,
+        "version_skew": false,
+        "extension_protocol_version": "1.8",
+        "unresponsive": false
+      },
+      "session": "njxo",
+      "nameRequested": "bsk-candidate-chrome",
+      "startNoFocus": true
+    }
+  ],
+  "failures": [
+    {
+      "browser": "2303ebf6",
+      "feature": "incognito",
+      "error": {
+        "message": "AssertionError [ERR_ASSERTION]: The input did not match the regular expression /incognito|borrow/i. Input:\n\n'BskError: bsk cooperate sync failed: tab 1448789456 not found in session scope (hint: the session, tab, or browser may have stopped; run `bsk session list` / `bsk browsers` to see current state)'\n",
+        "code": "ERR_ASSERTION"
+      }
+    }
+  ],
+  "limitations": [],
+  "cleanup": [
+    {
+      "browser": "2303ebf6",
+      "session": "njxo",
+      "stopped": true,
+      "currentScreenshotRetained": false,
+      "followScreenshotRetained": false
+    }
+  ],
+  "fixtureBoundary": "Packed apply and all six public tools use the unmodified real runner/CLI/daemon/extensions. Context registration, image-capable model metadata and the durable local attachment store are host fixtures; no desktop GUI or actual DSH attachment service is claimed.",
+  "componentRequirement": {
+    "cli": "0.4.1",
+    "daemon": "0.4.1",
+    "extension": "0.4.1",
+    "protocol": "1.8",
+    "customizedComponentsAllowed": false
+  },
+  "package": {
+    "name": "@caiqy/browser-skill-dsh-plugin",
+    "description": "DeepSeek Harness tool plugin that exposes BrowserSkill browser automation (bsk_* tools) to the model",
+    "version": "0.4.1-dsh.1",
+    "license": "MIT",
+    "publishConfig": {
+      "access": "public",
+      "registry": "https://registry.npmjs.org/"
+    },
+    "repository": {
+      "type": "git",
+      "directory": "packages/dsh-plugin-browserskill"
+    },
+    "homepage": "https://github.com/caiqy/BrowserSkill/tree/dsh/plugin-parity-0.3.3/packages/dsh-plugin-browserskill#readme",
+    "bugs": {},
+    "keywords": [
+      "dsh-plugin",
+      "deepseek-harness",
+      "browserskill",
+      "browser-automation"
+    ],
+    "type": "module",
+    "main": "lib/index.mjs",
+    "types": "lib/index.d.mts",
+    "exports": {
+      ".": {
+        "types": "./lib/index.d.mts",
+        "default": "./lib/index.mjs"
+      },
+      "./client": {
+        "default": "./lib/client.cjs"
+      },
+      "./package.json": "./package.json"
+    },
+    "files": [
+      "lib",
+      "skill",
+      "cordis.patch.yml",
+      "LICENSE"
+    ],
+    "dsh": {
+      "bundle": {
+        "patch": "./cordis.patch.yml"
+      },
+      "client": {
+        "platform": "web",
+        "inject": [
+          "@deepseek-ai/dsh-client-ui-tool",
+          "@deepseek-ai/dsh-client-ui-layout"
+        ],
+        "external": [
+          "@deepseek-ai/dsh-client-ui-primitives"
+        ]
+      }
+    },
+    "scripts": {
+      "build": "node scripts/build-client-css.mjs && node scripts/build-skill-content.mjs && tsdown",
+      "typecheck": "pnpm run build:skill && tsc --noEmit",
+      "test": "pnpm run build:css && pnpm run build:skill && vitest run",
+      "build:css": "node scripts/build-client-css.mjs",
+      "build:skill": "node scripts/build-skill-content.mjs",
+      "prepack": "pnpm run build",
+      "lint:publint": "publint"
+    },
+    "peerDependencies": {
+      "@deepseek-ai/cordis": "^4.0.2",
+      "@deepseek-ai/dsh-attachment": "^0.1.5-rc.3 || ^0.2.0-rc.1",
+      "@deepseek-ai/dsh-client-ui-primitives": "^0.1.5-rc.3 || ^0.2.0-rc.1",
+      "@deepseek-ai/dsh-client-ui-tool": "^0.1.5-rc.3 || ^0.2.0-rc.1",
+      "@deepseek-ai/dsh-llm": "^0.1.5-rc.3 || ^0.2.0-rc.1",
+      "@deepseek-ai/dsh-tools": "^0.1.5-rc.3 || ^0.2.0-rc.1",
+      "@deepseek-ai/schemastery": "^3.18.2",
+      "react": "^18.2.0"
+    },
+    "peerDependenciesMeta": {
+      "@deepseek-ai/dsh-attachment": {
+        "optional": true
+      },
+      "@deepseek-ai/dsh-client-ui-primitives": {
+        "optional": true
+      },
+      "@deepseek-ai/dsh-client-ui-tool": {
+        "optional": true
+      },
+      "react": {
+        "optional": true
+      }
+    },
+    "devDependencies": {
+      "@browser-skill/ui": "workspace:*",
+      "@deepseek-ai/cordis": "4.0.2",
+      "@deepseek-ai/dsh-agent": "0.1.5-rc.3",
+      "@deepseek-ai/dsh-agent-loop": "0.1.5-rc.3",
+      "@deepseek-ai/dsh-api-session-controller": "0.1.5-rc.3",
+      "@deepseek-ai/dsh-attachment": "0.1.5-rc.3",
+      "@deepseek-ai/dsh-client-store": "0.1.5-rc.3",
+      "@deepseek-ai/dsh-client-ui-chat": "0.1.5-rc.3",
+      "@deepseek-ai/dsh-client-ui-conversation": "0.1.5-rc.3",
+      "@deepseek-ai/dsh-client-ui-layout": "0.1.5-rc.3",
+      "@deepseek-ai/dsh-client-ui-primitives": "0.1.5-rc.3",
+      "@deepseek-ai/dsh-client-ui-renderer": "0.1.5-rc.3",
+      "@deepseek-ai/dsh-client-ui-session": "0.1.5-rc.3",
+      "@deepseek-ai/dsh-client-ui-slots": "0.1.5-rc.3",
+      "@deepseek-ai/dsh-client-ui-tool": "0.1.5-rc.3",
+      "@deepseek-ai/dsh-llm": "0.1.5-rc.3",
+      "@deepseek-ai/dsh-scope": "0.1.5-rc.3",
+      "@deepseek-ai/dsh-session": "0.1.5-rc.3",
+      "@deepseek-ai/dsh-session-projection": "0.1.5-rc.3",
+      "@deepseek-ai/dsh-skill": "0.1.5-rc.3",
+      "@deepseek-ai/dsh-system-prompt": "0.1.5-rc.3",
+      "@deepseek-ai/dsh-tool-skill": "0.1.5-rc.3",
+      "@deepseek-ai/dsh-tools": "0.1.5-rc.3",
+      "@deepseek-ai/schemastery": "3.18.2",
+      "@remixicon/react": "^4.9.0",
+      "@tailwindcss/cli": "^4.3.3",
+      "@testing-library/react": "^16.1.0",
+      "@types/node": "^22.10.0",
+      "@types/react": "~18.3.1",
+      "@types/react-dom": "^18.3.0",
+      "@types/semver": "7.7.1",
+      "happy-dom": "^15.11.7",
+      "lightningcss": "^1.30.0",
+      "postcss": "^8.5.0",
+      "postcss-prefix-selector": "^2.1.1",
+      "react": "^18.2.0",
+      "react-dom": "^18.2.0",
+      "semver": "7.8.5",
+      "tailwindcss": "^4.3.3",
+      "tsdown": "^0.22.14",
+      "typescript": "^5.8.0",
+      "vitest": "^4.1.6"
+    }
+  },
+  "runtime": {
+    "cli": "bsk 0.4.1",
+    "daemon_version": "0.4.1",
+    "protocol_version": "1.8"
+  },
+  "connected": [
+    {
+      "instance_id": "d408371e",
+      "browser_name": "edge",
+      "browser_version": "156.0.0.0",
+      "extension_version": "0.4.1",
+      "label": "edge",
+      "session_count": 0,
+      "connected_at_ms": 1793685315757,
+      "version_skew": false,
+      "extension_protocol_version": "1.8",
+      "unresponsive": false
+    },
+    {
+      "instance_id": "2303ebf6",
+      "browser_name": "chrome",
+      "browser_version": "155.0.0.0",
+      "extension_version": "0.4.1",
+      "label": "chrome",
+      "session_count": 0,
+      "connected_at_ms": 1793685527467,
+      "version_skew": false,
+      "extension_protocol_version": "1.8",
+      "unresponsive": false
+    }
+  ],
+  "finishedAt": "2026-11-03T08:31:46.255Z",
+  "requestedBrowsers": [
+    [
+      "chrome",
+      "2303ebf6"
+    ]
+  ],
+  "requestedFeatures": [
+    "wait",
+    "control",
+    "evaluate",
+    "evaluateCancel",
+    "evaluateTimeout",
+    "uploadSingle",
+    "uploadMultiple",
+    "uploadDrop",
+    "missingUpload",
+    "download",
+    "html",
+    "emulate",
+    "hover",
+    "drag",
+    "step",
+    "view",
+    "incognito",
+    "dialog"
+  ],
+  "outcome": "failed",
+  "passed": false
+}

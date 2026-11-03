@@ -1,0 +1,96 @@
+[
+  {
+    "id": "@caiqy/browser-skill-dsh-plugin@0.4.1-dsh.1",
+    "name": "@caiqy/browser-skill-dsh-plugin",
+    "version": "0.4.1-dsh.1",
+    "size": 141007,
+    "unpackedSize": 561689,
+    "shasum": "b1394d378a928b8c0f4ece554194b9f419d536cc",
+    "integrity": "sha512-zRTfxLBNxNZCX+8m2BeCTksZJEl8eGZon6JwqY1ybYN1xCvwJBxr7s3jKkhsdOG1HCQOIY/MOMgsJMdKcaNp0A==",
+    "filename": "caiqy-browser-skill-dsh-plugin-0.4.1-dsh.1.tgz",
+    "files": [
+      {
+        "path": "LICENSE",
+        "size": 1085,
+        "mode": 420
+      },
+      {
+        "path": "README.md",
+        "size": 23223,
+        "mode": 420
+      },
+      {
+        "path": "cordis.patch.yml",
+        "size": 235,
+        "mode": 420
+      },
+      {
+        "path": "lib/client.cjs",
+        "size": 202617,
+        "mode": 420
+      },
+      {
+        "path": "lib/index.d.mts",
+        "size": 20642,
+        "mode": 420
+      },
+      {
+        "path": "lib/index.mjs",
+        "size": 259347,
+        "mode": 420
+      },
+      {
+        "path": "package.json",
+        "size": 4533,
+        "mode": 420
+      },
+      {
+        "path": "skill/references/cooperation.md",
+        "size": 7444,
+        "mode": 420
+      },
+      {
+        "path": "skill/references/debugging.md",
+        "size": 7373,
+        "mode": 420
+      },
+      {
+        "path": "skill/references/help-and-recovery.md",
+        "size": 4538,
+        "mode": 420
+      },
+      {
+        "path": "skill/references/interaction-details.md",
+        "size": 12126,
+        "mode": 420
+      },
+      {
+        "path": "skill/references/native-dialogs.md",
+        "size": 1717,
+        "mode": 420
+      },
+      {
+        "path": "skill/references/screenshots-and-canvas.md",
+        "size": 4241,
+        "mode": 420
+      },
+      {
+        "path": "skill/references/tabs-and-profiles.md",
+        "size": 3399,
+        "mode": 420
+      },
+      {
+        "path": "skill/references/video.md",
+        "size": 4778,
+        "mode": 420
+      },
+      {
+        "path": "skill/SKILL.md",
+        "size": 4391,
+        "mode": 420
+      }
+    ],
+    "entryCount": 16,
+    "bundled": []
+  }
+]

@@ -1,0 +1,66 @@
+{
+  "action": {
+    "result": {
+      "tab_id": 1014176430,
+      "used_ref": "e9",
+      "used_selector": "#step-button",
+      "x": 74.6796875,
+      "y": 454.71875
+    }
+  },
+  "action_replayed": false,
+  "ok": true,
+  "phase": "observed",
+  "post": {
+    "activity": [],
+    "context_id": "a63e0624-4ff9-496e-ad5c-6a926db28590",
+    "control_policy": "target",
+    "guidance": "This context remains valid for DOM-targeted actions until human control or the document changes. Supplementary reads do not invalidate it. Use explicit expect checks for business facts such as price, recipient or record ID. Scripts, untargeted keys and visual clicks require this sync's observation_id and retain strict content checks. Never replay an uncertain action; inspect its result first.",
+    "history_complete": true,
+    "kind": "baseline",
+    "observation": {
+      "observation_id": "0efda979-ac14-42b2-ab66-16e11c9c9ba4",
+      "ref_count": 8,
+      "tab_id": 1014176430,
+      "text": "@vom 1\n@view 961x660\n@layers 1 focus=L1\nL1 page\n  RootWebArea \"BrowserSkill candidate smoke bsk-fixture-60086c40-c227-498d-87e7-920886f4d5c8\"\n    heading \"BrowserSkill 本地候选测试 💡\"\n      StaticText \"BrowserSkill 本地候选测试 💡\"\n    LabelText \"Single file\"\n      @e1 button \"Single file\"\n      StaticText \"Single file\"\n    LabelText \"Multiple files\"\n      @e2 button \"Multiple files\"\n      StaticText \"Multiple files\"\n    StaticText \"Drop test files\"\n    @e3 link \"Download test file\"\n    @e4 button \"Hover test menu [has-submenu]\"\n    @e5 button \"Run step\"\n    paragraph \"Step completed\"\n      StaticText \"Step completed\"\n    @e6 button \"Open prompt\"\n    @e7 button \"Open confirm\"\n    @e8 group [draggable] \"Drag source\"\n      StaticText \"Drag source\"\n    StaticText \"Drop target\"\n    status \"source\"\n      StaticText \"source\"\n    StaticText \"Full-page test spacer\"\n    paragraph \"End of test page\"\n      StaticText \"End of test page\"",
+      "truncated": false
+    },
+    "observation_id": "cea1f698-6bc8-48ee-8950-cc3d34ee6b2e",
+    "observation_origin": {
+      "capture_context_id": "a63e0624-4ff9-496e-ad5c-6a926db28590",
+      "kind": "capture",
+      "payload_sha256": "50ea0c34a2e67015e1a4eff12203506c27cb06ebbae4bd1740650bc49059d482",
+      "session_id": "xyiq"
+    },
+    "settle": {
+      "outcome": "synchronized",
+      "sync_attempts": 1
+    },
+    "state": {
+      "editing": false,
+      "mode": "ready",
+      "revision": 106,
+      "target": {
+        "expires": 1793694843101,
+        "x": 74.6796875,
+        "y": 454.71875
+      }
+    },
+    "tab_id": 1014176430
+  },
+  "readiness": {
+    "attached": true,
+    "elapsed_ms": 3,
+    "satisfied": true,
+    "tab_id": 1014176430,
+    "used_selector": "#step-done",
+    "visible": true
+  },
+  "rpc_calls": 3,
+  "timing_ms": {
+    "action": 277,
+    "readiness": 5,
+    "sync": 51,
+    "total": 333
+  }
+}

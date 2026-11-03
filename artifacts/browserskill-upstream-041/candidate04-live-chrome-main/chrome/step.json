@@ -1,0 +1,66 @@
+{
+  "action": {
+    "result": {
+      "tab_id": 1448789456,
+      "used_ref": "e9",
+      "used_selector": "#step-button",
+      "x": 74.6796875,
+      "y": 454.71875
+    }
+  },
+  "action_replayed": false,
+  "ok": true,
+  "phase": "observed",
+  "post": {
+    "activity": [],
+    "context_id": "7d086008-0c3b-4eb4-8c0d-767599ca3e1c",
+    "control_policy": "target",
+    "guidance": "This context remains valid for DOM-targeted actions until human control or the document changes. Supplementary reads do not invalidate it. Use explicit expect checks for business facts such as price, recipient or record ID. Scripts, untargeted keys and visual clicks require this sync's observation_id and retain strict content checks. Never replay an uncertain action; inspect its result first.",
+    "history_complete": true,
+    "kind": "baseline",
+    "observation": {
+      "observation_id": "18ade5f0-c588-4839-ba2f-b00b25e4ea59",
+      "ref_count": 8,
+      "tab_id": 1448789456,
+      "text": "@vom 1\n@view 969x649\n@layers 1 focus=L1\nL1 page\n  RootWebArea \"BrowserSkill candidate smoke bsk-fixture-7b3c4bc5-5228-4e02-8580-d2892993bb9a\"\n    heading \"BrowserSkill 本地候选测试 💡\"\n      StaticText \"BrowserSkill 本地候选测试 💡\"\n    LabelText \"Single file\"\n      @e1 button \"Single file\" =\"C:\\\\fakepath\\\\a.txt\"\n      StaticText \"Single file\"\n    LabelText \"Multiple files\"\n      @e2 button \"Multiple files\" =\"C:\\\\fakepath\\\\a.txt\"\n      StaticText \"Multiple files\"\n    StaticText \"Drop test files\"\n    @e3 link \"Download test file\"\n    @e4 button \"Hover test menu [has-submenu]\"\n    @e5 button \"Run step\"\n    paragraph \"Step completed\"\n      StaticText \"Step completed\"\n    @e6 button \"Open prompt\"\n    @e7 button \"Open confirm\"\n    @e8 group [draggable] \"Drag source\"\n      StaticText \"Drag source\"\n    StaticText \"Drop target\"\n    status \"source\"\n      StaticText \"source\"\n    StaticText \"Full-page test spacer\"\n    paragraph \"End of test page\"\n      StaticText \"End of test page\"",
+      "truncated": false
+    },
+    "observation_id": "6a486253-7465-4045-9f67-09117852a786",
+    "observation_origin": {
+      "capture_context_id": "7d086008-0c3b-4eb4-8c0d-767599ca3e1c",
+      "kind": "capture",
+      "payload_sha256": "56a8a76b3f01832d4c0811065b6ea54a148791ccccc5bb2b2a854553f7beaefb",
+      "session_id": "njxo"
+    },
+    "settle": {
+      "outcome": "synchronized",
+      "sync_attempts": 1
+    },
+    "state": {
+      "editing": false,
+      "mode": "ready",
+      "revision": 137,
+      "target": {
+        "expires": 1793694704793,
+        "x": 74.6796875,
+        "y": 454.71875
+      }
+    },
+    "tab_id": 1448789456
+  },
+  "readiness": {
+    "attached": true,
+    "elapsed_ms": 4,
+    "satisfied": true,
+    "tab_id": 1448789456,
+    "used_selector": "#step-done",
+    "visible": true
+  },
+  "rpc_calls": 3,
+  "timing_ms": {
+    "action": 171,
+    "readiness": 6,
+    "sync": 41,
+    "total": 218
+  }
+}

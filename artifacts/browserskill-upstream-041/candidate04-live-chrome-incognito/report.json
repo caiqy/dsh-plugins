@@ -1,0 +1,576 @@
+{
+  "candidate": "D:\\Caiqy\\Projects\\Github\\dsh-plugins\\artifacts\\browserskill-upstream-041\\candidate-04\\caiqy-browser-skill-dsh-plugin-0.4.1-dsh.1.tgz",
+  "bytes": 141007,
+  "sha256": "26ee94324c96d95a069ec4d9656f502dd380e9bfce3d431840e2809ea58c374f",
+  "startedAt": "2026-11-03T08:33:01.442Z",
+  "calls": [
+    {
+      "name": "bsk_session",
+      "args": {
+        "action": "browsers"
+      },
+      "elapsedMs": 46,
+      "ok": true,
+      "result": [
+        {
+          "instance_id": "d408371e",
+          "browser_name": "edge",
+          "browser_version": "156.0.0.0",
+          "extension_version": "0.4.1",
+          "label": "edge",
+          "session_count": 0,
+          "connected_at_ms": 1793685315757,
+          "version_skew": false,
+          "extension_protocol_version": "1.8",
+          "unresponsive": false
+        },
+        {
+          "instance_id": "2303ebf6",
+          "browser_name": "chrome",
+          "browser_version": "155.0.0.0",
+          "extension_version": "0.4.1",
+          "label": "chrome",
+          "session_count": 0,
+          "connected_at_ms": 1793685527467,
+          "version_skew": false,
+          "extension_protocol_version": "1.8",
+          "unresponsive": false
+        }
+      ]
+    },
+    {
+      "name": "bsk_session",
+      "args": {
+        "action": "list"
+      },
+      "elapsedMs": 1,
+      "ok": true,
+      "result": {
+        "pendingCleanup": 0,
+        "sessions": []
+      }
+    },
+    {
+      "name": "bsk_session",
+      "args": {
+        "action": "browsers"
+      },
+      "elapsedMs": 41,
+      "ok": true,
+      "result": [
+        {
+          "instance_id": "d408371e",
+          "browser_name": "edge",
+          "browser_version": "156.0.0.0",
+          "extension_version": "0.4.1",
+          "label": "edge",
+          "session_count": 0,
+          "connected_at_ms": 1793685315757,
+          "version_skew": false,
+          "extension_protocol_version": "1.8",
+          "unresponsive": false
+        },
+        {
+          "instance_id": "2303ebf6",
+          "browser_name": "chrome",
+          "browser_version": "155.0.0.0",
+          "extension_version": "0.4.1",
+          "label": "chrome",
+          "session_count": 0,
+          "connected_at_ms": 1793685527467,
+          "version_skew": false,
+          "extension_protocol_version": "1.8",
+          "unresponsive": false
+        }
+      ]
+    },
+    {
+      "name": "bsk_session",
+      "args": {
+        "action": "start",
+        "browser": "2303ebf6",
+        "name": "bsk-candidate-chrome",
+        "width": 1000,
+        "height": 800,
+        "noFocus": true
+      },
+      "elapsedMs": 1657,
+      "ok": true,
+      "result": {
+        "sessionId": "rssz",
+        "browserInstanceId": "2303ebf6"
+      }
+    },
+    {
+      "name": "bsk_tabs",
+      "args": {
+        "action": "list",
+        "session": "rssz",
+        "scope": "agent"
+      },
+      "elapsedMs": 103,
+      "ok": true,
+      "result": {
+        "session": "rssz",
+        "tabs": [
+          {
+            "active": true,
+            "scope": "agent"
+          }
+        ]
+      }
+    },
+    {
+      "name": "bsk_session",
+      "args": {
+        "action": "sync",
+        "session": "rssz",
+        "policy": "auto",
+        "saveFull": "D:\\Caiqy\\Projects\\Github\\dsh-plugins\\artifacts\\browserskill-upstream-041\\candidate04-live-chrome-incognito\\chrome\\baseline.json"
+      },
+      "elapsedMs": 238,
+      "ok": true,
+      "result": {
+        "activity": [],
+        "context_id": "67d12b70-4672-4e63-bbf3-f2d618cac356",
+        "control_policy": "target",
+        "full_output_path": "D:\\Caiqy\\Projects\\Github\\dsh-plugins\\artifacts\\browserskill-upstream-041\\candidate04-live-chrome-incognito\\chrome\\baseline.json",
+        "guidance": "This context remains valid for DOM-targeted actions until human control or the document changes. Supplementary reads do not invalidate it. Use explicit expect checks for business facts such as price, recipient or record ID. Scripts, untargeted keys and visual clicks require this sync's observation_id and retain strict content checks. Never replay an uncertain action; inspect its result first.",
+        "history_complete": false,
+        "kind": "baseline",
+        "observation": {
+          "observation_id": "86bb9a2b-23a5-4ad9-9f0a-7c269a8eda8f",
+          "ref_count": 8,
+          "truncated": false
+        },
+        "observation_id": "7f99233c-9b2e-4b74-885e-777062f3de87",
+        "observation_origin": {
+          "capture_context_id": "67d12b70-4672-4e63-bbf3-f2d618cac356",
+          "kind": "capture",
+          "payload_sha256": "4fd34630f57857b8165af5393c71fa3fb4dc5852fec2955e289fffb3bddb1947",
+          "session_id": "rssz"
+        },
+        "state": {
+          "editing": false,
+          "mode": "ready",
+          "revision": 7
+        }
+      }
+    },
+    {
+      "name": "bsk_inspect",
+      "args": {
+        "action": "observe",
+        "session": "rssz"
+      },
+      "elapsedMs": 200,
+      "ok": true,
+      "result": {
+        "session": "rssz",
+        "refCount": 8,
+        "truncated": false
+      }
+    },
+    {
+      "name": "bsk_session",
+      "args": {
+        "action": "start",
+        "browser": "2303ebf6",
+        "name": "bsk-incognito-chrome",
+        "incognito": true,
+        "noFocus": true,
+        "width": 900,
+        "height": 700
+      },
+      "elapsedMs": 835,
+      "ok": true,
+      "result": {
+        "sessionId": "kwqt",
+        "browserInstanceId": "2303ebf6"
+      }
+    },
+    {
+      "name": "bsk_tabs",
+      "args": {
+        "action": "list",
+        "session": "kwqt",
+        "scope": "agent"
+      },
+      "elapsedMs": 67,
+      "ok": true,
+      "result": {
+        "session": "kwqt",
+        "tabs": [
+          {
+            "active": true,
+            "scope": "agent"
+          }
+        ]
+      }
+    },
+    {
+      "name": "bsk_inspect",
+      "args": {
+        "action": "observe",
+        "session": "kwqt"
+      },
+      "elapsedMs": 108,
+      "ok": true,
+      "result": {
+        "session": "kwqt",
+        "refCount": 8,
+        "truncated": false
+      }
+    },
+    {
+      "name": "bsk_session",
+      "args": {
+        "action": "sync",
+        "session": "kwqt",
+        "policy": "auto"
+      },
+      "elapsedMs": 98,
+      "ok": true,
+      "result": {
+        "activity": [],
+        "context_id": "85c880c0-ad56-4622-b127-59e5ddc5d3b7",
+        "control_policy": "target",
+        "guidance": "This context remains valid for DOM-targeted actions until human control or the document changes. Supplementary reads do not invalidate it. Use explicit expect checks for business facts such as price, recipient or record ID. Scripts, untargeted keys and visual clicks require this sync's observation_id and retain strict content checks. Never replay an uncertain action; inspect its result first.",
+        "history_complete": false,
+        "kind": "baseline",
+        "observation": {
+          "observation_id": "302df267-34d1-4100-a3b8-2077e5542bc4",
+          "ref_count": 8,
+          "truncated": false
+        },
+        "observation_id": "8ccb8f0b-e1f0-4d4a-9cdc-0f11e48672dd",
+        "observation_origin": {
+          "capture_context_id": "85c880c0-ad56-4622-b127-59e5ddc5d3b7",
+          "kind": "capture",
+          "payload_sha256": "d786bbb8eeb40cc5c2c39c301e164db00749c4ce1d8a38d4cd5cd9830f942199",
+          "session_id": "kwqt"
+        },
+        "state": {
+          "editing": false,
+          "mode": "ready",
+          "revision": 8
+        }
+      }
+    },
+    {
+      "name": "bsk_session",
+      "args": {
+        "action": "sync",
+        "session": "kwqt",
+        "policy": "auto"
+      },
+      "elapsedMs": 45,
+      "ok": true,
+      "result": {
+        "activity": [],
+        "changes": [],
+        "context_id": "85c880c0-ad56-4622-b127-59e5ddc5d3b7",
+        "control_policy": "target",
+        "guidance": "This context remains valid for DOM-targeted actions until human control or the document changes. Supplementary reads do not invalidate it. Use explicit expect checks for business facts such as price, recipient or record ID. Scripts, untargeted keys and visual clicks require this sync's observation_id and retain strict content checks. Never replay an uncertain action; inspect its result first.",
+        "history_complete": true,
+        "kind": "unchanged",
+        "observation_id": "d9b7e012-e3b3-407a-a2b9-e1aa3a86c0ec",
+        "previous_context_id": "85c880c0-ad56-4622-b127-59e5ddc5d3b7",
+        "state": {
+          "editing": false,
+          "mode": "ready",
+          "revision": 11
+        }
+      }
+    },
+    {
+      "name": "bsk_tabs",
+      "args": {
+        "action": "borrow",
+        "session": "kwqt",
+        "contextId": "85c880c0-ad56-4622-b127-59e5ddc5d3b7",
+        "observationId": "d9b7e012-e3b3-407a-a2b9-e1aa3a86c0ec"
+      },
+      "elapsedMs": 46,
+      "ok": false,
+      "error": {
+        "message": "BskError: bsk tab borrow failed: Incognito sessions cannot borrow tabs. Create a new tab in the session instead. (hint: create a new task tab with `bsk tab create <url> --session <id>`)",
+        "code": "permission_denied",
+        "data": {
+          "reason": "incognito_borrow_disabled"
+        },
+        "timedOut": false
+      }
+    },
+    {
+      "name": "bsk_session",
+      "args": {
+        "action": "stop",
+        "session": "kwqt"
+      },
+      "elapsedMs": 116,
+      "ok": true,
+      "result": {
+        "stopped": "kwqt",
+        "alreadyClosed": false
+      }
+    },
+    {
+      "name": "bsk_session",
+      "args": {
+        "action": "stop",
+        "session": "rssz"
+      },
+      "elapsedMs": 106,
+      "ok": true,
+      "result": {
+        "stopped": "rssz",
+        "alreadyClosed": false
+      }
+    },
+    {
+      "name": "bsk_session",
+      "args": {
+        "action": "list"
+      },
+      "elapsedMs": 0,
+      "ok": true,
+      "result": {
+        "pendingCleanup": 0,
+        "sessions": []
+      }
+    }
+  ],
+  "browsers": [
+    {
+      "label": "chrome",
+      "browser": "2303ebf6",
+      "results": {
+        "incognito": {
+          "passed": true,
+          "value": {
+            "session": "kwqt",
+            "tabs": [
+              {
+                "scope": "agent",
+                "active": true
+              }
+            ],
+            "borrowedUserTab": false
+          }
+        }
+      },
+      "passed": true,
+      "connection": {
+        "instance_id": "2303ebf6",
+        "browser_name": "chrome",
+        "browser_version": "155.0.0.0",
+        "extension_version": "0.4.1",
+        "label": "chrome",
+        "session_count": 0,
+        "connected_at_ms": 1793685527467,
+        "version_skew": false,
+        "extension_protocol_version": "1.8",
+        "unresponsive": false
+      },
+      "session": "rssz",
+      "nameRequested": "bsk-candidate-chrome",
+      "startNoFocus": true
+    }
+  ],
+  "failures": [],
+  "limitations": [],
+  "cleanup": [
+    {
+      "browser": "2303ebf6",
+      "session": "rssz",
+      "stopped": true,
+      "currentScreenshotRetained": false,
+      "followScreenshotRetained": false
+    }
+  ],
+  "fixtureBoundary": "Packed apply and all six public tools use the unmodified real runner/CLI/daemon/extensions. Context registration, image-capable model metadata and the durable local attachment store are host fixtures; no desktop GUI or actual DSH attachment service is claimed.",
+  "componentRequirement": {
+    "cli": "0.4.1",
+    "daemon": "0.4.1",
+    "extension": "0.4.1",
+    "protocol": "1.8",
+    "customizedComponentsAllowed": false
+  },
+  "package": {
+    "name": "@caiqy/browser-skill-dsh-plugin",
+    "description": "DeepSeek Harness tool plugin that exposes BrowserSkill browser automation (bsk_* tools) to the model",
+    "version": "0.4.1-dsh.1",
+    "license": "MIT",
+    "publishConfig": {
+      "access": "public",
+      "registry": "https://registry.npmjs.org/"
+    },
+    "repository": {
+      "type": "git",
+      "directory": "packages/dsh-plugin-browserskill"
+    },
+    "homepage": "https://github.com/caiqy/BrowserSkill/tree/dsh/plugin-parity-0.3.3/packages/dsh-plugin-browserskill#readme",
+    "bugs": {},
+    "keywords": [
+      "dsh-plugin",
+      "deepseek-harness",
+      "browserskill",
+      "browser-automation"
+    ],
+    "type": "module",
+    "main": "lib/index.mjs",
+    "types": "lib/index.d.mts",
+    "exports": {
+      ".": {
+        "types": "./lib/index.d.mts",
+        "default": "./lib/index.mjs"
+      },
+      "./client": {
+        "default": "./lib/client.cjs"
+      },
+      "./package.json": "./package.json"
+    },
+    "files": [
+      "lib",
+      "skill",
+      "cordis.patch.yml",
+      "LICENSE"
+    ],
+    "dsh": {
+      "bundle": {
+        "patch": "./cordis.patch.yml"
+      },
+      "client": {
+        "platform": "web",
+        "inject": [
+          "@deepseek-ai/dsh-client-ui-tool",
+          "@deepseek-ai/dsh-client-ui-layout"
+        ],
+        "external": [
+          "@deepseek-ai/dsh-client-ui-primitives"
+        ]
+      }
+    },
+    "scripts": {
+      "build": "node scripts/build-client-css.mjs && node scripts/build-skill-content.mjs && tsdown",
+      "typecheck": "pnpm run build:skill && tsc --noEmit",
+      "test": "pnpm run build:css && pnpm run build:skill && vitest run",
+      "build:css": "node scripts/build-client-css.mjs",
+      "build:skill": "node scripts/build-skill-content.mjs",
+      "prepack": "pnpm run build",
+      "lint:publint": "publint"
+    },
+    "peerDependencies": {
+      "@deepseek-ai/cordis": "^4.0.2",
+      "@deepseek-ai/dsh-attachment": "^0.1.5-rc.3 || ^0.2.0-rc.1",
+      "@deepseek-ai/dsh-client-ui-primitives": "^0.1.5-rc.3 || ^0.2.0-rc.1",
+      "@deepseek-ai/dsh-client-ui-tool": "^0.1.5-rc.3 || ^0.2.0-rc.1",
+      "@deepseek-ai/dsh-llm": "^0.1.5-rc.3 || ^0.2.0-rc.1",
+      "@deepseek-ai/dsh-tools": "^0.1.5-rc.3 || ^0.2.0-rc.1",
+      "@deepseek-ai/schemastery": "^3.18.2",
+      "react": "^18.2.0"
+    },
+    "peerDependenciesMeta": {
+      "@deepseek-ai/dsh-attachment": {
+        "optional": true
+      },
+      "@deepseek-ai/dsh-client-ui-primitives": {
+        "optional": true
+      },
+      "@deepseek-ai/dsh-client-ui-tool": {
+        "optional": true
+      },
+      "react": {
+        "optional": true
+      }
+    },
+    "devDependencies": {
+      "@browser-skill/ui": "workspace:*",
+      "@deepseek-ai/cordis": "4.0.2",
+      "@deepseek-ai/dsh-agent": "0.1.5-rc.3",
+      "@deepseek-ai/dsh-agent-loop": "0.1.5-rc.3",
+      "@deepseek-ai/dsh-api-session-controller": "0.1.5-rc.3",
+      "@deepseek-ai/dsh-attachment": "0.1.5-rc.3",
+      "@deepseek-ai/dsh-client-store": "0.1.5-rc.3",
+      "@deepseek-ai/dsh-client-ui-chat": "0.1.5-rc.3",
+      "@deepseek-ai/dsh-client-ui-conversation": "0.1.5-rc.3",
+      "@deepseek-ai/dsh-client-ui-layout": "0.1.5-rc.3",
+      "@deepseek-ai/dsh-client-ui-primitives": "0.1.5-rc.3",
+      "@deepseek-ai/dsh-client-ui-renderer": "0.1.5-rc.3",
+      "@deepseek-ai/dsh-client-ui-session": "0.1.5-rc.3",
+      "@deepseek-ai/dsh-client-ui-slots": "0.1.5-rc.3",
+      "@deepseek-ai/dsh-client-ui-tool": "0.1.5-rc.3",
+      "@deepseek-ai/dsh-llm": "0.1.5-rc.3",
+      "@deepseek-ai/dsh-scope": "0.1.5-rc.3",
+      "@deepseek-ai/dsh-session": "0.1.5-rc.3",
+      "@deepseek-ai/dsh-session-projection": "0.1.5-rc.3",
+      "@deepseek-ai/dsh-skill": "0.1.5-rc.3",
+      "@deepseek-ai/dsh-system-prompt": "0.1.5-rc.3",
+      "@deepseek-ai/dsh-tool-skill": "0.1.5-rc.3",
+      "@deepseek-ai/dsh-tools": "0.1.5-rc.3",
+      "@deepseek-ai/schemastery": "3.18.2",
+      "@remixicon/react": "^4.9.0",
+      "@tailwindcss/cli": "^4.3.3",
+      "@testing-library/react": "^16.1.0",
+      "@types/node": "^22.10.0",
+      "@types/react": "~18.3.1",
+      "@types/react-dom": "^18.3.0",
+      "@types/semver": "7.7.1",
+      "happy-dom": "^15.11.7",
+      "lightningcss": "^1.30.0",
+      "postcss": "^8.5.0",
+      "postcss-prefix-selector": "^2.1.1",
+      "react": "^18.2.0",
+      "react-dom": "^18.2.0",
+      "semver": "7.8.5",
+      "tailwindcss": "^4.3.3",
+      "tsdown": "^0.22.14",
+      "typescript": "^5.8.0",
+      "vitest": "^4.1.6"
+    }
+  },
+  "runtime": {
+    "cli": "bsk 0.4.1",
+    "daemon_version": "0.4.1",
+    "protocol_version": "1.8"
+  },
+  "connected": [
+    {
+      "instance_id": "d408371e",
+      "browser_name": "edge",
+      "browser_version": "156.0.0.0",
+      "extension_version": "0.4.1",
+      "label": "edge",
+      "session_count": 0,
+      "connected_at_ms": 1793685315757,
+      "version_skew": false,
+      "extension_protocol_version": "1.8",
+      "unresponsive": false
+    },
+    {
+      "instance_id": "2303ebf6",
+      "browser_name": "chrome",
+      "browser_version": "155.0.0.0",
+      "extension_version": "0.4.1",
+      "label": "chrome",
+      "session_count": 0,
+      "connected_at_ms": 1793685527467,
+      "version_skew": false,
+      "extension_protocol_version": "1.8",
+      "unresponsive": false
+    }
+  ],
+  "finishedAt": "2026-11-03T08:33:05.439Z",
+  "requestedBrowsers": [
+    [
+      "chrome",
+      "2303ebf6"
+    ]
+  ],
+  "requestedFeatures": [
+    "incognito"
+  ],
+  "outcome": "passed",
+  "passed": true
+}

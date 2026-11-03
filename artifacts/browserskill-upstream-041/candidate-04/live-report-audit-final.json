@@ -1,0 +1,650 @@
+{
+  "schema": "browserskill.dsh-only-live-audit.v1",
+  "sha256": "26ee94324c96d95a069ec4d9656f502dd380e9bfce3d431840e2809ea58c374f",
+  "reports": [
+    {
+      "directory": "candidate04-live-chrome-main",
+      "outcome": "failed",
+      "passed": false,
+      "requestedFeatures": [
+        "wait",
+        "control",
+        "evaluate",
+        "evaluateCancel",
+        "evaluateTimeout",
+        "uploadSingle",
+        "uploadMultiple",
+        "uploadDrop",
+        "missingUpload",
+        "download",
+        "html",
+        "emulate",
+        "hover",
+        "drag",
+        "step",
+        "view",
+        "incognito",
+        "dialog"
+      ],
+      "features": [
+        {
+          "browser": "2303ebf6",
+          "feature": "control",
+          "status": "passed"
+        },
+        {
+          "browser": "2303ebf6",
+          "feature": "wait",
+          "status": "passed"
+        },
+        {
+          "browser": "2303ebf6",
+          "feature": "evaluate",
+          "status": "passed"
+        },
+        {
+          "browser": "2303ebf6",
+          "feature": "evaluateCancel",
+          "status": "passed"
+        },
+        {
+          "browser": "2303ebf6",
+          "feature": "evaluateTimeout",
+          "status": "passed"
+        },
+        {
+          "browser": "2303ebf6",
+          "feature": "uploadSingle",
+          "status": "passed"
+        },
+        {
+          "browser": "2303ebf6",
+          "feature": "uploadMultiple",
+          "status": "passed"
+        },
+        {
+          "browser": "2303ebf6",
+          "feature": "uploadDrop",
+          "status": "passed"
+        },
+        {
+          "browser": "2303ebf6",
+          "feature": "missingUpload",
+          "status": "passed"
+        },
+        {
+          "browser": "2303ebf6",
+          "feature": "download",
+          "status": "passed"
+        },
+        {
+          "browser": "2303ebf6",
+          "feature": "emulate",
+          "status": "passed"
+        },
+        {
+          "browser": "2303ebf6",
+          "feature": "hover",
+          "status": "passed"
+        },
+        {
+          "browser": "2303ebf6",
+          "feature": "drag",
+          "status": "passed"
+        },
+        {
+          "browser": "2303ebf6",
+          "feature": "step",
+          "status": "passed"
+        },
+        {
+          "browser": "2303ebf6",
+          "feature": "view",
+          "status": "passed"
+        },
+        {
+          "browser": "2303ebf6",
+          "feature": "incognito",
+          "status": "failed"
+        },
+        {
+          "browser": "2303ebf6",
+          "feature": "dialog",
+          "status": "passed"
+        }
+      ],
+      "failures": [
+        {
+          "feature": "incognito",
+          "code": "ERR_ASSERTION"
+        }
+      ],
+      "limitationCount": 0,
+      "cleanup": {
+        "sessions": 0,
+        "pendingCleanup": 0
+      }
+    },
+    {
+      "directory": "candidate04-live-chrome-incognito",
+      "outcome": "passed",
+      "passed": true,
+      "requestedFeatures": [
+        "incognito"
+      ],
+      "features": [
+        {
+          "browser": "2303ebf6",
+          "feature": "incognito",
+          "status": "passed"
+        }
+      ],
+      "failures": [],
+      "limitationCount": 0,
+      "cleanup": {
+        "sessions": 0,
+        "pendingCleanup": 0
+      }
+    },
+    {
+      "directory": "candidate04-live-chrome-incognito-regular-tab",
+      "outcome": "passed",
+      "passed": true,
+      "requestedFeatures": [
+        "incognito"
+      ],
+      "features": [
+        {
+          "browser": "2303ebf6",
+          "feature": "incognito",
+          "status": "passed"
+        }
+      ],
+      "failures": [],
+      "limitationCount": 0,
+      "cleanup": {
+        "sessions": 0,
+        "pendingCleanup": 0
+      }
+    },
+    {
+      "directory": "candidate04-live-edge-main",
+      "outcome": "passed",
+      "passed": true,
+      "requestedFeatures": [
+        "wait",
+        "control",
+        "evaluate",
+        "evaluateCancel",
+        "evaluateTimeout",
+        "missingUpload",
+        "download",
+        "html",
+        "emulate",
+        "hover",
+        "drag",
+        "step",
+        "view",
+        "incognito",
+        "dialog"
+      ],
+      "features": [
+        {
+          "browser": "d408371e",
+          "feature": "control",
+          "status": "passed"
+        },
+        {
+          "browser": "d408371e",
+          "feature": "wait",
+          "status": "passed"
+        },
+        {
+          "browser": "d408371e",
+          "feature": "evaluate",
+          "status": "passed"
+        },
+        {
+          "browser": "d408371e",
+          "feature": "evaluateCancel",
+          "status": "passed"
+        },
+        {
+          "browser": "d408371e",
+          "feature": "evaluateTimeout",
+          "status": "passed"
+        },
+        {
+          "browser": "d408371e",
+          "feature": "missingUpload",
+          "status": "passed"
+        },
+        {
+          "browser": "d408371e",
+          "feature": "download",
+          "status": "passed"
+        },
+        {
+          "browser": "d408371e",
+          "feature": "emulate",
+          "status": "passed"
+        },
+        {
+          "browser": "d408371e",
+          "feature": "hover",
+          "status": "passed"
+        },
+        {
+          "browser": "d408371e",
+          "feature": "drag",
+          "status": "passed"
+        },
+        {
+          "browser": "d408371e",
+          "feature": "step",
+          "status": "passed"
+        },
+        {
+          "browser": "d408371e",
+          "feature": "view",
+          "status": "passed"
+        },
+        {
+          "browser": "d408371e",
+          "feature": "incognito",
+          "status": "passed"
+        },
+        {
+          "browser": "d408371e",
+          "feature": "dialog",
+          "status": "passed"
+        }
+      ],
+      "failures": [],
+      "limitationCount": 0,
+      "cleanup": {
+        "sessions": 0,
+        "pendingCleanup": 0
+      }
+    },
+    {
+      "directory": "candidate04-live-edge-incognito-regular-tab",
+      "outcome": "passed",
+      "passed": true,
+      "requestedFeatures": [
+        "incognito"
+      ],
+      "features": [
+        {
+          "browser": "d408371e",
+          "feature": "incognito",
+          "status": "passed"
+        }
+      ],
+      "failures": [],
+      "limitationCount": 0,
+      "cleanup": {
+        "sessions": 0,
+        "pendingCleanup": 0
+      }
+    },
+    {
+      "directory": "candidate04-live-edge-upload-single",
+      "outcome": "passed",
+      "passed": true,
+      "requestedFeatures": [
+        "uploadSingle"
+      ],
+      "features": [
+        {
+          "browser": "d408371e",
+          "feature": "uploadSingle",
+          "status": "passed"
+        }
+      ],
+      "failures": [],
+      "limitationCount": 0,
+      "cleanup": {
+        "sessions": 0,
+        "pendingCleanup": 0
+      }
+    },
+    {
+      "directory": "candidate04-live-edge-upload-multiple",
+      "outcome": "passed",
+      "passed": true,
+      "requestedFeatures": [
+        "uploadMultiple"
+      ],
+      "features": [
+        {
+          "browser": "d408371e",
+          "feature": "uploadMultiple",
+          "status": "passed"
+        }
+      ],
+      "failures": [],
+      "limitationCount": 0,
+      "cleanup": {
+        "sessions": 0,
+        "pendingCleanup": 0
+      }
+    },
+    {
+      "directory": "candidate04-live-edge-upload-drop",
+      "outcome": "passed",
+      "passed": true,
+      "requestedFeatures": [
+        "uploadDrop"
+      ],
+      "features": [
+        {
+          "browser": "d408371e",
+          "feature": "uploadDrop",
+          "status": "passed"
+        }
+      ],
+      "failures": [],
+      "limitationCount": 0,
+      "cleanup": {
+        "sessions": 0,
+        "pendingCleanup": 0
+      }
+    },
+    {
+      "directory": "candidate04-live-chrome-screenshot",
+      "outcome": "failed",
+      "passed": false,
+      "requestedFeatures": [
+        "screenshot"
+      ],
+      "features": [
+        {
+          "browser": "2303ebf6",
+          "feature": "screenshot",
+          "status": "failed"
+        }
+      ],
+      "failures": [
+        {
+          "feature": "screenshot",
+          "code": "cdp_failed",
+          "reason": "page_hidden"
+        }
+      ],
+      "limitationCount": 0,
+      "cleanup": {
+        "sessions": 0,
+        "pendingCleanup": 0
+      }
+    },
+    {
+      "directory": "candidate04-live-edge-screenshot",
+      "outcome": "accepted-limitations",
+      "passed": false,
+      "requestedFeatures": [
+        "screenshot"
+      ],
+      "features": [
+        {
+          "browser": "d408371e",
+          "feature": "screenshot",
+          "status": "accepted-limitation"
+        }
+      ],
+      "failures": [],
+      "limitationCount": 1,
+      "cleanup": {
+        "sessions": 0,
+        "pendingCleanup": 0
+      }
+    },
+    {
+      "directory": "candidate04-live-chrome-background",
+      "outcome": "accepted-limitations",
+      "passed": false,
+      "requestedFeatures": [
+        "screenshotBackground"
+      ],
+      "features": [
+        {
+          "browser": "2303ebf6",
+          "feature": "screenshotBackground",
+          "status": "accepted-limitation"
+        }
+      ],
+      "failures": [],
+      "limitationCount": 1,
+      "cleanup": {
+        "sessions": 0,
+        "pendingCleanup": 0
+      }
+    },
+    {
+      "directory": "candidate04-live-edge-background",
+      "outcome": "accepted-limitations",
+      "passed": false,
+      "requestedFeatures": [
+        "screenshotBackground"
+      ],
+      "features": [
+        {
+          "browser": "d408371e",
+          "feature": "screenshotBackground",
+          "status": "accepted-limitation"
+        }
+      ],
+      "failures": [],
+      "limitationCount": 1,
+      "cleanup": {
+        "sessions": 0,
+        "pendingCleanup": 0
+      }
+    },
+    {
+      "directory": "candidate04-live-chrome-html",
+      "outcome": "passed",
+      "passed": true,
+      "requestedFeatures": [
+        "html"
+      ],
+      "features": [
+        {
+          "browser": "2303ebf6",
+          "feature": "html",
+          "status": "passed"
+        }
+      ],
+      "failures": [],
+      "limitationCount": 0,
+      "cleanup": {
+        "sessions": 0,
+        "pendingCleanup": 0
+      }
+    },
+    {
+      "directory": "candidate04-live-edge-html",
+      "outcome": "passed",
+      "passed": true,
+      "requestedFeatures": [
+        "html"
+      ],
+      "features": [
+        {
+          "browser": "d408371e",
+          "feature": "html",
+          "status": "passed"
+        }
+      ],
+      "failures": [],
+      "limitationCount": 0,
+      "cleanup": {
+        "sessions": 0,
+        "pendingCleanup": 0
+      }
+    }
+  ],
+  "effectiveCoverage": [
+    {
+      "browser": "2303ebf6",
+      "passingFeatureGroups": 18,
+      "evidence": [
+        {
+          "feature": "wait",
+          "directory": "candidate04-live-chrome-main"
+        },
+        {
+          "feature": "control",
+          "directory": "candidate04-live-chrome-main"
+        },
+        {
+          "feature": "evaluate",
+          "directory": "candidate04-live-chrome-main"
+        },
+        {
+          "feature": "evaluateCancel",
+          "directory": "candidate04-live-chrome-main"
+        },
+        {
+          "feature": "evaluateTimeout",
+          "directory": "candidate04-live-chrome-main"
+        },
+        {
+          "feature": "uploadSingle",
+          "directory": "candidate04-live-chrome-main"
+        },
+        {
+          "feature": "uploadMultiple",
+          "directory": "candidate04-live-chrome-main"
+        },
+        {
+          "feature": "uploadDrop",
+          "directory": "candidate04-live-chrome-main"
+        },
+        {
+          "feature": "missingUpload",
+          "directory": "candidate04-live-chrome-main"
+        },
+        {
+          "feature": "download",
+          "directory": "candidate04-live-chrome-main"
+        },
+        {
+          "feature": "html",
+          "directory": "candidate04-live-chrome-html"
+        },
+        {
+          "feature": "emulate",
+          "directory": "candidate04-live-chrome-main"
+        },
+        {
+          "feature": "hover",
+          "directory": "candidate04-live-chrome-main"
+        },
+        {
+          "feature": "drag",
+          "directory": "candidate04-live-chrome-main"
+        },
+        {
+          "feature": "step",
+          "directory": "candidate04-live-chrome-main"
+        },
+        {
+          "feature": "view",
+          "directory": "candidate04-live-chrome-main"
+        },
+        {
+          "feature": "incognito",
+          "directory": "candidate04-live-chrome-incognito-regular-tab"
+        },
+        {
+          "feature": "dialog",
+          "directory": "candidate04-live-chrome-main"
+        }
+      ]
+    },
+    {
+      "browser": "d408371e",
+      "passingFeatureGroups": 18,
+      "evidence": [
+        {
+          "feature": "wait",
+          "directory": "candidate04-live-edge-main"
+        },
+        {
+          "feature": "control",
+          "directory": "candidate04-live-edge-main"
+        },
+        {
+          "feature": "evaluate",
+          "directory": "candidate04-live-edge-main"
+        },
+        {
+          "feature": "evaluateCancel",
+          "directory": "candidate04-live-edge-main"
+        },
+        {
+          "feature": "evaluateTimeout",
+          "directory": "candidate04-live-edge-main"
+        },
+        {
+          "feature": "missingUpload",
+          "directory": "candidate04-live-edge-main"
+        },
+        {
+          "feature": "download",
+          "directory": "candidate04-live-edge-main"
+        },
+        {
+          "feature": "html",
+          "directory": "candidate04-live-edge-html"
+        },
+        {
+          "feature": "emulate",
+          "directory": "candidate04-live-edge-main"
+        },
+        {
+          "feature": "hover",
+          "directory": "candidate04-live-edge-main"
+        },
+        {
+          "feature": "drag",
+          "directory": "candidate04-live-edge-main"
+        },
+        {
+          "feature": "step",
+          "directory": "candidate04-live-edge-main"
+        },
+        {
+          "feature": "view",
+          "directory": "candidate04-live-edge-main"
+        },
+        {
+          "feature": "incognito",
+          "directory": "candidate04-live-edge-incognito-regular-tab"
+        },
+        {
+          "feature": "dialog",
+          "directory": "candidate04-live-edge-main"
+        },
+        {
+          "feature": "uploadSingle",
+          "directory": "candidate04-live-edge-upload-single"
+        },
+        {
+          "feature": "uploadMultiple",
+          "directory": "candidate04-live-edge-upload-multiple"
+        },
+        {
+          "feature": "uploadDrop",
+          "directory": "candidate04-live-edge-upload-drop"
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "Original main reports lost the HTML result node during redaction; fresh HTML-only reports supply the preserved evidence.",
+    "Original Chrome incognito helper assertion failed; fresh regular-agent-tab checks prove the public-tool rejection.",
+    "No screenshot is counted as passing. Three reports qualify as accepted limitations; the original Chrome screenshot remains an unqualified failed report."
+  ]
+}

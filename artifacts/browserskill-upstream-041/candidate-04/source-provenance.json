@@ -1,0 +1,32 @@
+{
+  "schema": "browserskill.dsh-only-source-provenance.v1",
+  "recordedAt": "2026-11-03T08:34:09.4506080Z",
+  "sourceRevision": "1201bf53272693c3541bd73bc37b1453caff577a",
+  "sourceBranch": "dsh/plugin-parity-0.3.3",
+  "plugin": {
+    "version": "0.4.1-dsh.1",
+    "size": 141007,
+    "name": "@caiqy/browser-skill-dsh-plugin",
+    "sha256": "26ee94324c96d95a069ec4d9656f502dd380e9bfce3d431840e2809ea58c374f",
+    "filename": "caiqy-browser-skill-dsh-plugin-0.4.1-dsh.1.tgz"
+  },
+  "liveScriptSha256": "8253739b248259481fff7395e388f730c281bddb50ae6a9281812bb7123e9cee",
+  "officialComponents": {
+    "unexpectedUntrackedPaths": [],
+    "checkedTrackedPaths": [
+      "apps/extension",
+      "crates",
+      "packages/vom",
+      "packages/i18n",
+      "Cargo.toml",
+      "Cargo.lock"
+    ],
+    "changedTrackedPaths": [],
+    "baselineTag": "dsh-plugin-v0.4.1",
+    "baselineCommit": "b8f2d4f0fa35c8c7c866229e1cf3b3329ae39de5"
+  },
+  "nodeVersion": "v24.21.0",
+  "pnpmVersion": "10.17.0",
+  "runtimeDesktopInstalled": false,
+  "customExtensionLoaded": false
+}

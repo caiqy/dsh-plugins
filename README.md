@@ -18,7 +18,7 @@ https://raw.githubusercontent.com/caiqy/dsh-plugins/main/index.json
 | Web Search | `@caiqy/dsh-plugin-web-search` | `0.1.1` |
 | DSH 工具箱 | `@caiqy/dsh-plugin-toolbox` | `0.2.3` |
 
-BrowserSkill 增强版要求另行安装官方 CLI 和浏览器扩展（当前配套 0.3.3），不能与官方 DSH 插件同时启用。发行使用 npm 的 `dsh` 标签和索引中的精确版本，不覆盖官方 npm 包。
+BrowserSkill 增强版要求另行安装官方 CLI 和浏览器扩展（当前公开版 `0.3.3-dsh.3` 配套官方 0.3.3），不能与官方 DSH 插件同时启用。发行使用 npm 的 `dsh` 标签和索引中的精确版本，不覆盖官方 npm 包。开发中的 `0.4.1-dsh.1` 插件候选仅增强 DSH 插件层，配套官方 CLI/daemon/浏览器扩展 0.4.1、协议 1.8；不定制浏览器扩展或 bsk。此前兼容扩展候选已撤回，不应加载，实际差异、候选状态及验证边界见 [本次合并记录](artifacts/browserskill-upstream-041/DELIVERY.md)。
 
 发版使用 GitHub Actions + npm Trusted Publishing（OIDC），不需要在 CI 保存 npm token 或重复浏览器登录。先在对应源码仓库修改版本并推送，再在本仓库选择一个插件发版（版本号为示例）：
 
@@ -77,9 +77,9 @@ pnpm --filter @caiqy/dsh-plugin-toolbox test
 
 ## BrowserSkill 子仓库
 
-`packages/browser-skill/` 是 Git submodule，fork 为 <https://github.com/caiqy/BrowserSkill>（`origin`），官方上游为 <https://github.com/Tencent/BrowserSkill>（`upstream`）。长期增强分支为 `dsh/plugin-parity-0.3.3`；名称中的 `0.3.3` 表示初始基线，后续继续复用此分支。当前发行版本 `0.3.3-dsh.3` 通过 Actions OIDC 发布，对应提交 `19232997c523ec7e8e95b724feb99cb0f50d2ed0`，父仓库固定该提交。此前 `0.3.3-dsh.2` 保留 tag `caiqy-dsh-plugin-v0.3.3-dsh.2` / `91fae956183d45e3ec2de197e22cdb27f1866382`。早期本地增强版本 `0.3.3-dsh.1` 保留在 tag `dsh-plugin-v0.3.3-dsh.1` / `cb389bb4a31cfa200ba179e9279e2f6a347509d4`；官方初始基线为 `dsh-plugin-v0.3.3` / `d9a78aed47874459ae1e44523a597e42dd9acf99`。增强分支及版本 tag 均已推送到 fork。
+`packages/browser-skill/` 是 Git submodule，fork 为 <https://github.com/caiqy/BrowserSkill>（`origin`），官方上游为 <https://github.com/Tencent/BrowserSkill>（`upstream`）。长期增强分支为 `dsh/plugin-parity-0.3.3`；名称中的 `0.3.3` 表示初始基线，后续继续复用此分支。当前已发行版本 `0.3.3-dsh.3` 通过 Actions OIDC 发布，对应提交 `19232997c523ec7e8e95b724feb99cb0f50d2ed0`。本地 `0.4.1-dsh.1` 开发候选对应 `feaa7f60498f43bd6baf21575407ee797ced01c2`，仅合并 DSH 插件增强，尚未发布或推送；交付证据见本节链接。此前 `0.3.3-dsh.2` 保留 tag `caiqy-dsh-plugin-v0.3.3-dsh.2` / `91fae956183d45e3ec2de197e22cdb27f1866382`。早期本地增强版本 `0.3.3-dsh.1` 保留在 tag `dsh-plugin-v0.3.3-dsh.1` / `cb389bb4a31cfa200ba179e9279e2f6a347509d4`；官方初始基线为 `dsh-plugin-v0.3.3` / `d9a78aed47874459ae1e44523a597e42dd9acf99`。增强分支及版本 tag 均已推送到 fork。
 
-它保留自己的 pnpm workspace、依赖和构建流程，显式排除在根 workspace 之外。DSH 插件源码位于 `packages/browser-skill/packages/dsh-plugin-browserskill/`；增强仅修改插件层，Chrome、Edge 继续使用官方扩展。
+它保留自己的 pnpm workspace、依赖和构建流程，显式排除在根 workspace 之外。DSH 插件源码位于 `packages/browser-skill/packages/dsh-plugin-browserskill/`。增强方案只能修改 DSH 插件层；浏览器扩展和 bsk CLI/daemon 保持官方原版，本次 0.4.1 合并也不例外。插件层无法等效实现的行为须说明差异并交用户选择，不能转而给其他组件打补丁。配套与验收状态以[本次合并记录](artifacts/browserskill-upstream-041/DELIVERY.md)为准。
 
 新 checkout 获取源码并配置官方远端：
 
