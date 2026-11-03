@@ -1,6 +1,6 @@
 # BrowserSkill 0.4.1：仅 DSH 插件增强
 
-本记录保存候选 04、源码与真实浏览器证据。用户已明确接受当前结果及已披露限制；Comet Runtime 已完成归档（stateVersion 17，Run completed，A1–A21 全部通过）。[正式验收报告](../../docs/comet/archive/2026-11-03-browserskill-upstream-041/verification.md)与[归档状态](../../docs/comet/archive/2026-11-03-browserskill-upstream-041/comet-state.yaml)保留完整依据。**候选 03 的定制扩展与配套插件已撤回，不能加载或安装。** 浏览器扩展、bsk CLI/daemon 和协议保持官方原版。
+本记录保存候选 04、源码与真实浏览器证据。用户已明确接受当前结果及已披露限制；Comet Runtime 已完成归档（stateVersion 17，Run completed，A1–A21 全部通过）。[正式验收报告](../../docs/comet/archive/2026-11-03-browserskill-upstream-041/verification.md)与[归档状态](../../docs/comet/archive/2026-11-03-browserskill-upstream-041/comet-state.yaml)保留完整依据。**候选 03 的定制扩展与配套插件已撤回，不能加载或安装。** 浏览器扩展、bsk CLI/daemon 和协议保持官方原版。后续已按用户授权从新长期分支 `dsh/enhanced` 公开发布 `0.4.1-dsh.1`，见[发行记录](release-0.4.1-dsh.1/RELEASE.md)；下述候选 04 哈希及浏览器证据仍保留原貌，不与 CI 发行包混同。
 
 ## 固定候选与源码
 
@@ -63,8 +63,8 @@ Chrome、Edge 各 18 组普通功能有有效通过证据：control、wait、eva
 
 ## 安装与回退
 
-在用 Desktop 未安装新包、未重启；没有发布、推送、触发远端 CI 或改写历史 tag。交付不含定制扩展。候选 03 的 ZIP、proof 与配套包仅作撤回历史。
+在用 Desktop 未安装新包、未重启；本轮验收与归档时未发布、推送或触发远端 CI，后续授权的 CI 发行已单独记录，历史 tag 未改写。交付不含定制扩展。候选 03 的 ZIP、proof 与配套包仅作撤回历史。
 
 另获在用 profile 安装授权后，先备份实际配置和旧包，确认无未完成任务，再用验证过的 tarball；页面刷新不能证明插件加载。回退 `0.3.3-dsh.3` 时成套恢复其官方 0.3.3 CLI、daemon、扩展。改用官方 0.4.1 DSH 插件前停用增强包，七类增强不保证保留。不手改安装目录 node_modules。
 
-[历史 0.3.3 记录](../browserskill-dsh-enhancement/DELIVERY.md)保持原样。正式验收、用户结果接受与 Runtime 归档已完成；成果保留在父仓库 `main` 与子仓库 `dsh/plugin-parity-0.3.3`，仅本地交付，未推送或发布。
+[历史 0.3.3 记录](../browserskill-dsh-enhancement/DELIVERY.md)保持原样。正式验收、用户结果接受与 Runtime 归档已完成；归档时成果保留在父仓库 `main` 与子仓库原增强分支；后续已迁移至 `dsh/enhanced` 并公开发行，详见上方发行记录，归档卷宗本身不改写。

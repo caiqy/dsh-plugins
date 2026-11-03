@@ -1,0 +1,28 @@
+{
+  "schema": "browserskill.dsh-public-release.v1",
+  "name": "@caiqy/browser-skill-dsh-plugin",
+  "version": "0.4.1-dsh.1",
+  "branch": "dsh/enhanced",
+  "sourceCommit": "3859a15a8af9ef382c9dc441a006cdd5b02f22db",
+  "workflowRun": "https://github.com/caiqy/BrowserSkill/actions/runs/41653164935",
+  "publishedAt": "2026-11-03T14:28:17.782Z",
+  "verifiedAt": "2026-11-03T14:29:14.345Z",
+  "distTags": {
+    "latest": "0.3.3-dsh.2",
+    "dsh": "0.4.1-dsh.1"
+  },
+  "tarball": "https://registry.npmjs.org/@caiqy/browser-skill-dsh-plugin/-/browser-skill-dsh-plugin-0.4.1-dsh.1.tgz",
+  "integrity": "sha512-ZIN/OL744QV3e2fbKExID6THdGrdO8gOoZIdcanfIyfmCjAVRpPm1eLcPcxthgJ0Rdr1nx4wn0DmYVU31UeK8Q==",
+  "sha256": "399529ad999d89d5143a69ae1715be7d7da670cb4f23e37e8a1efd2905b7192c",
+  "bytes": 140598,
+  "actionsArtifactBytesEqual": true,
+  "homepage": "https://github.com/caiqy/BrowserSkill/tree/dsh/enhanced/packages/dsh-plugin-browserskill#readme",
+  "attestations": {
+    "url": "https://registry.npmjs.org/-/npm/v1/attestations/@caiqy%2fbrowser-skill-dsh-plugin@0.4.1-dsh.1",
+    "provenance": {
+      "predicateType": "https://slsa.dev/provenance/v1"
+    }
+  },
+  "baselineCandidateSha256": "26ee94324c96d95a069ec4d9656f502dd380e9bfce3d431840e2809ea58c374f",
+  "note": "Actions rebuilds the verified source and publishes its tested tarball. This receipt verifies public npm bytes against that Actions artifact; it does not claim byte equality with the earlier Windows candidate or new Desktop/browser validation."
+}

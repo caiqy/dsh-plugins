@@ -6,7 +6,7 @@
     {
       "name": "@caiqy/browser-skill-dsh-plugin",
       "title": "BrowserSkill 增强版",
-      "description": "BrowserSkill 浏览器自动化增强插件；需另行安装官方 CLI 和浏览器扩展 0.3.3，不能与官方 DSH 插件同时启用。",
+      "description": "BrowserSkill 浏览器自动化增强插件；0.4.1-dsh 系列配套官方 CLI/daemon 和浏览器扩展 0.4.1、协议 1.8，不能与官方 DSH 插件同时启用。",
       "author": "caiqy",
       "homepage": "https://github.com/caiqy/BrowserSkill/tree/dsh/enhanced/packages/dsh-plugin-browserskill#readme",
       "repository": {
@@ -14,6 +14,15 @@
         "directory": "packages/dsh-plugin-browserskill"
       },
       "versions": [
+        {
+          "version": "0.4.1-dsh.1",
+          "publishTimestamp": 1793716097,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org/"
+          },
+          "engines": {}
+        },
         {
           "version": "0.3.3-dsh.3",
           "publishTimestamp": 1792489422,
