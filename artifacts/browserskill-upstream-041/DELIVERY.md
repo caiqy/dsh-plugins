@@ -1,6 +1,6 @@
 # BrowserSkill 0.4.1：仅 DSH 插件增强
 
-本记录保存候选 04、源码与真实浏览器证据。最终接受和归档以 Comet Runtime 为准。**候选 03 的定制扩展与配套插件已撤回，不能加载或安装。** 浏览器扩展、bsk CLI/daemon 和协议保持官方原版。
+本记录保存候选 04、源码与真实浏览器证据。用户已明确接受当前结果及已披露限制；Comet Runtime 已完成归档（stateVersion 17，Run completed，A1–A21 全部通过）。[正式验收报告](../../docs/comet/archive/2026-11-03-browserskill-upstream-041/verification.md)与[归档状态](../../docs/comet/archive/2026-11-03-browserskill-upstream-041/comet-state.yaml)保留完整依据。**候选 03 的定制扩展与配套插件已撤回，不能加载或安装。** 浏览器扩展、bsk CLI/daemon 和协议保持官方原版。
 
 ## 固定候选与源码
 
@@ -17,7 +17,7 @@
 
 ## 已确认范围
 
-[brief](../../docs/comet/changes/browserskill-upstream-041/brief.md) 和[完整规格](../../docs/comet/changes/browserskill-upstream-041/specs/browserskill-dsh-capabilities/spec.md) A1–A21 已确认。复用官方 evaluate/upload/download、共享控制、drag/step/view/incognito/dialog；保留七类插件增强及位置参数字面量保护。**增强只修改 DSH 插件及必要发布、测试、文档适配，不定制扩展或 bsk。**
+[brief](../../docs/comet/archive/2026-11-03-browserskill-upstream-041/brief.md) 和[完整规格](../../docs/comet/archive/2026-11-03-browserskill-upstream-041/specs/browserskill-dsh-capabilities/spec.md) A1–A21 已确认。复用官方 evaluate/upload/download、共享控制、drag/step/view/incognito/dialog；保留七类插件增强及位置参数字面量保护。**增强只修改 DSH 插件及必要发布、测试、文档适配，不定制扩展或 bsk。**
 
 用户接受官方后台 fullPage 不保证等效，Edge 上传在控制撤销时可能返回不确定结果。这些限制不算功能成功，不能豁免未执行用例、其他错误或清理失败。unknown 不重放；只进行约定的一次 fresh-sync 只读核对后停止。不自动置顶、录像保活、改设置或绕守卫。
 
@@ -25,7 +25,7 @@
 
 第一轮 Runtime 正式检查实际通过：32 测试文件通过、779 测试通过；10 个默认 browser skip 不计真实浏览器通过。类型检查、构建、真实 CLI parser 回归、9 个 packed 技能资源及无关 cwd apply 通过，入口 4,391 bytes。独立 Verifier Action18 正式结论为 19 passed、A5/A13 failed（[原始提交输出导出](candidate-04/verifier-01-output.json)），原因是没有 follow 实派与普通 Chrome 条件探针缺失，Runtime 返回 Build12。
 
-补验只改测试脚本。三项可重复检查验证：生产源码/固定包/官方组件未变；隐私、scope、nonce 和唯一窗口分类断言；四份新 scope 报告的真实派发、条件、无后续 unknown 动作和清理。既有正式完整回归按未变源码复用，不以旧开发自评代替正式检查。第二轮 Runtime 和全新独立 Verifier 的最终结论待另行记录。
+补验只改测试脚本。三项可重复检查验证：生产源码/固定包/官方组件未变；隐私、scope、nonce 和唯一窗口分类断言；四份新 scope 报告的真实派发、条件、无后续 unknown 动作和清理。既有正式完整回归按未变源码复用，不以旧开发自评代替正式检查。第二轮 Runtime 三项检查全部通过，全新独立 Verifier Action21 对 A1–A21 逐项验收通过；用户已明确接受并授权本地归档、提交。官方限制、重建差异与 fixture/Desktop 边界仍保留，详见正式验收报告。
 
 共保存 22 份报告：首轮 14 份、窗口测量修订前 4 份、唯一目标窗口补验 4 份；原始失败从未改写。均以 packed apply→六个公开工具→真实 runner/官方 CLI/daemon/扩展操作自有 Agent Window 的无敏感 fixture。宿主注册、模型元数据和附件接口为 fixture，**不代表安装到在用 Desktop，不证明实际 Desktop UI 或真实附件授权服务通过**。全部报告终态 `sessions=0`、`pendingCleanup=0`。
 
@@ -67,4 +67,4 @@ Chrome、Edge 各 18 组普通功能有有效通过证据：control、wait、eva
 
 另获在用 profile 安装授权后，先备份实际配置和旧包，确认无未完成任务，再用验证过的 tarball；页面刷新不能证明插件加载。回退 `0.3.3-dsh.3` 时成套恢复其官方 0.3.3 CLI、daemon、扩展。改用官方 0.4.1 DSH 插件前停用增强包，七类增强不保证保留。不手改安装目录 node_modules。
 
-[历史 0.3.3 记录](../browserskill-dsh-enhancement/DELIVERY.md)保持原样。正式验收、用户结果接受与归档由 Runtime 继续执行。
+[历史 0.3.3 记录](../browserskill-dsh-enhancement/DELIVERY.md)保持原样。正式验收、用户结果接受与 Runtime 归档已完成；成果保留在父仓库 `main` 与子仓库 `dsh/plugin-parity-0.3.3`，仅本地交付，未推送或发布。
