@@ -5,7 +5,7 @@ import { pathToFileURL } from 'node:url';
 
 export const targets = {
   'web-search': { name: '@caiqy/dsh-plugin-web-search', repo: 'caiqy/dsh-plugins', workflow: 'publish-web-search.yml', ref: 'main' },
-  'browser-skill': { name: '@caiqy/browser-skill-dsh-plugin', repo: 'caiqy/BrowserSkill', workflow: 'release-dsh-plugin.yml', ref: 'dsh/plugin-parity-0.3.3' },
+  'browser-skill': { name: '@caiqy/browser-skill-dsh-plugin', repo: 'caiqy/BrowserSkill', workflow: 'release-dsh-plugin.yml', ref: 'dsh/enhanced' },
   toolbox: { name: '@caiqy/dsh-plugin-toolbox', repo: 'caiqy/dsh-plugins', workflow: 'publish-toolbox.yml', ref: 'main' },
 };
 

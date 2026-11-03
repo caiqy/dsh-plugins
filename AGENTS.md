@@ -124,9 +124,9 @@ pnpm release browser-skill 0.3.3-dsh.4 --ref <branch-or-tag> --check
 | --- | --- | --- | --- |
 | `web-search` | `caiqy/dsh-plugins` / `main` | [.github/workflows/publish-web-search.yml](.github/workflows/publish-web-search.yml) | `web-search-v` |
 | `toolbox` | `caiqy/dsh-plugins` / `main` | [.github/workflows/publish-toolbox.yml](.github/workflows/publish-toolbox.yml) | `toolbox-v` |
-| `browser-skill` | `caiqy/BrowserSkill` / `dsh/plugin-parity-0.3.3` | [release-dsh-plugin.yml](packages/browser-skill/.github/workflows/release-dsh-plugin.yml) | `caiqy-dsh-plugin-v` |
+| `browser-skill` | `caiqy/BrowserSkill` / `dsh/enhanced` | [release-dsh-plugin.yml](packages/browser-skill/.github/workflows/release-dsh-plugin.yml) | `caiqy-dsh-plugin-v` |
 
-也可通过 `gh workflow run` 手动运行目标工作流，填写精确 `version` 和 `dry_run`。BrowserSkill 的默认 `main` 仍跟随上游，必须指定增强分支 `--ref dsh/plugin-parity-0.3.3`（推荐使用上面的统一入口）；不要在 `main` 运行上游发布工作流。Web Search 和工具箱的 Actions 网页默认 `dry_run: true`，正式发布需取消该选项。输入版本或 tag 版本必须等于提交中的包版本；工作流不会替你修改版本。CLI 正式发版显式传 `dry_run=false`，`--check` 则传 `true`。命令返回只表示已提交运行请求，用对应仓库的 `gh run list` / `gh run view` 查看真实结果。BrowserSkill 继续独立使用 pnpm 10.17.0，Web Search 和工具箱使用根 pnpm 9.15.9；均只构建所选插件，不发布官方 CLI、扩展、注册表或示例插件。
+也可通过 `gh workflow run` 手动运行目标工作流，填写精确 `version` 和 `dry_run`。BrowserSkill 的默认 `main` 仍跟随上游，必须指定增强分支 `--ref dsh/enhanced`（推荐使用上面的统一入口）；不要在 `main` 运行上游发布工作流。Web Search 和工具箱的 Actions 网页默认 `dry_run: true`，正式发布需取消该选项。输入版本或 tag 版本必须等于提交中的包版本；工作流不会替你修改版本。CLI 正式发版显式传 `dry_run=false`，`--check` 则传 `true`。命令返回只表示已提交运行请求，用对应仓库的 `gh run list` / `gh run view` 查看真实结果。BrowserSkill 继续独立使用 pnpm 10.17.0，Web Search 和工具箱使用根 pnpm 9.15.9；均只构建所选插件，不发布官方 CLI、扩展、注册表或示例插件。
 
 认证只使用 npm Trusted Publishing（OIDC）。在各 npm 包的 Settings → Trusted Publisher 配置 GitHub 用户 `caiqy`、上表仓库及**工作流文件名**（不填路径），Environment 均为 `npm-publish`，明确允许直接 `npm publish`。两个源码仓库分别发布，以匹配包的 `repository.url` 和 provenance。使用 GitHub-hosted runner、Node 24、npm 11，发布 job 有 `id-token: write`；不配置 `NPM_TOKEN`，不复制本机 npm 登录态，保留账号 2FA。首次配置或更改 npm 信任关系可能仍需人工安全验证。新连接可能显示 `Pending validation`，须在 npm 页面给出的期限内（通常 48 小时）通过该 OIDC 工作流成功发布一个新版本来激活；`--check` 或本机发布不能替代验证。应在新版本已准备好时配置连接，超时后需重新配置；以页面实际状态和截止时间为准。不要在 GitHub Environment 添加 required reviewers，除非明确需要每次人工批准。
 

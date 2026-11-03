@@ -29,6 +29,7 @@ function mockRegistry(change = () => {}, calls = []) {
 test('release selects exactly one repository and supports verification without publishing', () => {
   assert.deepEqual(releaseCommand(['toolbox', '0.2.2']), ['workflow', 'run', 'publish-toolbox.yml', '--repo', 'caiqy/dsh-plugins', '--ref', 'main', '--field', 'version=0.2.2', '--field', 'dry_run=false']);
   assert.deepEqual(releaseCommand(['web-search', '0.1.1']), ['workflow', 'run', 'publish-web-search.yml', '--repo', 'caiqy/dsh-plugins', '--ref', 'main', '--field', 'version=0.1.1', '--field', 'dry_run=false']);
+  assert.deepEqual(releaseCommand(['browser-skill', '0.4.1-dsh.1']), ['workflow', 'run', 'release-dsh-plugin.yml', '--repo', 'caiqy/BrowserSkill', '--ref', 'dsh/enhanced', '--field', 'version=0.4.1-dsh.1', '--field', 'dry_run=false']);
   assert.deepEqual(releaseCommand(['browser-skill', '0.3.3-dsh.3', '--check', '--ref', 'candidate']), ['workflow', 'run', 'release-dsh-plugin.yml', '--repo', 'caiqy/BrowserSkill', '--ref', 'candidate', '--field', 'version=0.3.3-dsh.3', '--field', 'dry_run=true']);
   for (const argv of [['all', '1.0.0'], ['__proto__', '1.0.0'], ['web-search'], ['web-search', '1.0.0;echo bad'], ['web-search', '1.0.0', 'extra'], ['web-search', '1.0.0', '--ref', '']]) {
     assert.throws(() => releaseCommand(argv));

@@ -8,7 +8,7 @@
       "title": "BrowserSkill 增强版",
       "description": "BrowserSkill 浏览器自动化增强插件；需另行安装官方 CLI 和浏览器扩展 0.3.3，不能与官方 DSH 插件同时启用。",
       "author": "caiqy",
-      "homepage": "https://github.com/caiqy/BrowserSkill/tree/dsh/plugin-parity-0.3.3/packages/dsh-plugin-browserskill#readme",
+      "homepage": "https://github.com/caiqy/BrowserSkill/tree/dsh/enhanced/packages/dsh-plugin-browserskill#readme",
       "repository": {
         "url": "https://github.com/caiqy/BrowserSkill.git",
         "directory": "packages/dsh-plugin-browserskill"
