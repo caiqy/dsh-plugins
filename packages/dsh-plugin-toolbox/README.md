@@ -14,7 +14,9 @@ DSH Desktop 使用 Electron 的 Node 模式运行宿主。右上角“用 VS Cod
 
 ### 2. 重启 DSH Desktop（优雅重启 + 超时兜底）
 
-适用于 Windows DSH Desktop，在“设置 → DSH 工具箱”提供一键「立即重启」操作卡片。
+适用于 Windows DSH Desktop。在侧栏“更多”菜单提供「重启 DSH Desktop」快捷入口，保留“设置 → DSH 工具箱”的「立即重启」操作卡片。两个入口共用宿主确认弹窗和同一条重启请求，确认后才执行；「允许超时强制关闭」沿用工具箱中已保存的选项。请求进行中两个入口均禁止重复提交，失败后显示原因并允许重试。
+
+“更多”入口使用宿主公开的 `sidebar.panellist.actions` 插槽，弹窗使用 `shell.overlay`、`Modal`；不修改宿主菜单或安装文件。较旧宿主未提供“更多”插槽时保留设置页入口。当前工作区新增的菜单入口尚未包含在已发布的 `0.2.3` 中。
 
 - **静默无黑框**：通过 WMI 独立进程创建并指定 `ShowWindow = 0 (SW_HIDE)` 及 `windowsHide`，彻底避免启动辅助程序时的黑框闪烁。
 - **优雅关闭**：通过 Windows Restart Manager (`RmShutdown`) 触发 Desktop 正常退出，等待主进程与 Host 优雅关闭释放所有端口和文件锁。
@@ -76,6 +78,6 @@ dsh plugin --profile desktop add ./.tmp/toolbox-dist/caiqy-dsh-plugin-toolbox-0.
 
 后端在 `src/index.ts` 的 `Config` 增加逐项布尔字段，默认值明确，必须声明 `.volatile()`，否则宿主不会向设置页面暴露字段。动态配置由 Cordis 原地更新稳定引用；启动包装每次读取 `.get()`，关闭开关即不再修改启动环境，无需重载插件。插件停用时通过 `ctx.effect` 撤销包装。
 
-独立辅助程序位于 `res/restart-worker.ps1`，打包时包含在 npm 包的 `res` 目录中。宿主通过 `/api/toolbox/restart` 端点响应前端请求，执行身份与环境校验、创建临时运行区并向辅助程序发出握手信号。设置页面在 `src/client.tsx` 统一渲染各项开关、重启卡片及操作确认态。
+独立辅助程序位于 `res/restart-worker.ps1`，打包时包含在 npm 包的 `res` 目录中。宿主通过 `/api/toolbox/restart` 端点响应前端请求，执行身份与环境校验、创建临时运行区并向辅助程序发出握手信号。客户端在 `src/client.tsx` 注册设置页、“更多”菜单项及共享确认弹窗；两个入口复用同一份重启状态，确认时读取最新配置。
 
 Windows PowerShell 5.1 中 `FILETIME` 必须使用 `System.Runtime.InteropServices.ComTypes.FILETIME` 全名；其 `Set-Content -Encoding UTF8` 会产生 BOM，读取 `result.json` 时需要移除 BOM，才能及时显示真实错误。`tests/restart-worker.test.mjs` 在实际 Windows PowerShell 下编译随包接口并执行辅助程序的 `-ValidateOnly` 模式，覆盖就绪握手及错误解析；该模式在就绪后退出，不发出关闭请求或拉起应用。宿主调度函数也支持 `initiateRestart({ validateOnly: true })`，用于验证完整 WMI 启动链路。只读验证通过不代表完整关闭再拉起已通过。
