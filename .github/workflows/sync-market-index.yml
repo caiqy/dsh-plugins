@@ -12,7 +12,7 @@ on:
         description: Plugin to synchronize from its published npm dsh tag
         type: choice
         default: all
-        options: [all, web-search, browser-skill, toolbox]
+        options: [all, web-search, browser-skill, toolbox, subagent-registry]
 
 permissions:
   contents: read

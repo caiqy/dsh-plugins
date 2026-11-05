@@ -31,6 +31,8 @@ test('release selects exactly one repository and supports verification without p
   assert.deepEqual(releaseCommand(['web-search', '0.1.1']), ['workflow', 'run', 'publish-web-search.yml', '--repo', 'caiqy/dsh-plugins', '--ref', 'main', '--field', 'version=0.1.1', '--field', 'dry_run=false']);
   assert.deepEqual(releaseCommand(['browser-skill', '0.4.1-dsh.1']), ['workflow', 'run', 'release-dsh-plugin.yml', '--repo', 'caiqy/BrowserSkill', '--ref', 'dsh/enhanced', '--field', 'version=0.4.1-dsh.1', '--field', 'dry_run=false']);
   assert.deepEqual(releaseCommand(['browser-skill', '0.3.3-dsh.3', '--check', '--ref', 'candidate']), ['workflow', 'run', 'release-dsh-plugin.yml', '--repo', 'caiqy/BrowserSkill', '--ref', 'candidate', '--field', 'version=0.3.3-dsh.3', '--field', 'dry_run=true']);
+  assert.deepEqual(releaseCommand(['subagent-registry', '0.17.0-dsh.1']), ['workflow', 'run', 'publish-caiqy.yml', '--repo', 'caiqy/dsh-subagent-registry', '--ref', 'dsh/enhanced', '--field', 'version=0.17.0-dsh.1', '--field', 'dry_run=false']);
+  assert.deepEqual(releaseCommand(['subagent-registry', '0.17.0-dsh.1', '--check']), ['workflow', 'run', 'publish-caiqy.yml', '--repo', 'caiqy/dsh-subagent-registry', '--ref', 'dsh/enhanced', '--field', 'version=0.17.0-dsh.1', '--field', 'dry_run=true']);
   for (const argv of [['all', '1.0.0'], ['__proto__', '1.0.0'], ['web-search'], ['web-search', '1.0.0;echo bad'], ['web-search', '1.0.0', 'extra'], ['web-search', '1.0.0', '--ref', '']]) {
     assert.throws(() => releaseCommand(argv));
   }
@@ -49,11 +51,13 @@ test('selected index sync preserves the other plugin, keeps old versions and is 
 });
 
 test('all sync leaves unreleased targets out until a verified market entry exists', async () => {
-  const existing = { ...initial, plugins: initial.plugins.filter(plugin => plugin.name !== targets.toolbox.name) };
+  const existing = { ...initial, plugins: initial.plugins.filter(plugin => ![targets.toolbox.name, targets['subagent-registry'].name].includes(plugin.name)) };
   const calls = [];
   const result = await syncMarketIndex(existing, 'all', mockRegistry(undefined, calls));
   assert.equal(result.plugins.length, existing.plugins.length);
   assert(!calls.some(url => url.includes(encodeURIComponent(targets.toolbox.name))));
+  assert(!calls.some(url => url.includes(encodeURIComponent(targets['subagent-registry'].name))));
+  await assert.rejects(syncMarketIndex(existing, 'subagent-registry', mockRegistry()), /missing from index/);
   await assert.rejects(syncMarketIndex(existing, 'toolbox', mockRegistry()), /missing from index/);
 });
 

@@ -26,19 +26,21 @@ BrowserSkill 增强版 `0.4.1-dsh.1` 已公开发行，配套官方 CLI/daemon/�
 pnpm release web-search 0.1.2
 pnpm release toolbox 0.2.3
 pnpm release browser-skill 0.3.3-dsh.4
+pnpm release subagent-registry 0.17.0-dsh.1
 
 # 使用现有版本验证 Actions 构建、测试与打包，不发布。
 pnpm release web-search 0.1.1 --check
 pnpm release toolbox 0.2.3 --check
 pnpm release browser-skill 0.3.3-dsh.3 --check
+pnpm release subagent-registry 0.17.0-dsh.1 --check
 ```
 
-本机需已登录 GitHub CLI；可用 `--ref <branch-or-tag>` 指定已推送的候选。各插件在自己的源码仓库运行发布工作流，只发布所选包。也可推送 `web-search-v<version>` / `toolbox-v<version>` / `caiqy-dsh-plugin-v<version>` tag 触发，或在对应仓库 Actions 手动运行。npm 发布仍需先为每个包配置 Trusted Publisher；新连接需在页面给出的期限内（通常 48 小时）完成一次真实 OIDC 发布来激活，检查模式不能激活连接。BrowserSkill 手动运行须选择增强分支 `dsh/plugin-parity-0.3.3`，不要使用跟随上游的 `main` 发布。
+本机需已登录 GitHub CLI；可用 `--ref <branch-or-tag>` 指定已推送的候选。各插件在自己的源码仓库运行发布工作流，只发布所选包。也可推送 `web-search-v<version>` / `toolbox-v<version>` / `caiqy-dsh-plugin-v<version>` tag 触发，或在对应仓库 Actions 手动运行。npm 发布仍需先为每个包配置 Trusted Publisher；新连接需在页面给出的期限内（通常 48 小时）完成一次真实 OIDC 发布来激活，检查模式不能激活连接。BrowserSkill 和注册表手动运行须选择增强分支 `dsh/enhanced`，不要使用跟随上游的 `main` 发布。
 
-工作流会类型检查、构建、测试、打包并验证真实公开 npm 包。市场索引在 Web Search / Toolbox 工作流成功后及每小时第 17、47 分钟同步；BrowserSkill 发行会由定时任务接入。也可以立即手动同步指定插件：
+工作流会类型检查、构建、测试、打包并验证真实公开 npm 包。市场索引在 Web Search / Toolbox 工作流成功后及每小时第 17、47 分钟同步；BrowserSkill 和注册表发行会由定时任务接入。也可以立即手动同步指定插件：
 
 ```sh
-gh workflow run sync-market-index.yml --repo caiqy/dsh-plugins -f plugin=browser-skill
+gh workflow run sync-market-index.yml --repo caiqy/dsh-plugins -f plugin=subagent-registry
 ```
 
 索引只有在公开包可下载且哈希校验通过后才更新，保留历史版本。GitHub 定时调度可能延迟，DSH 默认另缓存索引 10 分钟。认证字段、检查模式、失败重试及子模块维护要点见 [AGENTS.md 的发版说明](AGENTS.md#按插件发版github-actions)。根 workspace 不发布，BrowserSkill 保持自己的构建流程。
@@ -74,6 +76,10 @@ pnpm --filter @caiqy/dsh-plugin-toolbox typecheck
 pnpm --filter @caiqy/dsh-plugin-toolbox build
 pnpm --filter @caiqy/dsh-plugin-toolbox test
 ```
+
+## 子代理注册表子仓库
+
+[注册表](packages/dsh-subagent-registry/README.md)个人发行准备使用 `@caiqy/dsh-subagent-registry@0.17.0-dsh.1`，基于上游 v0.17.0（`36b4acf`）。fork 远端为 `fork`（caiqy），`origin` 为上游 fan56；`main` 保留上游，长期个人分支为 `dsh/enhanced`。发布入口 `pnpm release subagent-registry <version>` 自动指定个人仓库、分支和工作流。个人 tag 前缀为 `caiqy-subagent-registry-v`。真实发布并校验后才加入上方市场索引；不能与上游包同时启用。作者、许可证与上游发行记录保持原样。
 
 ## BrowserSkill 子仓库
 
