@@ -17,7 +17,7 @@ https://raw.githubusercontent.com/caiqy/dsh-plugins/main/index.json
 | BrowserSkill 增强版 | `@caiqy/browser-skill-dsh-plugin` | `0.4.1-dsh.1` |
 | Web Search | `@caiqy/dsh-plugin-web-search` | `0.1.1` |
 | DSH 工具箱 | `@caiqy/dsh-plugin-toolbox` | `0.2.3` |
-| 子智能体注册表 | `@caiqy/dsh-subagent-registry` | `0.17.0-dsh.2` |
+| 子智能体注册表 | `@caiqy/dsh-subagent-registry` | `0.17.0-dsh.3` |
 
 BrowserSkill 增强版 `0.4.1-dsh.1` 已公开发行，配套官方 CLI/daemon/浏览器扩展 0.4.1、协议 1.8；不能与官方 DSH 插件同时启用。发行使用 npm 的 `dsh` 标签和索引中的精确版本，不覆盖官方 npm 包。增强仅限 DSH 插件层，不定制浏览器扩展或 bsk。此前兼容扩展候选已撤回，不应加载；[发布回执](artifacts/browserskill-upstream-041/release-0.4.1-dsh.1/RELEASE.md)和[验收及已知限制](artifacts/browserskill-upstream-041/DELIVERY.md)分别记录发行包与原候选证据。
 
