@@ -1,8 +1,38 @@
 {
   "format": 1,
   "title": "caiqy 的 DSH 插件",
-  "description": "BrowserSkill 增强版、Web Search 与 DSH 工具箱插件发行索引。",
+  "description": "BrowserSkill 增强版、Web Search、DSH 工具箱与子智能体注册表插件发行索引。",
   "plugins": [
+    {
+      "name": "@caiqy/dsh-subagent-registry",
+      "title": "子智能体注册表",
+      "description": "基于上游 0.17.0 的个人发行版，支持自定义子智能体、后台追问、续跑和可视化管理。与上游注册表共享工具和配置标识，请勿同时启用。",
+      "author": "caiqy（个人发行）；fliu56（上游作者）",
+      "homepage": "https://github.com/caiqy/dsh-subagent-registry/tree/dsh/enhanced#readme",
+      "repository": {
+        "url": "https://github.com/caiqy/dsh-subagent-registry.git"
+      },
+      "versions": [
+        {
+          "version": "0.17.0-dsh.2",
+          "publishTimestamp": 1793926479,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org/"
+          },
+          "engines": {}
+        },
+        {
+          "version": "0.17.0-dsh.1",
+          "publishTimestamp": 1793926078,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org/"
+          },
+          "engines": {}
+        }
+      ]
+    },
     {
       "name": "@caiqy/browser-skill-dsh-plugin",
       "title": "BrowserSkill 增强版",
