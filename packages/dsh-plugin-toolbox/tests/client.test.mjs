@@ -83,7 +83,8 @@ test('Settings and More share confirmation, restart state, and the persisted for
   }
   assert.equal(await face.setEnabled('fixVsCodeLaunch', false), true)
   assert.equal(await face.setEnabled('allowForceRestart', true), true)
-  assert.deepEqual(writes, [['fixVsCodeLaunch', false], ['allowForceRestart', true]])
+  assert.equal(await face.setEnabled('fixReasoningEffort', true), true)
+  assert.deepEqual(writes, [['fixVsCodeLaunch', false], ['allowForceRestart', true], ['fixReasoningEffort', true]])
 
   const render = (slot = 'settings.section', extra = {}) => {
     switchCalls.length = buttonCalls.length = menuCalls.length = 0
@@ -99,9 +100,11 @@ test('Settings and More share confirmation, restart state, and the persisted for
   assert.match(html, /DSH 工具箱/)
   assert.match(html, /修复 VS Code 打开失败/)
   assert.match(html, /重启 DSH Desktop/)
-  assert.equal(switchCalls.length, 2)
+  assert.match(html, /思考强度协议兼容/)
+  assert.equal(switchCalls.length, 3)
   assert.equal(switchCalls[0].checked, true)
   assert.equal(switchCalls[1].checked, false)
+  assert.equal(switchCalls[2].checked, false)
   assert.equal(buttonCalls.length, 1)
 
   // Settings and More open the same dialog; neither requests a restart until confirmed.

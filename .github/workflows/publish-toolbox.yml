@@ -95,7 +95,7 @@ jobs:
           const [pkg] = JSON.parse(readFileSync(`${process.env.RUNNER_TEMP}/release-pack.json`, 'utf8'));
           assert.equal(pkg.name, process.env.PACKAGE_NAME);
           assert.equal(pkg.version, process.env.RELEASE_VERSION);
-          for (const path of ['package.json', 'cordis.patch.yml', 'lib/index.js', 'lib/client.js', 'lib/restart.js', 'res/restart-worker.ps1'])
+          for (const path of ['package.json', 'cordis.patch.yml', 'lib/index.js', 'lib/client.js', 'lib/reasoning.js', 'lib/restart.js', 'res/restart-worker.ps1'])
             assert(pkg.files.some(file => file.path === path), `Missing package resource: ${path}`);
           appendFileSync(process.env.GITHUB_ENV, `RELEASE_TARBALL=${process.env.RUNNER_TEMP}/plugin-release/${pkg.filename}\n`);
           NODE

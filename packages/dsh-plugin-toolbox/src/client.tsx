@@ -13,6 +13,7 @@ export const inject = ['slots', 'configForms', 'locale']
 interface ToolboxConfig {
   fixVsCodeLaunch: boolean
   allowForceRestart: boolean
+  fixReasoningEffort: boolean
 }
 
 interface RestartResponse {
@@ -100,7 +101,24 @@ function ToolboxPage({ useToolbox, useRestart, setEnabled, requestRestart, t }: 
 
           <hr style={{ border: 'none', borderTop: '1px solid var(--dsw-alias-border-subtle, rgba(255,255,255,0.08))', margin: 0 }} />
 
-          {/* 2. DSH Restart Section */}
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 24 }}>
+            <div style={{ minWidth: 0 }}>
+              <div>{t('reasoningTitle')}</div>
+              <p style={{ margin: '8px 0 0', color: 'var(--dsw-alias-label-secondary)', lineHeight: 1.6 }}>
+                {t('reasoningDescription')}
+              </p>
+            </div>
+            <Switch
+              checked={host.value?.fixReasoningEffort ?? false}
+              label={t('reasoningTitle')}
+              disabled={!writable || savingKey !== null}
+              onChange={enabled => { void change('fixReasoningEffort', enabled) }}
+            />
+          </div>
+
+          <hr style={{ border: 'none', borderTop: '1px solid var(--dsw-alias-border-subtle, rgba(255,255,255,0.08))', margin: 0 }} />
+
+          {/* DSH Restart Section */}
           <div style={{ display: 'grid', gap: 16 }}>
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 24 }}>
               <div style={{ minWidth: 0 }}>

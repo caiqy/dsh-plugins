@@ -2,15 +2,17 @@ import type { Context, Volatile } from '@deepseek-ai/cordis'
 import z from '@deepseek-ai/schemastery'
 import { installVsCodeLaunchFix } from './launch.js'
 import { initiateRestart } from './restart.js'
+import { installReasoningEffortFix } from './reasoning.js'
 
 export const name = 'toolbox'
 
 export const Config: z<
-  { fixVsCodeLaunch?: boolean; allowForceRestart?: boolean },
-  { fixVsCodeLaunch: Volatile<boolean>; allowForceRestart: Volatile<boolean> }
+  { fixVsCodeLaunch?: boolean; allowForceRestart?: boolean; fixReasoningEffort?: boolean },
+  { fixVsCodeLaunch: Volatile<boolean>; allowForceRestart: Volatile<boolean>; fixReasoningEffort: Volatile<boolean> }
 > = z.object({
   fixVsCodeLaunch: z.boolean().default(true).volatile(),
   allowForceRestart: z.boolean().default(false).volatile(),
+  fixReasoningEffort: z.boolean().default(false).volatile(),
 })
 
 export { installVsCodeLaunchFix } from './launch.js'
@@ -29,6 +31,9 @@ interface ConnectionService {
 
 /** Host settings update the stable reference without restarting this fiber. */
 export function apply(ctx: Context, config: ReturnType<typeof Config>): void {
+  ctx.effect(() => installReasoningEffortFix(() => config.fixReasoningEffort.get(), value => {
+    ctx.logger.info(`toolbox reasoning: ${value.protocol} ${value.action} (${value.reason})`)
+  }), 'toolbox: reasoning effort compatibility')
   if (process.platform === 'win32') {
     ctx.effect(() => installVsCodeLaunchFix(() => config.fixVsCodeLaunch.get()), 'toolbox: VS Code launch environment')
   }

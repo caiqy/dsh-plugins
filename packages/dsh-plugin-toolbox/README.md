@@ -16,13 +16,36 @@ DSH Desktop 使用 Electron 的 Node 模式运行宿主。右上角“用 VS Cod
 
 适用于 Windows DSH Desktop。在侧栏“更多”菜单提供「重启 DSH Desktop」快捷入口，保留“设置 → DSH 工具箱”的「立即重启」操作卡片。两个入口共用宿主确认弹窗和同一条重启请求，确认后才执行；「允许超时强制关闭」沿用工具箱中已保存的选项。请求进行中两个入口均禁止重复提交，失败后显示原因并允许重试。
 
-“更多”入口使用宿主公开的 `sidebar.panellist.actions` 插槽，弹窗使用 `shell.overlay`、`Modal`；不修改宿主菜单或安装文件。较旧宿主未提供“更多”插槽时保留设置页入口。当前工作区新增的菜单入口尚未包含在已发布的 `0.2.3` 中。
+“更多”入口使用宿主公开的 `sidebar.panellist.actions` 插槽，弹窗使用 `shell.overlay`、`Modal`；不修改宿主菜单或安装文件。较旧宿主未提供“更多”插槽时保留设置页入口。该菜单入口自 `0.3.0` 起提供。
 
 - **静默无黑框**：通过 WMI 独立进程创建并指定 `ShowWindow = 0 (SW_HIDE)` 及 `windowsHide`，彻底避免启动辅助程序时的黑框闪烁。
 - **优雅关闭**：通过 Windows Restart Manager (`RmShutdown`) 触发 Desktop 正常退出，等待主进程与 Host 优雅关闭释放所有端口和文件锁。
 - **超时兜底**：提供「允许超时强制关闭」开关（默认关闭）。当优雅退出超过 10 秒未响应时，若开启该选项则强制结束残留进程，确保成功重启。
 - **纯净环境拉起**：辅助程序在确认旧实例彻底退出后，清理继承的 Node 模式环境变量（`ELECTRON_RUN_AS_NODE`），拉起全新的 `DeepSeek Harness.exe`，并进行启动存活自检与失败重试。
 - **零官方文件修改**：完全在外部完成进程编排与状态维护，不修改任何官方安装文件或代码。
+
+### 3. 思考强度协议兼容（默认关闭，0.3.0 新增）
+
+在设置页开启后，从下一次模型请求生效；关闭或停用插件后停止改写，无需重启。按协议和已知请求结构识别，原厂直连与兼容服务使用同样规则，不依赖域名或模型名称。
+
+| 请求协议 | 开启后的行为 |
+| --- | --- |
+| OpenAI Responses | 存在末尾当前强度 `configuration_update` 时，将已映射的值提升至顶层 `reasoning.effort`，清理历史及当前更新中的 `effort`，保留其他配置 |
+| Anthropic Messages | 对 adaptive thinking 的末尾空 system 强度标记，将当前值提升至 `output_config.effort`，清理全部已识别强度标记；不触碰普通消息、thinking、签名及缓存控制字段 |
+| Chat Completions / DeepSeek | 已有的 `reasoning_effort`、`thinking`、`output_config` 等原生字段原样通过；不推测不同模型的档位映射 |
+| Gemini / Vertex | `thinkingLevel`、`thinkingBudget`、关闭思考等原生配置原样通过 |
+
+此开关将逐条强度历史转换为请求级参数，历史前缀会改变，缓存命中率可能降低。Anthropic 历史 thinking 是否能继续复用仍由服务端验证，保留签名字串不代表保证签名接受或缓存命中。不会删除 beta 标记或其他扩展字段；服务端若拒绝这些字段，本开关不负责自动降级。
+
+只处理不超过 16 MiB 的缓冲 JSON 正文（字符串、UTF-8 字节），不读取 `Request` 自带的流或其他流式请求正文。未知格式、未识别档位、缺少末尾当前强度标记、压缩或已识别的签名绑定请求原样通过。改写后移除旧 `Content-Length`，由 fetch 按新正文计算；认证、取消信号和响应流保留。宿主日志以 `toolbox reasoning:` 输出协议与 `rewritten / unchanged / skipped` 原因，同类结果只记录一次，不记录正文、密钥或地址；该日志不代表服务端已采用参数。
+
+自动检查覆盖协议样例、历史标记、开关及卸载、压缩 fetch accessor 的两种加载顺序。原厂和兼容服务的真实推理与计费档位仍需在安装后用各服务的请求记录验收。
+
+## 0.3.0 更新（2026-11-14）
+
+- 新增默认关闭的「思考强度协议兼容」开关；按 Responses / Messages 结构提升当前档位，保留 DeepSeek、Gemini 等原生参数。
+- 增加「更多 → 重启 DSH Desktop」入口，与设置页共用确认、请求状态及已保存的强制关闭选项。
+- 新增协议样例、历史配置保留、动态开关、卸载及压缩 fetch 链两种加载顺序的回归检查。
 
 ## 发布与安装
 
@@ -37,8 +60,8 @@ dsh plugin --profile desktop add @caiqy/dsh-plugin-toolbox@dsh
 ```
 
 ```sh
-pnpm release toolbox 0.2.3 --check  # 只构建、测试、打包
-pnpm release toolbox 0.2.3          # 发布已提交并推送的版本
+pnpm release toolbox 0.3.0 --check  # 只构建、测试、打包
+pnpm release toolbox 0.3.0          # 发布已提交并推送的版本
 ```
 
 在仓库根目录构建与验证：
@@ -59,7 +82,7 @@ dsh plugin --profile plugins-dev add link:./packages/dsh-plugin-toolbox
 
 ```sh
 pnpm -C packages/dsh-plugin-toolbox pack --pack-destination ../../.tmp/toolbox-dist
-dsh plugin --profile desktop add ./.tmp/toolbox-dist/caiqy-dsh-plugin-toolbox-0.2.3.tgz
+dsh plugin --profile desktop add ./.tmp/toolbox-dist/caiqy-dsh-plugin-toolbox-0.3.0.tgz
 ```
 
 安装后在 **设置 → DSH 工具箱** 中管理功能。
@@ -72,6 +95,7 @@ dsh plugin --profile desktop add ./.tmp/toolbox-dist/caiqy-dsh-plugin-toolbox-0.
   config:
     fixVsCodeLaunch: true
     allowForceRestart: false
+    fixReasoningEffort: false
 ```
 
 ## 开发约定
